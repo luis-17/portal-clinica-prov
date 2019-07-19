@@ -1,12 +1,12 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php 
-	$arrServicios = $this->model_servicio->cargar_servicios(); 
+	$arrServicios = $this->model_servicio->cargar_servicios_menu(); 
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title> Estudio Contable DC & JV </title> 
+	<title> Clínica Providencia </title> 
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap-social.css'); ?>" rel="stylesheet">
 
@@ -20,36 +20,67 @@
 </head>
 <body> 
 <div class="site-wrapper">
-  <header class="box-header"> 
+  <header id="myHeaderTop" class="box-header"> 
   	<div class="box-content-header-secondary">
-  		<div class="container">
-				<div class="box-header-secondary">
-	    		<div class="box-header-lema">
-	    			"Contadores confiables para tu crecimiento" 
-	    		</div>
+  		<div class="container-full">
+			<div class="box-header-secondary">
 	    		<div class="box-header-info">
 	    			<div class="box-item box-telefono">
 	    				<div class="box-icon"> <i class="fa fa-phone"></i> </div> 
-	    				<div class="box-value"> (01) 945 142 588 </div>
+	    				<div class="box-value"> (511) 660 6000 </div>
 	    			</div>
-	    			<div class="box-item box-direccion">
-	    				<div class="box-icon"> <i class="fa fa-map-marker"></i> </div> 
-	    				<div class="box-value"> Av. Gran Chimú 1421 Urb. Zárate </div>
+	    			<div class="box-item box-mail">
+	    				<div class="box-icon"> <i class="fa fa-envelope"></i> </div>
+	    				<div class="box-value"> <a href="mailto:contacto@clinicaprovidencia.pe">contacto@clinicaprovidencia.pe </a></div>
 	    			</div>
-	    			<div class="box-item box-rs">
-	    				<a href="https://www.facebook.com/profile.php?id=100012277215574" target="_blank"> 
-		    				<div class="box-icon"> <i class="fab fa-facebook"></i> </div> 
+	    		</div>
+	    		<div class="box-header-redes">
+	    			<div class="box-item ">
+	    				<a class="btn btn-fb" href="https://www.facebook.com/CLINICAPROVIDENCIAOFICIAL" target="_blank"> 
+		    				<i class="fab fa-facebook-f"></i>
 	    				</a> 
 	    			</div>
+	    			<div class="box-item">
+	    				<a class="btn btn-yt" href="https://www.youtube.com/channel/UCJ1zj71qdkwnYKkXr6C6nmQ" target="_blank"> 
+		    				<i class="fab fa-youtube"></i>
+	    				</a> 
+	    			</div>
+	    			<div class="box-item">
+	    				<a class="btn btn-ig" href="https://www.instagram.com/clinicaprovidenciaperu/" target="_blank"> 
+		    				<i class="fab fa-instagram"></i>
+	    				</a> 
+	    			</div>
+	    		</div>
+	    		<div class="box-header-buttons">
+	    			<button type="button" class="btn secondary btn-reserva">RESERVA TU CITA</button>
+	    			<button type="button" class="btn btn-menu-lateral"> <i class="fas fa-bars"></i> </button>
 	    		</div>
 	  		</div>
 	  	</div>
   	</div>
-	<div class="box-content-header-secondary">
-		<div class="container">
-		  	<div class="box-header-primary">
+  	<div class="box-menu-lateral out">
+		<div class="content-header">
+			<div class="logo">
+				<img src="<?php echo base_url('assets/dinamic/logo_white.png'); ?>" alt="Clinica Providencia" />
+			</div>
+			<div class="close-icon">
+				<div class="line line-x"></div>
+				<div class="line line-y"></div>
+			</div>
+		</div>
+		<ul class="content-list">
+			<li>Conócenos</li>
+			<li>Convenios</li>
+			<li>Resultados de Laboratorio</li>
+			<li>Trabaja con Nosotros</li>
+			<li>¿Por qué elegirnos?</li>
+		</ul>
+	</div>
+	<div class="box-content-header-primary">
+		<div class="container-full">
+		  	<div class="box-header-primary" id="box-header-primary">
 	    		<div class="box-logo">
-	    			<a href="<?php echo site_url(); ?>"> <img src="<?php echo base_url('assets/images/logo.png'); ?>" /> </a>
+	    			<a href="<?php echo site_url(); ?>"> <img src="<?php echo base_url('assets/dinamic/logo.png'); ?>" /> </a>
 	    		</div>
 	    		<div class="box-menu">
 	    			<nav class="box-nav-menu collapse navbar-collapse">
@@ -63,24 +94,19 @@
 						</div>
 		      			<ul class="box-list-menu">
 		      				<li class="box-item <?php echo $active['inicio']; ?>">
-		      					<a href="<?php echo site_url('inicio'); ?>"> Inicio </a>
+		      					<a href="<?php echo site_url('inicio'); ?>" title="Inicio"> <i class="fa fa-home"></i> </a>
 		      				</li>
-		      				<li class="box-item <?php echo $active['nosotros']; ?>">
-		      					<a href="#"> Nosotros <img src="<?php echo base_url('assets/icons/arrow-down-32.png'); ?>"/> </a>
-		      					<ul class="box-list-submenu">
-		      						<li class="box-subitem">
-		      							<a href="<?php echo site_url('quienes-somos'); ?>"> Quienes Somos </a>
-		      						</li>
-		      						<li class="box-subitem">
-		      							<a href="<?php echo site_url('mision'); ?>"> Misión </a>
-		      						</li>
-		      						<li class="box-subitem">
-		      							<a href="<?php echo site_url('vision'); ?>"> Visión </a>
-		      						</li>
-		      					</ul> 
+		      				<li class="box-item <?php echo $active['especialidades']; ?>">
+		      					<a href="<?php echo site_url('especialidades'); ?>"> ESPECIALIDADES </a> 
+		      				</li>
+		      				<li class="box-item <?php echo $active['conocenos']; ?>">
+		      					<a href="<?php echo site_url('conocenos'); ?>"> CONÓCENOS </a> 
+		      				</li>
+		      				<li class="box-item <?php echo $active['staff_medico']; ?>">
+		      					<a href="<?php echo site_url('staff_medico'); ?>"> STAFF MÉDICO </a> 
 		      				</li>
 		      				<li class="box-item <?php echo $active['servicios']; ?>">
-		      					<a href="#"> Servicios <img src="<?php echo base_url('assets/icons/arrow-down-32.png'); ?>"/> </a>
+		      					<a href="#"> SERVICIOS <img src="<?php echo base_url('assets/icons/arrow-down-32.png'); ?>"/> </a>
 		      					<ul class="box-list-submenu"> 
 		      						<?php foreach($arrServicios as $key => $row) { ?> 
 		      						<li class="box-subitem"> 
@@ -89,11 +115,11 @@
 		      						<?php } ?> 
 		      					</ul>
 		      				</li>
-		      				<li class="box-item <?php echo $active['clientes']; ?>">
-		      					<a href="<?php echo site_url('clientes'); ?>"> Clientes </a> 
+		      				<li class="box-item <?php echo $active['noticias']; ?>">
+		      					<a href="<?php echo site_url('noticias'); ?>"> NOTICIAS </a> 
 		      				</li>
-		      				<li class="box-item <?php echo $active['contacto']; ?>">
-		      					<a href="<?php echo site_url('contactanos'); ?>"> Contáctanos </a>
+		      				<li class="box-item <?php echo $active['contactanos']; ?>">
+		      					<a href="<?php echo site_url('contactanos'); ?>"> CONTÁCTANOS </a>
 		      				</li>
 		      			</ul>
 	    			</nav>

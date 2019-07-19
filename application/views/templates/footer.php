@@ -82,6 +82,45 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
+<script type="text/javascript">
+window.onscroll = function() {myScrollFixedMenu()};
+
+var header = document.getElementById("myHeaderTop");
+var pointToFixed = document.getElementById("box-header-primary");
+var sticky = pointToFixed.offsetTop;
+
+function myScrollFixedMenu() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky-fixed");
+  } else {
+    header.classList.remove("sticky-fixed");
+  }
+}
+
+/* menu lateral */
+$( document ).ready( function() {
+	console.log('click me', $('.btn-menu-lateral'));
+	$('.btn-menu-lateral').on('click', function(){
+		var sectionMenuLat = $('.box-menu-lateral');
+		if(sectionMenuLat.hasClass('out')){
+			sectionMenuLat.removeClass('out').addClass('in');
+		}else{
+			sectionMenuLat.removeClass('in').addClass('out');
+		}
+	});
+	$(document).mouseup(function(e) {
+	    var sectionMenuLat = $('.box-menu-lateral');
+	    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
+	        sectionMenuLat.removeClass('in').addClass('out');
+	    }
+	});
+	$('.close-icon').on('click', function(){
+		var sectionMenuLat = $('.box-menu-lateral');
+		sectionMenuLat.removeClass('in').addClass('out');
+	});
+});
+</script>
 <!--End of Tawk.to Script-->
 </body>
 </html>

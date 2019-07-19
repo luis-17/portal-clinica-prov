@@ -5,18 +5,21 @@ class Inicio extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        
+        $this->load->model(array('model_slider', 'model_especialidad'));
     }
 	public function index()
 	{
-        $data['arrServicios'] = $this->model_servicio->cargar_servicios(); 
+        $data['arrSliders'] = $this->model_slider->cargar_sliders_para_home();
+        $data['arrEspecialidades'] = $this->model_especialidad->cargar_especialidades_home();
         $data['activeSelected'] = 'inicio'; 
 		$data['active'] = array(
             'inicio'=> '-active',
-            'nosotros'=> NULL,
+            'especialidades'=> NULL,
+            'conocenos'=> NULL,
+            'staff_medico'=> NULL,
             'servicios'=> NULL,
-            'clientes'=> NULL,
-            'contacto'=> NULL
+            'noticias'=> NULL,
+            'contactanos'=> NULL,
         );
 		$this->load->template('inicio',$data);
 	}
