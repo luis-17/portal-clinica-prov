@@ -29,6 +29,9 @@
     <?php endforeach; ?>
   </div>
 </section>
+<div class="angle-separator-content">
+  <div class="angle-separator-up"></div>
+</div>
 <section class="section-especialidades">
   <div class="container">
     <div class="box-title">
@@ -38,7 +41,7 @@
     <div class="box-content">
       <div id="prov-especialidades" class="owl-carousel"> 
         <?php foreach($arrEspecialidades as $key => $row): ?> 
-        <div class="owl-item">
+        <a href="#" class="owl-item">
           <div class="box-especialidad">
             <div class="box-img">
               <img alt="<?php echo $row['nombre']; ?>" src="assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
@@ -47,7 +50,7 @@
               <?php echo $row['nombre']; ?>
             </div>
           </div>
-        </div>
+        </a>
         <?php endforeach; ?>
       </div>
       <div class="box-action">
@@ -56,7 +59,54 @@
     </div>
   </div>
 </section>
-
+<div class="angle-separator-content">
+  <div class="angle-separator-bottom"></div>
+</div>
+<section class="section-conocenos">
+  <div class="box-conocenos">
+    <div class="box-text">
+      <h2> Conócenos </h2>
+      <p> 
+        Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso en sus servicios asistenciales clínicos y quirúrgicos, acreditados y certificados dentro de los más altos estándares nacionales e internacionales. Garantizando a nuestros usuarios calidad en nuestro servicio médico hospitalario.
+      </p>
+      <button type="button" class="btn btn-rounded">SABER MÁS</button>
+    </div>
+    <div class="box-image">
+      <img alt="Conocenos" src="assets/dinamic/conocenos/conocenos.jpg" />
+    </div>
+  </div>
+</section>
+<div class="angle-separator-content">
+  <div class="angle-separator-up"></div>
+</div>
+<section class="section-porque-elegirnos">
+  <div class="container">
+    <div class="box-header">
+      <img src="assets/images/corazon-salud.png" />
+      <h2> ¿Por qúe elegirnos? </h2>
+    </div>
+    <div class="box-content">
+      <?php foreach($arrPorqueElegirnos as $key => $row): ?> 
+      <div class="box-item motivo">
+        <div class="box-item-content">
+          <div class="box-image">
+            <img src="assets/dinamic/porque-elegirnos/<?php echo $row['icon']; ?>">
+          </div>
+          <div class="box-title">
+            <?php echo $row['nombre']; ?>
+          </div>
+          <div class="box-action">
+            <a href="#" class="btn btn-rounded"> SABER MÁS </a>
+          </div>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<div class="angle-separator-content">
+  <div class="angle-separator-bottom"></div>
+</div>
 <script type="text/javascript">
 
   $(document).ready(function() { 
@@ -78,10 +128,10 @@
       pagination : false,
       navigation : true,
       items: 4,
-      // navigationText: [
-      //   "<i class='vc-btnnext fa fa-angle-left'></i>",
-      //   "<i class='vc-btnprev fa fa-angle-right'></i>"
-      // ]
+      navigationText: [
+        "<i class='next fa fa-angle-left'></i>",
+        "<i class='prev fa fa-angle-right'></i>"
+      ]
       // singleItem : true 
     });
   });
