@@ -1,60 +1,67 @@
 	<section class="section-footer">
-	  <div class="box-content">
-	    <div class="box-resenia">
-	      <div class="box-logo">
-	        <img alt="Estudio Contable JV" src="<?php echo base_url('assets/images/logo_white.png'); ?>" /> 
+		<div class="container">
+			<div class="box-suscripcion">
+		    <form class="form-suscripcion">
+		    	<div class="form-header">
+		    		<h3> Suscríbete </h3>
+		      	<p> Entérate de todas las novedades sobre cómo cuidar tu salud </p>
+		    	</div>
+		      <div class="form-group">
+		      	<input class="form-control correo-suscripcion" placeholder="Email*" type="text" name="correo" />
+		      	<button class="btn btn-rounded btn-suscripcion" type="button">Suscríbete</button>
+		      </div>
+		    </form>
+		  </div>
+		  <div class="box-contacto"> 
+	      <div class="box-telefono">
+	      	<div class="box-icon">
+	      		<img src="assets/images/telefono.png" />
+	      	</div>
+	      	<div class="box-items">
+	      		<div class="box-item telefono-1">
+		      		<div class="box-key"> Central de citas: </div>
+		      		<div class="box-value">
+		      			(511) 660-6000 
+		      		</div>
+		      	</div>
+		      	<div class="box-item telefono-2">
+		      		<div class="box-key"> Central administrativa:</div>
+		      		<div class="box-value">
+		      			(511) 660-6020 
+		      		</div>
+		      	</div>
+	      	</div>
 	      </div>
-	      <div class="box-description">
-	        <p>
-	          Somos una compañia con experiencia. dedicada a la consultoria contable, tributaria, laboral y financiera. Con personal capacitado con mas de 15 años de experiencia brindando a nuestros cliente, eficiencia, economía y valor humano. 
-	        </p>
+	      <div class="box-ubicación">
+	      	<div class="box-icon">
+	      		<img src="assets/images/ubicacion.png" />
+	      	</div>
+	      	<div class="box-item">
+	      		<div class="box-key"> Ubicación: </div>
+		      	<div class="box-value">
+		      		Carlos Gonzales 250 - San Miguel (alt. cdra. 26 de la Av. La Marina).
+		      	</div>
+	      	</div>
 	      </div>
-	      <div class="box-redes-sociales">
-	        <div class="red-social-fb">
-	          <i class="fab fa-facebook-square"></i> 
-	        </div>
+	      <div class="box-redes">
+	      	<div class="box-item ">
+    				<a class="btn btn-fb" href="https://www.facebook.com/CLINICAPROVIDENCIAOFICIAL" target="_blank"> 
+	    				<i class="fab fa-facebook-f"></i>
+    				</a> 
+    			</div>
+    			<div class="box-item">
+    				<a class="btn btn-yt" href="https://www.youtube.com/channel/UCJ1zj71qdkwnYKkXr6C6nmQ" target="_blank"> 
+	    				<i class="fab fa-youtube"></i>
+    				</a> 
+    			</div>
+    			<div class="box-item">
+    				<a class="btn btn-ig" href="https://www.instagram.com/clinicaprovidenciaperu/" target="_blank"> 
+	    				<i class="fab fa-instagram"></i>
+    				</a> 
+    			</div>
 	      </div>
-	    </div>
-	    <div class="box-mapa-sitio">
-	      <div class="box-title"> Mapa de Sitio </div>
-	      <div class="box-list">
-	        <ul>
-	          <li>
-	            <a href="#"> Inicio </a>
-	          </li>
-	          <li>
-	            <a href="#"> Nosotros</a>
-	          </li>
-	          <li>
-	            <a href="#"> Servicios</a>
-	          </li>
-	          <li>
-	            <a href="#"> Clientes</a>
-	          </li>
-	          <li>
-	            <a href="#"> Contáctanos</a>
-	          </li>
-	        </ul>
-	      </div>
-	    </div>
-	    <div class="box-contacto"> 
-	      <div class="box-title"> CONTACTO </div>
-	      <div class="box-content">
-	        <div class="box-direccion">
-	          <i class="fa fa-map-marker"></i> Av. Gran Chimú 1421 Urb. Zárate S.J.L. 
-	        </div>
-	        <div class="box-horario">
-	          <i class="fa fa-clock"></i> Lun. a Sab. 9am - 5:30pm
-	        </div>
-	        <div class="box-telefono">
-	          <i class="fa fa-phone"></i> (01) 945 142 588 / (01) 704-3855 
-	        </div>
-	        <div class="box-correo">
-	          <a href="mailto:informes@dcyjvasociados.com"> <i class="fas fa-envelope"></i> informes@dcyjvasociados.com </a>
-	        </div> 
-	      </div>
-	    </div>
-	  </div>
+		  </div>
+		</div>
 	</section>
 	<section class="section-post-footer">
 	  <div class="box-derechos">

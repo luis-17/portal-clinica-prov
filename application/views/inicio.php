@@ -107,6 +107,58 @@
 <div class="angle-separator-content">
   <div class="angle-separator-bottom"></div>
 </div>
+<section class="section-testimonio">
+  <div class="container">
+    <div class="box-header">
+      <h2> ¡Nuestros pacientes lo confirman! </h2>
+    </div>
+    <div class="box-content">
+      <?php foreach($arrTestimonios as $key => $row): ?>
+        <div class="box-item testimonio">
+          <div class="box-item-wrap">
+            <div class="box-image">
+              <img src="assets/dinamic/testimonio/<?php echo $row['foto']; ?>">
+            </div>
+            <div class="box-info">
+              <div class="box-title">
+                <span><?php echo $row['paciente']; ?></span>
+                <img src="assets/images/comillas.png" />
+              </div>
+              <div class="box-text">
+                <p><?php echo $row['testimonio_html']; ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div class="box-action">
+      <button type="button" class="btn btn-rounded primary"> VER MÁS TESTIMONIOS </button>
+    </div>
+  </div>
+</section>
+<section class="section-seguro">
+  <div class="container">
+    <div class="box-header">
+      <h2> Seguros </h2>
+      <p> Para su tranquilidad trabajamos con las siguientes compañias de seguros </p>
+    </div>
+    <div class="box-content">
+      <div id="prov-seguro" class="owl-carousel"> 
+        <?php foreach($arrSeguros as $key => $row): ?> 
+          <div class="box-seguro owl-item">
+            <div class="box-img">
+              <img alt="<?php echo $row['nombre']; ?>" src="assets/dinamic/seguro/<?php echo $row['logo']; ?>" />
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="angle-separator-content">
+  <div class="angle-separator-bottom"></div>
+</div>
 <script type="text/javascript">
 
   $(document).ready(function() { 
@@ -132,6 +184,21 @@
         "<i class='next fa fa-angle-left'></i>",
         "<i class='prev fa fa-angle-right'></i>"
       ]
+      // singleItem : true 
+    });
+    // GALERIA SEGUROS  
+    var owlSeg = $("#prov-seguro");
+    // console.log($("#prov-seguro"), '$("#prov-seguro");');
+    owlSeg.owlCarousel({
+      pagination : true,
+      navigation : false,
+      items: 4,
+      autoPlay: true,
+      // stopOnHover: true,
+      // navigationText: [
+      //   "<i class='next fa fa-angle-left'></i>",
+      //   "<i class='prev fa fa-angle-right'></i>"
+      // ]
       // singleItem : true 
     });
   });
