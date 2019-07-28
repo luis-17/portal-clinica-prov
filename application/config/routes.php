@@ -56,5 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 // other customs 
 $route['quienes-somos'] = 'quienes/index';
 $route['contactanos'] = 'contacto';
+$route['staff-medico'] = 'StaffMedico/index';
 
 $route['servicio/(:any)'] = 'servicio/servicio/$1';

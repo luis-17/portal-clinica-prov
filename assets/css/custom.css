@@ -28,9 +28,25 @@ a:hover, a:focus, a:active{
     margin: 0 auto;
     width: 86%;
 }
+.loading-spinner{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 2;
+}
+.loading-spinner .box-img-loading{
+    top: 33%;
+    position: absolute;
+    left: 44%;
+}
+.loading-spinner .box-img-loading img{
+    width: 180px;
+}
 
 /* buttons */
-
 .btn{
 	position: relative;
 	text-align: center;
@@ -97,6 +113,7 @@ a:hover, a:focus, a:active{
     color: white;
     border: 2px solid #00488d;
 }
+
 header.box-header{
 	position: absolute;
 	right: 0;
@@ -817,56 +834,6 @@ header.box-header{
 }
 
 
-/* DETALLE DE SERVICIO */ 
-
-.page .box-breadcrumb{
-    background-image: url('../images/services/detalle-servicio.jpg');
-    height: 160px; 
-    background-position: center;
-    display: flex;
-    align-items: center;
-}
-.page > .box-content{
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-
-.page .box-breadcrumb .text-breadcrumb{
-    font-size: 24px;
-    padding: 12px;
-    font-weight: 300;
-    display: inline;
-    background-color: rgba(255,255,255,0.45);
-}
-.page .box-info{
-    display: flex;
-    align-items: center;
-}
-.page .box-info-text{
-    font-size: 18px;
-    font-weight: 300;
-    padding: 28px 48px;
-}
-.page .box-info-text h1{
-    margin-bottom: 30px;
-    margin-top: 0;
-}
-.page .box-info-image img{
-    width: 480px;
-    border: 1px solid #ddd;
-    padding: 5px;
-    background-color: white;
-}
-
-.box-maps > div{ 
-    height: 320px;
-}
-
-
-.page.page-detalle-servicio h1{ 
-    text-transform: uppercase;    
-} 
-
 /* CLIENTES */
 .page.page-cliente > .box-content{ 
     padding-top: 5%;
@@ -888,64 +855,90 @@ header.box-header{
 .page.page-cliente .box-client .box-img img{
     margin: auto;
 }
-
-/* CONTACTO */
-.page-contacto .box-info-contacto .box-item{
-    margin-bottom: 20px;
+/* ************ */
+/* STAFF MEDICO */
+/* ************ */
+.page-sm .section-portada{
+    margin-top: 140px;
+    background-color: #0085b2;
+    padding-top: 60px;
+    position: relative;
 }
-.page.page-contacto > .box-content{ 
-    padding-top: 5%;
-    padding-bottom: 5%;
-} 
-.page.page-contacto .box-formulario button{
-    margin: auto;
-    display: block;
-    width: 200px;
-    height: 45px;
-    background-color: #2a3991;
+.page-sm .section-portada .img-portada {
+    position: relative;
+}
+.page-sm .section-portada .texto-portada{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    padding-bottom: 60px;
+}
+.page-sm .section-portada .texto-portada h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0085b2;
+}
+.page-sm .section-portada .img-portada .bg-portada{
+    background-image: url(../images/portada-staff.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 80% 25%;
+    border-top-right-radius: 80% 25%;
+}
+.page-sm .section-medicos .box-title{
+    margin: 35px 0;
+}
+.page-sm .section-medicos .box-title h3{
+    color: #00488d;
+    text-align: center;
+    font-size: 22px;
+}
+.page-sm .section-medicos .box-filtros .box-form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.page-sm .section-medicos .box-filtros .box-form .form-group{
+    margin-bottom: 0;
+}
+.page-sm .section-medicos .box-filtros .box-form .box-especialidad{
+    margin-right: 20px;
+    width: 30%;
+}
+.page-sm .section-medicos .box-filtros .box-form .box-medico{
+    margin-right: 20px;
+    width: 40%;
+}
+.page-sm .section-medicos .box-filtros .box-form button{
+    background-color: #00488d;
     color: white;
 }
-.page-contacto .box-info-contacto .box-item h4{ 
-    margin: 0;
-    padding-bottom: 5px;
-    color: #00a7e0;
-    text-decoration: underline;
-    font-weight: bold;
+.page-sm .section-medicos .box-filtros .box-abc{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
-.page-contacto .box-info-contacto .box-item .box-item-value, .page-contacto .box-info-contacto .box-item .box-item-value a{
+.page-sm .section-medicos .box-filtros .box-abc button{
+    font-weight: bold;
     font-size: 20px;
-    color: #2a3991;;
 }
-.page-contacto .box-content > .row{
-    display: flex;
-    align-items: center;
-}
-.page-contacto .alert{
-    text-align: center;
-    font-weight: bold;
-}
-.page-contacto form{
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    background-color: #00a7e0;
-    color: white;
-}
+/*.page-sm .section-portada .img-portada .box-angle{
+    position: absolute;
+    height: 100px;
+    border-top-left-radius: 100% 25%;
+    border-top-right-radius: 100% 25%;
+}*/
+/*.sm .section-portada .img-portada img{
+    max-width: 100%;
+    width: 100%;
+}*/
 
-.page-contacto .box-content-telefono{
-    display: flex;
-    align-items: center;
-}
-.page-contacto .box-content-telefono .phone-detail{
-    padding-left: 6px;
-    text-align: center;
-}
-.page-contacto .box-item svg{
-    margin-right: 10px;
-}
-
-/**********/
-/* FOOTER */
-/**********/
+/* ******** */
+/*  FOOTER  */
+/* ******** */
 .section-footer{ 
     background-color: #0085b2;
     padding: 90px 0 50px;
@@ -955,6 +948,7 @@ header.box-header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .section-footer .form-suscripcion .form-header{
     padding-right: 40px;
@@ -963,6 +957,11 @@ header.box-header{
     flex: 1;
     display: flex;
     margin-bottom: -15px;
+}
+.section-footer .form-suscripcion .form-group label{
+    position: absolute;
+    bottom: -12px;
+    color: #9e0101;
 }
 .section-footer .form-suscripcion .form-group input{
     background-color: #00a9ca;
@@ -974,6 +973,9 @@ header.box-header{
 .section-footer .form-suscripcion .form-group button{
     background-color: #014d90;
     border-radius: 0 0 15px 0;
+}
+.section-footer .form-suscripcion .form-group button:hover{
+    color: white;
 }
 .section-footer .box-suscripcion{
     margin-bottom: 50px;
@@ -1040,4 +1042,9 @@ header.box-header{
 .section-post-footer .box-autor{
     flex-grow: 1;
     text-align: right;
+}
+
+/* helpers */
+.-turquesa-bg{
+    background-color: #0085b2;
 }

@@ -83,7 +83,7 @@
   <div class="container">
     <div class="box-header">
       <img src="assets/images/corazon-salud.png" />
-      <h2> ¿Por qúe elegirnos? </h2>
+      <h2> ¿Por qué elegirnos? </h2>
     </div>
     <div class="box-content">
       <?php foreach($arrPorqueElegirnos as $key => $row): ?> 
@@ -175,7 +175,7 @@
     });
     // GALERIA ESPECIALIDADES  
     var owlEspec = $("#prov-especialidades");
-    console.log($("#prov-especialidades"), '$("#prov-especialidades");');
+    // console.log($("#prov-especialidades"), '$("#prov-especialidades");');
     owlEspec.owlCarousel({
       pagination : false,
       navigation : true,

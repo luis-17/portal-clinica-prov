@@ -103,7 +103,7 @@
 		      					<a href="<?php echo site_url('conocenos'); ?>"> CONÓCENOS </a> 
 		      				</li>
 		      				<li class="box-item <?php echo $active['staff_medico']; ?>">
-		      					<a href="<?php echo site_url('staff_medico'); ?>"> STAFF MÉDICO </a> 
+		      					<a href="<?php echo site_url('staff-medico'); ?>"> STAFF MÉDICO </a> 
 		      				</li>
 		      				<li class="box-item <?php echo $active['servicios']; ?>">
 		      					<a href="#"> SERVICIOS <img src="<?php echo base_url('assets/icons/arrow-down-32.png'); ?>"/> </a>

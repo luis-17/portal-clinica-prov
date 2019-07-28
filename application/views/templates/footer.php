@@ -1,14 +1,15 @@
 	<section class="section-footer">
 		<div class="container">
 			<div class="box-suscripcion">
-		    <form class="form-suscripcion">
+		    <form id="form-suscripcion" class="form-suscripcion">
 		    	<div class="form-header">
 		    		<h3> Suscríbete </h3>
 		      	<p> Entérate de todas las novedades sobre cómo cuidar tu salud </p>
 		    	</div>
 		      <div class="form-group">
-		      	<input class="form-control correo-suscripcion" placeholder="Email*" type="text" name="correo" />
-		      	<button class="btn btn-rounded btn-suscripcion" type="button">Suscríbete</button>
+		      	<input class="form-control correo-suscripcion" placeholder="Email*" type="email" required name="correo" />
+		      	<button class="btn btn-rounded btn-suscripcion" type="submit">Suscríbete</button>
+		      	<button class="btn btn-rounded btn-suscrito" disabled type="button">¡Te suscribiste!</button>
 		      </div>
 		    </form>
 		  </div>
@@ -75,7 +76,8 @@
 <script type="text/javascript" src="<?php echo base_url('libs/bootstrap-3.3.7/js/bootstrap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/jquery-mask-plugin/jquery.mask.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/owl-carousel/owl.carousel.min.js'); ?>"></script>
-
+<script type="text/javascript" src="<?php echo base_url('libs/jquery-validate/jquery.validate.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/var.js'); ?>"></script>
 <!-- Include js plugin -->
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -107,7 +109,6 @@ function myScrollFixedMenu() {
 
 /* menu lateral */
 $( document ).ready( function() {
-	console.log('click me', $('.btn-menu-lateral'));
 	$('.btn-menu-lateral').on('click', function(){
 		var sectionMenuLat = $('.box-menu-lateral');
 		if(sectionMenuLat.hasClass('out')){
@@ -125,6 +126,51 @@ $( document ).ready( function() {
 	$('.close-icon').on('click', function(){
 		var sectionMenuLat = $('.box-menu-lateral');
 		sectionMenuLat.removeClass('in').addClass('out');
+	});
+	$('.btn-suscrito').hide();
+	$('.btn-suscripcion').show();
+	// REGISTRAR SUSCRIPCIÓN
+	$("#form-suscripcion").validate({
+		rules: {
+	       correo: {
+	           required: true,
+	           email: true
+	       },
+   		},
+   		messages: {
+   			correo: {
+   				required: 'Este campo es requerido.',
+	           	email: 'Este campo sólo permite correo.'
+   			},
+   		},
+		submitHandler: function(form) {
+			// console.log('hola xd');
+		    // form.submit();
+		    var arrData = {
+		    	correo: $('.correo-suscripcion').val()
+		    };
+		    $.ajax({
+		         type: "POST",
+		         url: "suscripcion/registrar",
+		         data: JSON.stringify(arrData),
+		         dataType: "json",
+		         contentType: 'application/json',
+		         success: function (response) {
+		         	console.log(response, 'responseee');
+		         	$('.btn-suscrito').show();
+		         	$('.btn-suscripcion').hide();
+		         	$('.correo-suscripcion').prop('disabled', true);
+		             // $(form).html("<div id='message'></div>");
+		             // $('#message').html("<h2>Your request is on the way!</h2>")
+		             //     .append("<p>someone</p>")
+		             //     .hide()
+		             //     .fadeIn(1500, function () {
+		             //     $('#message').append("<img id='checkmark' src='images/ok.png' />");
+		             // });
+		         }
+		     });
+		     return false;
+	 	}
 	});
 });
 </script>
