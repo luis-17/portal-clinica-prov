@@ -13,6 +13,7 @@ class StaffMedico extends CI_Controller {
         $data['activeSelected'] = 'staff_medico'; 
         $data['arrEspecialidades'] = $this->model_especialidad->m_cargar_especialidades();
         $data['arrAbc'] = range('A', 'Z');
+        // array_unshift($data['arrAbc'], "TODOS LOS MÉDICOS");
         $data['active'] = array(
             'inicio'=> NULL,
             'especialidades'=> NULL,

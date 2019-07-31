@@ -129,6 +129,7 @@ $( document ).ready( function() {
 	});
 	$('.btn-suscrito').hide();
 	$('.btn-suscripcion').show();
+	
 	// REGISTRAR SUSCRIPCIÓN
 	$("#form-suscripcion").validate({
 		rules: {
@@ -144,7 +145,6 @@ $( document ).ready( function() {
    			},
    		},
 		submitHandler: function(form) {
-			// console.log('hola xd');
 		    // form.submit();
 		    var arrData = {
 		    	correo: $('.correo-suscripcion').val()
@@ -160,13 +160,6 @@ $( document ).ready( function() {
 		         	$('.btn-suscrito').show();
 		         	$('.btn-suscripcion').hide();
 		         	$('.correo-suscripcion').prop('disabled', true);
-		             // $(form).html("<div id='message'></div>");
-		             // $('#message').html("<h2>Your request is on the way!</h2>")
-		             //     .append("<p>someone</p>")
-		             //     .hide()
-		             //     .fadeIn(1500, function () {
-		             //     $('#message').append("<img id='checkmark' src='images/ok.png' />");
-		             // });
 		         }
 		     });
 		     return false;

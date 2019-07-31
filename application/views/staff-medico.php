@@ -31,6 +31,10 @@
 					<button type="button" class="btn btn-buscarMedico">BUSCAR MÉDICO</button>
 				</div>
 				<div class="box-abc">
+					<div class="box-item-abc">
+						<input type="hidden" value="ALL" name="hid-medico-abc" class="hid-medico-abc selected">
+						<button class="btn btn-letter selected" type="button"> TODOS LOS MÉDICOS </button>
+					</div>
 					<?php foreach ($arrAbc as $key => $row): ?>
 						<div class="box-item-abc">
 							<input type="hidden" value="<?php echo $row; ?>" name="hid-medico-abc" class="hid-medico-abc">
@@ -41,28 +45,12 @@
 					<?php endforeach ?>
 				</div>
 			</div>
-			<div class="box-result cont-staff-medico">
-				<!-- <?php //foreach ($arrEspecialidades as $key => $row): ?>
-				<div class="col-lg-3">
-					<div class="item-medico">
-						<img alt="" src="">
-						<div class="box-hovered">
-							<div class="box-info">
-								<h5 class="especialidad"> <?php echo $row['especialidad'] ?> </h5>
-								<span class="cmp"> CMP: <?php echo $row['cmp'] ?> </span>
-							</div>
-							<div class="box-action">
-								<button class="btn btn-verMas" type="button"> Ver más </button>
-							</div>
-						</div>
-					</div>
-					<h4> <?php echo $row['nombres']; ?> </h4>
-				</div>
-				<?php //endforeach ?> -->
+			<div class="box-result cont-staff-medico row">
 			</div>
 			<div class="box-paginate">
 				<div class="box-content">
 					<div class="box-lateral-left">
+						<span> Mostrar: </span>
 						<select class="form-control cbo-pageSize" name="pagina">
 							<option value="12">12</option>
 							<option value="24">24</option>
@@ -76,7 +64,7 @@
 							<option value="2">2</option>
 							<option value="3">3</option>
 						</select>
-						<div> de <span class="txt-limit"></span> </div>
+						<div class="propos"> de <span class="txt-limit"></span> </div>
 						<button type="button" class="btn btn-direction btn-next"> <i class='next fa fa-angle-left'></i> </button>
 						<button type="button" class="btn btn-direction btn-prev"> <i class='prev fa fa-angle-right'></i> </button>
 					</div>
@@ -85,6 +73,67 @@
 		</div>
 	</section>
 </div>
+<div class="angle-separator-content">
+  <div class="angle-separator-bottom"></div>
+</div>
+<!-- 		PERFIL DE MEDICO 	-->
+<div class="box-modal-perfil out">
+	<div class="box-close close-icon">
+		<div class="line line-x"></div>
+		<div class="line line-y"></div>
+	</div>
+	<div class="box-perfil-medico">
+		<div class="box-info-medico">
+			<div class="box-present">
+				<div class="box-present-nombre">
+					<h2> Carlos Perez Loyola </h2>
+				</div>
+				<div class="box-present-detail">
+					<dl>
+						<dt> Especialidad: </dt>
+						<dd> Pediatría </dd>
+					</dl>
+					<dl>
+						<dt> CMP: </dt>
+						<dd> 04535 </dd>
+					</dl>
+					<dl>
+						<dt> RNE: </dt>
+						<dd> 023535 </dd>
+					</dl>
+				</div>
+				<div class="box-present-lema">
+					<q>Donde quiera que se ame el arte de la medicina, se ama también a la humanidad</q>
+				</div>
+			</div>
+			<div class="box-horario">
+				<h3> Horarios: </h3>
+				<dl>
+					<dt> Lunes: </dt>
+					<dd> 08:00 - 21:00 </dd>
+				</dl>
+				<dl>
+					<dt> Jueves: </dt>
+					<dd> 09:00 - 13:00 </dd>
+				</dl>
+				<dl>
+					<dt> Sábado: </dt>
+					<dd> 08:00 - 13:00 </dd>
+				</dl>
+			</div>
+			<div class="box-estudios">
+				<h3> Estudios: </h3>
+				<p>
+					Facultad de Medicina, Universidad Nacional Mayor de San Marcos Pediatria, Hospital del Niño, UNMSM (1970 - 1973)
+				</p>
+			</div>
+		</div>
+		<div class="box-foto-perfil">
+			<img src="<?php echo base_url('assets/dinamic/medico/medico-perfil/perfil.png'); ?>" alt="" />
+		</div>
+	</div>
+</div>
+<!-- END PERFIL DE MEDICO -->
 <script type="text/javascript">
   $(document).ready(function() { 
   	// if (typeof page == 'undefined') return false;
@@ -195,9 +244,13 @@
 					$('.cbo-pageNumber').val(valPageNumber);
 				}
 			}
+			var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
+			if (paramsFirstRow < 0) {
+				paramsFirstRow = 0;
+			}
 			var arrParams = {
 				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+					firstRow: paramsFirstRow,
 					pageNumber: $('.cbo-pageNumber').val(),
 					pageSize: $('.cbo-pageSize').val(),
 					sort: "ASC",
@@ -232,55 +285,54 @@
 	      	console.log(paramPaginate, 'paramPaginateee');
 	      	var limitByView = Math.ceil(paramPaginate.totalRows / paramPaginate.itemsByView);
 	      	console.log(limitByView);
-	      	// var strLimit = 
-	      	
-
-	      	// return false;
-	      	// var paginate = response.
-	      	// $contStaffMedico.empty();
-	      	// var $itemsWrappedAll = $('');
 	      	$contStaffMedico.empty();
 	      	$.each(paramData, function(key, val) {
 	      		console.log(key, val, 'keyval');
-	      		var $wrap1 = $('<div class="col-lg-3"></div>');
+	      		var $wrap1 = $('<div class="col-lg-3 pre-item"></div>');
 	      			var $wrap2 = $('<div class="item-medico"></div>');
 	      				var $wrap2_1 = $('<img alt="'+val.medico+'" src="assets/dinamic/medico/'+val.foto+'" />');
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');
 	      					var $wrap2_2_1 = $('<div class="box-info"></div>');
 	      						var $wrap2_2_1_1 = $('<h5 class="especialidad">'+val.especialidad+'</h5>');
-	      						var $wrap2_2_1_2 = $('<span class="cmp">'+val.cmp+'</span>');
+	      						var $wrap2_2_1_2 = $('<span class="cmp"> CMP: '+val.cmp+'</span>');
 	      					var $wrap2_2_2 = $('<div class="box-action"></div>');
 	      						var $wrap2_2_2_1 = $('<button class="btn btn-verMas" type="button"> Ver más </button>');
-	      			var $wrap3 = $('<h4>'+val.nombres+'</h4>');
+	      			var $wrap3 = $('<h4>'+val.medico+'</h4>');
 	      		var $itemWrapped = $wrap1.append($wrap2.append($wrap2_1, $wrap2_2.append($wrap2_2_1.append($wrap2_2_1_1, $wrap2_2_1_2), $wrap2_2_2.append($wrap2_2_2_1))),$wrap3);
-	      		console.log($itemWrapped, '$itemWrappedgg');
+	      		// console.log($itemWrapped, '$itemWrappedgg');
 	      		$contStaffMedico.append($itemWrapped);
 	      	});
-	      	// $contStaffMedico.empty();
-	      	// $contStaffMedico.append($itemsWrappedAll);
-	      	// console.log($contStaffMedico, 'contStaffMedico');
-	      	// console.log($itemsWrappedAll, 'itemsWrappedAll');
 					$('.txt-limit').html(limitByView);
-	        /*
-						<div class="col-lg-3">
-							<div class="item-medico">
-								<img alt="" src="">
-								<div class="box-hovered">
-									<div class="box-info">
-										<h5 class="especialidad"> <?php echo $row['especialidad'] ?> </h5>
-										<span class="cmp"> CMP: <?php echo $row['cmp'] ?> </span>
-									</div>
-									<div class="box-action">
-										<button class="btn btn-verMas" type="button"> Ver más </button>
-									</div>
-								</div>
-							</div>
-							<h4> <?php // echo $row['nombres']; ?> </h4>
-						</div>
-	        */
+					onClickPerfilMedico();
 	      }
 	  	});
     }
     $('.btn-buscarMedico').trigger('click');
-  });
+
+    /* INTERACCION PERFIL MEDICO */
+    function onClickPerfilMedico() {
+    	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
+				var sectionPerfilMed = $('.box-modal-perfil');
+				if(sectionPerfilMed.hasClass('out')){
+					sectionPerfilMed.removeClass('out').addClass('in');
+					$('.page-sm').addClass('op-25');
+					$('#myHeaderTop').addClass('op-25');
+				}else{
+					sectionPerfilMed.removeClass('in').addClass('out');
+					$('.page-sm').removeClass('op-25');
+					$('#myHeaderTop').removeClass('op-25');
+				}
+				event.preventDefault();
+			});
+
+    };
+    $(document).mouseup(function(e) {
+		    var sectionMenuLat = $('.box-modal-perfil');
+		    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
+		        sectionMenuLat.removeClass('in').addClass('out');
+		        $('.page-sm').removeClass('op-25');
+		        $('#myHeaderTop').removeClass('op-25');
+		    }
+		});
+	});
 </script>

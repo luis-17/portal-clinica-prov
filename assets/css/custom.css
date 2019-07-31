@@ -23,7 +23,9 @@ a:hover, a:focus, a:active{
     src: url("../fonts/leelawdb.ttf");
     font-weight: 800;
 }
-
+.op-25{
+    opacity: 0.25 !important;
+}
 .container-full{
     margin: 0 auto;
     width: 86%;
@@ -143,7 +145,7 @@ header.box-header{
     align-items: end;
     justify-content: space-between;
 }
-.box-menu-lateral .content-header .close-icon{
+.box-menu-lateral .content-header .close-icon, .close-icon{
     width: 40px;
     height: 40px;
     text-align: center;
@@ -157,23 +159,23 @@ header.box-header{
     transition-duration: .35s;
     transition-timing-function: linear;
 }
-.box-menu-lateral .content-header .close-icon:hover{
+.box-menu-lateral .content-header .close-icon:hover, .close-icon:hover{
     background-color: white;
 }
-.box-menu-lateral .content-header .close-icon:hover .line{
+.box-menu-lateral .content-header .close-icon:hover .line, .close-icon:hover .line{
     border-bottom: 1px solid #0033a0;
 }
-.box-menu-lateral .content-header .close-icon .line{
+.box-menu-lateral .content-header .close-icon .line, .close-icon .line{
     width: 28px;
     height: 36px;
     border-bottom: 1px solid white;
     position: absolute;
 }
-.box-menu-lateral .content-header .close-icon .line.line-x{
+.box-menu-lateral .content-header .close-icon .line.line-x, .close-icon .line.line-x{
     -webkit-transform: translateY(-10px) translateX(16px) rotate(45deg);
     transform: translateY(-10px) translateX(16px) rotate(45deg);
 }
-.box-menu-lateral .content-header .close-icon .line.line-y{
+.box-menu-lateral .content-header .close-icon .line.line-y, .close-icon .line.line-y{
     -webkit-transform: translateY(-10px) translateX(-8px) rotate(-45deg);
     transform: translateY(-10px) translateX(-8px) rotate(-45deg);
 }
@@ -299,7 +301,8 @@ header.box-header{
     flex-grow: 1;
 }
 .box-header .box-header-primary .box-logo img{
-	height: 88px;
+	height: 80px;
+    margin-top: -25px;
 }
 .box-header .box-header-primary .box-menu{
 	float: right;
@@ -337,8 +340,10 @@ header.box-header{
     align-items: center;
     height: 60px;
     border-top: 3px solid transparent;
-    /*padding-top: 14px;
-    padding-bottom: 14px;*/
+}
+.box-header .box-header-primary .box-item a svg{
+    font-size: 2rem;
+    margin-top: -5px;
 }
 /*sticked menu*/
 .box-header.sticky-fixed{
@@ -921,9 +926,147 @@ header.box-header{
     justify-content: center;
     margin-bottom: 40px;
 }
+.page-sm .section-medicos .box-filtros .box-item-abc{
+    margin: 4px;
+}
+.page-sm .section-medicos .box-filtros .box-item-abc button{
+    border-radius: 12px 0;
+    border: 1px solid;
+}
+.page-sm .section-medicos .box-filtros .box-item-abc button.selected{
+    background-color: #969696;
+    color: white;
+}
+.page-sm .section-medicos .box-filtros .box-item-abc button:hover{
+    background-color: #969696;
+    color: white;
+}
 .page-sm .section-medicos .box-filtros .box-abc button{
     font-weight: bold;
+    color: #969696;
+    width: 35px;
+    font-size: 15px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+.page-sm .section-medicos .box-filtros .box-abc .box-item-abc:first-child button{
+    width: auto;
+}
+.page-sm .section-medicos .box-result .pre-item{
+    margin-bottom: 30px;
+}
+.page-sm .section-medicos .box-result .pre-item h4{
+    color: #00488d;
+    font-weight: 800;
+    text-align: center;
+    margin: 15px auto;
+    width: 220px;
+}
+.page-sm .section-medicos .box-result .item-medico{
+    width: 220px;
+    margin: auto;
+    height: 240px;
+    position: relative;
+    border: 3px solid #0085b2;
+    border-radius: 18px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /**/
+    transition-property: color, background-color, visibility;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+.page-sm .section-medicos .box-result .item-medico img{
+    width: 170px;
+    border-radius: 12px 0;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    /*display: none;*/
+    transition-property: color, background-color, display;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+}
+.page-sm .section-medicos .box-result .item-medico:hover .box-hovered{
+    display: flex;
+    background-color: rgba(0,133,178,.65);
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    visibility: visible;/**/
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-action{
+    margin: 20px;
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-action button{
+    width: 90px;
+    background-color: white;
+    border-radius: 12px 0;
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info .cmp{
+    font-size: 28px;
+    font-weight: 100;
+}
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info h5{
     font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.page-sm .section-medicos .box-paginate{
+    overflow: auto;
+}
+.page-sm .section-medicos .box-paginate .box-content{
+    overflow: auto;
+    margin: 0 20px;
+    border-top: 1px solid #969696;
+    padding: 15px 0;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-left{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-left span{
+    margin-right: 15px;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-right{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-right select{
+    width: 60px;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-right > div{
+    width: 70px;
+    text-align: center;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-right .propos{
+    margin-left: 10px;
+    text-align: left;
+    width: 40px;
+}
+.page-sm .section-medicos .box-paginate .box-lateral-right .btn-direction{
+    border-radius: 4px;
+    border: 1px solid;
+    color: #969696;
+    margin-left: 4px;
 }
 /*.page-sm .section-portada .img-portada .box-angle{
     position: absolute;
@@ -936,6 +1079,103 @@ header.box-header{
     width: 100%;
 }*/
 
+/* ************************* */
+/*  MODAL PERFIL DEL MEDICO  */
+/* ************************* */
+.box-modal-perfil{
+    width: 60%;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 220;
+    background-image: url('../images/fondo-perfil-medico-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -4px -1px 10px 2px rgba(70, 70, 70, 0.34);
+    -webkit-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+    -moz-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+    -o-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+    -ms-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+    transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+}
+.box-modal-perfil.out{
+    /*visibility: hidden;*/
+    right: -60%;
+}
+.box-modal-perfil.in{
+    right: 0;
+}
+.box-modal-perfil .box-close.close-icon{
+    /*background-color: #002661;*/
+    border-color: #002661;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.box-modal-perfil .box-close.close-icon .line{
+    border-color: #002661;
+}
+.box-modal-perfil .box-close.close-icon:hover{
+    background-color: #002661;
+}
+.box-modal-perfil .box-close.close-icon:hover .line{
+    border-color: white;
+}
+.box-modal-perfil .box-perfil-medico{
+    margin: 45px;
+    color: #00488d;
+    display: flex;
+}
+.box-modal-perfil .box-perfil-medico .box-present{
+    padding-top: 6px;
+}
+.box-modal-perfil .box-perfil-medico h3{
+    font-size: 22px;
+    font-weight: 700;
+}
+.box-modal-perfil .box-perfil-medico .box-present h2{
+    font-weight: 700;
+}
+.box-modal-perfil .box-perfil-medico .box-present .box-present-detail{
+    margin-bottom: 10px;
+}
+.box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl{
+    display: flex;
+    margin-bottom: 2px;
+}
+.box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl dt {
+    width: 120px;
+}
+.box-modal-perfil .box-perfil-medico .box-present .box-present-lema{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+.box-modal-perfil .box-perfil-medico .box-horario{
+    border-bottom: 2px solid;
+    padding-bottom: 16px;
+}
+.box-modal-perfil .box-perfil-medico .box-horario dl{
+    display: flex;
+    margin-bottom: 2px;
+}
+.box-modal-perfil .box-perfil-medico .box-horario dl dt {
+    width: 120px;
+}
+.box-modal-perfil .box-perfil-medico .box-foto-perfil{
+    width: 100%;
+}
+.box-modal-perfil .box-perfil-medico .box-foto-perfil img{
+    max-width: 460px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 /* ******** */
 /*  FOOTER  */
 /* ******** */
