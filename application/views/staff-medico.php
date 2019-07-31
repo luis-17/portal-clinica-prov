@@ -274,7 +274,7 @@
 	    		$contStaffMedico.html(loaderCP);
 	    $.ajax({
 	      type: "POST",
-	      url: "staffmedico/listar_staff_medico",
+	      url: "StaffMedico/listar_staff_medico",
 	      data: JSON.stringify(params),
 	      dataType: "json",
 	      contentType: 'application/json',

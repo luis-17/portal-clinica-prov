@@ -151,7 +151,7 @@ $( document ).ready( function() {
 		    };
 		    $.ajax({
 		         type: "POST",
-		         url: "suscripcion/registrar",
+		         url: "Suscripcion/registrar",
 		         data: JSON.stringify(arrData),
 		         dataType: "json",
 		         contentType: 'application/json',
