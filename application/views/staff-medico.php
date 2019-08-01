@@ -10,6 +10,9 @@
 			<h1> Staff Médico </h1>
 		</div>
 	</section>
+	<div class="angle-separator-content">
+	  <div class="angle-separator-up-style-2"></div>
+	</div>
 	<section class="section-medicos">
 		<div class="container">
 			<div class="box-title">
@@ -109,15 +112,15 @@
 			<div class="box-horario">
 				<h3> Horarios: </h3>
 				<dl>
-					<dt> Lunes: </dt>
+					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
 					<dd> 08:00 - 21:00 </dd>
 				</dl>
 				<dl>
-					<dt> Jueves: </dt>
+					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Jueves: </dt>
 					<dd> 09:00 - 13:00 </dd>
 				</dl>
 				<dl>
-					<dt> Sábado: </dt>
+					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Sábado: </dt>
 					<dd> 08:00 - 13:00 </dd>
 				</dl>
 			</div>
@@ -302,8 +305,8 @@
 	      		// console.log($itemWrapped, '$itemWrappedgg');
 	      		$contStaffMedico.append($itemWrapped);
 	      	});
-					$('.txt-limit').html(limitByView);
-					onClickPerfilMedico();
+			$('.txt-limit').html(limitByView);
+			onClickPerfilMedico();
 	      }
 	  	});
     }
@@ -311,19 +314,21 @@
 
     /* INTERACCION PERFIL MEDICO */
     function onClickPerfilMedico() {
+    	$('.btn-verMas, .box-modal-perfil .box-close').off();
     	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
-				var sectionPerfilMed = $('.box-modal-perfil');
-				if(sectionPerfilMed.hasClass('out')){
-					sectionPerfilMed.removeClass('out').addClass('in');
-					$('.page-sm').addClass('op-25');
-					$('#myHeaderTop').addClass('op-25');
-				}else{
-					sectionPerfilMed.removeClass('in').addClass('out');
-					$('.page-sm').removeClass('op-25');
-					$('#myHeaderTop').removeClass('op-25');
-				}
-				event.preventDefault();
-			});
+    		console.log('click mee xd');
+			var sectionPerfilMed = $('.box-modal-perfil');
+			if(sectionPerfilMed.hasClass('out')){
+				sectionPerfilMed.removeClass('out').addClass('in');
+				$('.page-sm').addClass('op-25');
+				$('#myHeaderTop').addClass('op-25');
+			}else{
+				sectionPerfilMed.removeClass('in').addClass('out');
+				$('.page-sm').removeClass('op-25');
+				$('#myHeaderTop').removeClass('op-25');
+			}
+			event.preventDefault();
+		});
 
     };
     $(document).mouseup(function(e) {

@@ -604,6 +604,15 @@ header.box-header{
     border-top-left-radius: 75% 100%;
     border-top-right-radius: 75% 100%;
 }
+.angle-separator-up-style-2{
+    height: 34px;
+    position: absolute;
+    width: 100%;
+    top: -34px;
+    background-color: white;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+}
 .angle-separator-bottom{
     height: 70px;
     position: absolute;
@@ -865,8 +874,8 @@ header.box-header{
 /* ************ */
 .page-sm .section-portada{
     margin-top: 140px;
-    background-color: #0085b2;
-    padding-top: 60px;
+    /*background-color: #0085b2;*/
+    /*padding-top: 60px;*/
     position: relative;
 }
 .page-sm .section-portada .img-portada {
@@ -887,9 +896,9 @@ header.box-header{
     background-image: url(../images/portada-staff.jpg);
     background-size: cover;
     width: 100%;
-    height: 300px;
-    border-top-left-radius: 80% 25%;
-    border-top-right-radius: 80% 25%;
+    height: 340px;
+    /*border-top-left-radius: 80% 25%;
+    border-top-right-radius: 80% 25%;*/
 }
 .page-sm .section-medicos .box-title{
     margin: 35px 0;
@@ -1165,6 +1174,10 @@ header.box-header{
 }
 .box-modal-perfil .box-perfil-medico .box-horario dl dt {
     width: 120px;
+}
+.box-modal-perfil .box-perfil-medico .box-horario dl dt img{
+    width: 16px;
+    margin-right: 4px;
 }
 .box-modal-perfil .box-perfil-medico .box-foto-perfil{
     width: 100%;
