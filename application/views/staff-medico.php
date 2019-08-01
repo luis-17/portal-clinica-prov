@@ -89,46 +89,47 @@
 		<div class="box-info-medico">
 			<div class="box-present">
 				<div class="box-present-nombre">
-					<h2> Carlos Perez Loyola </h2>
+					<h2 class="inputjson nombre"> - </h2>
 				</div>
 				<div class="box-present-detail">
 					<dl>
 						<dt> Especialidad: </dt>
-						<dd> Pediatría </dd>
+						<dd class="inputjson especialidad"> - </dd>
 					</dl>
 					<dl>
 						<dt> CMP: </dt>
-						<dd> 04535 </dd>
+						<dd class="inputjson cmp"> - </dd>
 					</dl>
 					<dl>
 						<dt> RNE: </dt>
-						<dd> 023535 </dd>
+						<dd class="inputjson rne"> - </dd>
 					</dl>
 				</div>
 				<div class="box-present-lema">
-					<q>Donde quiera que se ame el arte de la medicina, se ama también a la humanidad</q>
+					<q class="inputjson lema"> - </q>
 				</div>
 			</div>
 			<div class="box-horario">
-				<h3> Horarios: </h3>
-				<dl>
-					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
+				<h3> Horarios: </h3> 
+				<div class="inputjson horarios">
+					No se muestra horarios en este momento. 
+				</div>
+				<!-- <dl>
+					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
 					<dd> 08:00 - 21:00 </dd>
-				</dl>
-				<dl>
-					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Jueves: </dt>
+				</dl> -->
+				<!-- <dl>
+					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Jueves: </dt>
 					<dd> 09:00 - 13:00 </dd>
 				</dl>
 				<dl>
-					<dt> <img src="<?php echo base_url('assets/images/mini-stethoscope.png'); ?>"> Sábado: </dt>
+					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Sábado: </dt>
 					<dd> 08:00 - 13:00 </dd>
-				</dl>
+				</dl> -->
 			</div>
 			<div class="box-estudios">
 				<h3> Estudios: </h3>
-				<p>
-					Facultad de Medicina, Universidad Nacional Mayor de San Marcos Pediatria, Hospital del Niño, UNMSM (1970 - 1973)
-				</p>
+				<p class="inputjson estudios"> - </p>
 			</div>
 		</div>
 		<div class="box-foto-perfil">
@@ -290,6 +291,7 @@
 	      	console.log(limitByView);
 	      	$contStaffMedico.empty();
 	      	$.each(paramData, function(key, val) {
+	      		var strJson = JSON.stringify(val);
 	      		console.log(key, val, 'keyval');
 	      		var $wrap1 = $('<div class="col-lg-3 pre-item"></div>');
 	      			var $wrap2 = $('<div class="item-medico"></div>');
@@ -299,7 +301,7 @@
 	      						var $wrap2_2_1_1 = $('<h5 class="especialidad">'+val.especialidad+'</h5>');
 	      						var $wrap2_2_1_2 = $('<span class="cmp"> CMP: '+val.cmp+'</span>');
 	      					var $wrap2_2_2 = $('<div class="box-action"></div>');
-	      						var $wrap2_2_2_1 = $('<button class="btn btn-verMas" type="button"> Ver más </button>');
+	      						var $wrap2_2_2_1 = $('<button class="btn btn-verMas" type="button""> Ver más </button><code class="json-hide">'+strJson+'</code>');
 	      			var $wrap3 = $('<h4>'+val.medico+'</h4>');
 	      		var $itemWrapped = $wrap1.append($wrap2.append($wrap2_1, $wrap2_2.append($wrap2_2_1.append($wrap2_2_1_1, $wrap2_2_1_2), $wrap2_2_2.append($wrap2_2_2_1))),$wrap3);
 	      		// console.log($itemWrapped, '$itemWrappedgg');
@@ -316,12 +318,42 @@
     function onClickPerfilMedico() {
     	$('.btn-verMas, .box-modal-perfil .box-close').off();
     	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
+    		var thes = $(this);
     		console.log('click mee xd');
 			var sectionPerfilMed = $('.box-modal-perfil');
 			if(sectionPerfilMed.hasClass('out')){
 				sectionPerfilMed.removeClass('out').addClass('in');
 				$('.page-sm').addClass('op-25');
 				$('#myHeaderTop').addClass('op-25');
+				// BINDEAR INFO
+				strPerfilJson = thes.next().text();
+				// console.log(strPerfilJson, 'strPerfilJson');
+				arrPerfilJson = JSON.parse(strPerfilJson);
+				// console.log(arrPerfilJson, 'arrPerfilJson');
+				$('.inputjson.nombre').html(arrPerfilJson.medico);
+				$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
+				$('.inputjson.cmp').html(arrPerfilJson.cmp);
+				$('.inputjson.rne').html(arrPerfilJson.rne);
+
+				$('.inputjson.lema').html(arrPerfilJson.lema);
+				/* horarios */
+				if( arrPerfilJson.horarios.length > 0 ){
+					$('.inputjson.horarios').empty();
+					$.each(arrPerfilJson.horarios, function(key, val) {
+						var objDl = $('<dl> <dt> <img src="assets/images/mini-stethoscope.png" /> '+val.dia+': </dt> <dd> '+val.hora_inicio+' - '+val.hora_fin+ ' </dd> </dl>');
+						$('.inputjson.horarios').append(objDl);
+					});
+					/*
+						<dl>
+							<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
+							<dd> 08:00 - 21:00 </dd>
+						</dl>
+					*/
+				}
+				
+
+				$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
+
 			}else{
 				sectionPerfilMed.removeClass('in').addClass('out');
 				$('.page-sm').removeClass('op-25');

@@ -34,11 +34,12 @@ class StaffMedico extends CI_Controller {
         $fContador = $this->model_medico->m_count_staff_medico($paramPaginate,$paramDatos);
         //var_dump('hola'); exit();
         $arrListado = array();
-        foreach ($lista as $row) { 
+        foreach ($lista as $row) {
+            $arrHorarios = $this->model_medico->m_cargar_horario_medico($row['idmedico']);
             array_push($arrListado,
                 array(
                     'idmedico' => $row['idmedico'],
-                    'medico'=> $row['ap_paterno'].' '.$row['ap_materno'].', '.$row['nombres'],
+                    'medico'=> ucwords(strtolower($row['nombres'].', '.$row['ap_paterno'].' '.$row['ap_materno'])),
                     'nombres' => $row['nombres'],
                     'ap_paterno' => $row['ap_paterno'],
                     'ap_materno' => $row['ap_materno'],
@@ -47,7 +48,8 @@ class StaffMedico extends CI_Controller {
                     'rne' => $row['rne'],
                     'lema' => $row['lema'],
                     'estudios_html' => $row['estudios_html'],
-                    'foto' => $row['foto']
+                    'foto' => $row['foto'],
+                    'horarios'=> $arrHorarios
                 )
             );
         }

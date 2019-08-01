@@ -50,4 +50,12 @@ class Model_medico extends CI_Model {
 		}
 		return $this->db->get()->row_array();
 	}
+	public function m_cargar_horario_medico($idmedico)
+	{
+		$this->db->select('md.idmedico, ho.idhorario, dia, hora_inicio, hora_fin');
+		$this->db->from('medico md');
+		$this->db->join('horario ho', 'md.idmedico = ho.idmedico');
+		$this->db->where('md.idmedico', $idmedico);
+		return $this->db->get()->result_array();
+	}
 }

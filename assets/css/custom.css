@@ -1022,6 +1022,9 @@ header.box-header{
     background-color: white;
     border-radius: 12px 0;
 }
+.page-sm .section-medicos .box-result .item-medico .box-hovered .box-action code{
+    display: none;
+}
 .page-sm .section-medicos .box-result .item-medico .box-hovered .box-info{
     text-align: center;
     color: white;
