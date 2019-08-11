@@ -431,7 +431,7 @@ header.box-header{
 }
 
 /* GALERIA */
-.section-galeria .owl-carousel figure img{
+.page-home .section-galeria .owl-carousel figure img{
     max-width: 100%;
     height: 100%;
 }
@@ -452,7 +452,7 @@ header.box-header{
     text-align: center;
 }
 
-.section-galeria .owl-carousel .owl-controls .owl-buttons div{ 
+.page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div{ 
 	top: 50%;
     padding: 0;
     opacity: 1;
@@ -475,40 +475,40 @@ header.box-header{
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
-.section-galeria .owl-carousel .owl-controls .owl-buttons div:hover{
+.page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div:hover{
 	background-color: #2a3991; /* #00a7e0 */
 	color: white;
 	border: 2px solid #2a3991;
 }
-.section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-next{
+.page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-next{
 	right: 20px;
 }
-.section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-prev{
+.page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-prev{
 	left: 20px;
 }
-.section-galeria .owl-carousel .owl-controls .owl-buttons div svg{
+.page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div svg{
 	display: block;
     font-size: 30px;
     line-height: 66px;
     text-align: center;
 }
-.section-galeria .box-galeria-content{
+.page-home .section-galeria .box-galeria-content{
     height: 100%;
     position: relative;
 }
-.section-galeria .box-image-lateral{
+.page-home .section-galeria .box-image-lateral{
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.section-galeria .box-text-lateral{
+.page-home .section-galeria .box-text-lateral{
     position: absolute;
     width: 54%;
     text-align: left;
     bottom: 33%;
     margin-left: 5%;
 }
-.section-galeria .box-text-lateral h1{
+.page-home .section-galeria .box-text-lateral h1{
     font-size: 70px;
     color: #00488d;
     font-family: 'Leelawade', 'Raleway', Arial, Helvetica, sans-serif;
@@ -517,17 +517,17 @@ header.box-header{
     font-style: normal;
     margin-bottom: 24px;
 }
-.section-galeria .box-text-lateral p{
+.page-home .section-galeria .box-text-lateral p{
     font-size: 24px;
     /*line-height: 36px;*/
     color: #739525;
     font-weight: 300;
     font-family: 'Raleway';
 }
-.section-galeria .box-text-lateral .box-actions{
+.page-home .section-galeria .box-text-lateral .box-actions{
     margin-top: 40px;
 }
-.section-galeria .box-text-lateral .box-actions > a{
+.page-home .section-galeria .box-text-lateral .box-actions > a{
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     padding: 17px 40px;
     line-height: 21px;
@@ -536,58 +536,58 @@ header.box-header{
 }
 
 /* ESPECIALIDADES */
-.section-especialidades{
+.page-home .section-especialidades{
     margin: 40px 0;
 }
-.section-especialidades .box-title{
+.page-home .section-especialidades .box-title{
     text-align: center;
     color: #0085b2;
     padding-bottom: 20px;
 }
-.section-especialidades .box-title h2{
+.page-home .section-especialidades .box-title h2{
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 20px;
 }
-.section-especialidades .box-title p{
+.page-home .section-especialidades .box-title p{
     font-size: 20px;
 }
-.section-especialidades .box-content{
+.page-home .section-especialidades .box-content{
     margin-top: 40px;
 }
-.section-especialidades .box-especialidad{
+.page-home .section-especialidades .box-especialidad{
     text-align: center;
 }
-.section-especialidades .box-especialidad .box-img{
+.page-home .section-especialidades .box-especialidad .box-img{
     /*margin-bottom: 20px;*/
     height: 160px;
 }
-.section-especialidades .box-especialidad .box-img img{
+.page-home .section-especialidades .box-especialidad .box-img img{
     width: 138px;
     height: 140px;
 }
-.section-especialidades .box-especialidad .box-nombre{
+.page-home .section-especialidades .box-especialidad .box-nombre{
     color: #0085b2;
 }
-.section-especialidades .box-content .box-action{
+.page-home .section-especialidades .box-content .box-action{
     text-align: center;
     margin-top: 50px;
 }
-.section-especialidades .box-content .box-action button{
+.page-home .section-especialidades .box-content .box-action button{
     padding: 12px 20px;
     font-size: 16px;
 }
-.section-especialidades .owl-buttons .owl-prev{
+.page-home .section-especialidades .owl-buttons .owl-prev{
     position: absolute;
     left: -30px;
     top: 50%;
 }
-.section-especialidades .owl-buttons .owl-next{
+.page-home .section-especialidades .owl-buttons .owl-next{
     position: absolute;
     right: -30px;
     top: 50%;
 }
-.section-especialidades .owl-buttons svg{
+.page-home .section-especialidades .owl-buttons svg{
     font-size: 45px;
     color: #0085b2;
 }
@@ -630,7 +630,7 @@ header.box-header{
     margin-top: 180px;
 }*/
 /* SECTION CONOCENOS */
-.section-conocenos .box-conocenos{
+.page-home .section-conocenos .box-conocenos{
     display: flex;
     align-items: center;
     position: relative;
@@ -638,21 +638,21 @@ header.box-header{
     color: white;
     overflow: hidden;
 }
-.section-conocenos .box-conocenos .box-text{
+.page-home .section-conocenos .box-conocenos .box-text{
     padding: 0 180px;
     font-size: 20px;
     font-weight: 100;
     width: 50%;
 }
-.section-conocenos .box-conocenos .box-text h2{
+.page-home .section-conocenos .box-conocenos .box-text h2{
     font-weight: 600;
     margin-bottom: 30px;
     text-align: center;
 }
-.section-conocenos .box-conocenos .box-image{
+.page-home .section-conocenos .box-conocenos .box-image{
     width: 50%;
 }
-.section-conocenos .box-conocenos .btn{
+.page-home .section-conocenos .box-conocenos .btn{
     background-color: white;
     font-weight: 800;
     color: #00498d;
@@ -662,43 +662,43 @@ header.box-header{
     margin-top: 30px;
 }
 /* SECTION PORQUE ELEGIRNOS */
-.section-porque-elegirnos{
+.page-home .section-porque-elegirnos{
     /*background-color: rgba(232,232,232);*/
 }
-.section-porque-elegirnos .box-header{
+.page-home .section-porque-elegirnos .box-header{
     text-align: center;
     margin-bottom: 80px;
 }
-.section-porque-elegirnos .box-header h2{
+.page-home .section-porque-elegirnos .box-header h2{
     margin-top: 0;
     font-size: 40px;
     font-weight: 800;
     color: #0085b2;
 }
-.section-porque-elegirnos .box-content{
+.page-home .section-porque-elegirnos .box-content{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 120px;
 }
-.section-porque-elegirnos .box-content .box-item .box-item-content:hover{
+.page-home .section-porque-elegirnos .box-content .box-item .box-item-content:hover{
     background-color: #0085b2;
 }
-.section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-title{
+.page-home .section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-title{
     color: white;
 }
-.section-porque-elegirnos .box-content .box-item{
+.page-home .section-porque-elegirnos .box-content .box-item{
     text-align: center;
     width: 30%;
     margin-bottom: 50px;
 }
-.section-porque-elegirnos .box-content .box-item .box-title{
+.page-home .section-porque-elegirnos .box-content .box-item .box-title{
     color: #0085b2;
     font-size: 15px;
     line-height: 1.3;
     margin-top: 12px;
 }
-.section-porque-elegirnos .box-content .box-item .box-item-content{
+.page-home .section-porque-elegirnos .box-content .box-item .box-item-content{
     display: inline-block;
     border-radius: 12px 0;
     border: 4px solid #0085b2;
@@ -707,52 +707,52 @@ header.box-header{
     height: 228px;
     position: relative;
 }
-.section-porque-elegirnos .box-image img{
+.page-home .section-porque-elegirnos .box-image img{
     width: 85px;
 }
-.section-porque-elegirnos .box-content .box-item .box-action{
+.page-home .section-porque-elegirnos .box-content .box-item .box-action{
     position: absolute;
     bottom: 8%;
     left: 0;
     width: 100%;
 }
-.section-porque-elegirnos .box-content .box-item .box-action a{
+.page-home .section-porque-elegirnos .box-content .box-item .box-action a{
     background-color: #0085b2;
     color: white;
     padding: 8px 20px;
 }
-.section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-action a{
+.page-home .section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-action a{
     background-color: white;
     color: #0085b2;
 }
-.section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-image img{
+.page-home .section-porque-elegirnos .box-content .box-item .box-item-content:hover .box-image img{
     filter: brightness(0) invert(1);
 }
 
 /* TESTIMONIOS */
-.section-testimonio{
+.page-home .section-testimonio{
     background-image: url('../images/testimonio-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 70px 0;
 }
-.section-testimonio .box-header h2{
+.page-home .section-testimonio .box-header h2{
     color: #014d90;
     font-weight: 900;
     text-align: center;
     margin-top: 60px;
     font-size: 34px;
 }
-.section-testimonio .box-content{
+.page-home .section-testimonio .box-content{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
 }
-.section-testimonio .box-item{
+.page-home .section-testimonio .box-item{
     margin-bottom: 50px;
     width: 50%;
 }
-.section-testimonio .box-item .box-item-wrap{
+.page-home .section-testimonio .box-item .box-item-wrap{
     width: 75%;
     margin: auto;
     display: flex;
@@ -763,79 +763,79 @@ header.box-header{
     border-radius: 20px 0;
     padding: 26px;
 }
-.section-testimonio .box-item .box-title{
+.page-home .section-testimonio .box-item .box-title{
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 15px;
     border-bottom: 1px solid;
     width: 85%;
 }
-.section-testimonio .box-item .box-title img{
+.page-home .section-testimonio .box-item .box-title img{
     height: 48px;
     float: right;
     position: relative;
     right: -20%;
 }
-.section-testimonio .box-item .box-image{
+.page-home .section-testimonio .box-item .box-image{
     margin-left: -80px;
     padding-right: 20px;
 }
-.section-testimonio .box-item .box-image img{
+.page-home .section-testimonio .box-item .box-image img{
     border-radius: 50%;
     width: 110px;
     height: 110px;
     border: 2px solid white;
 }
-.section-testimonio .box-action{
+.page-home .section-testimonio .box-action{
     text-align: center;
 }
-.section-testimonio .box-action button{
+.page-home .section-testimonio .box-action button{
     padding: 12px 26px;
     background-color: rgba(255,255,255,0);
     border: 3px solid #014d90;
     color: #014d90;
     font-weight: bold;
 }
-.section-testimonio .box-action button:hover{
+.page-home .section-testimonio .box-action button:hover{
     color: white;
     background-color: #014d90;
 }
 
 /* SEGUROS */
-.section-seguro{
+.page-home .section-seguro{
     padding: 50px 0;
 }
-.section-seguro .box-header h2{
+.page-home .section-seguro .box-header h2{
     color: #014d90;
     font-weight: 900;
     text-align: center;
     margin-top: 60px;
     font-size: 34px;
 }
-.section-seguro .box-header p{
+.page-home .section-seguro .box-header p{
     font-size: 24px;
     text-align: center;
     color: #014d90;
     padding-top: 15px;
 }
-.section-seguro .box-content{
+.page-home .section-seguro .box-content{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
 }
 
-.section-seguro .box-content .owl-controls .owl-pagination{
+.page-home .section-seguro .box-content .owl-controls .owl-pagination{
     margin-top: 20px;
 }
-.section-seguro .box-content .owl-controls .owl-pagination .owl-page > span{
+.page-home .section-seguro .box-content .owl-controls .owl-pagination .owl-page > span{
     background-color: #d0d0d0;
     border-color: #d0d0d0;
 }
-.section-seguro .box-content .owl-controls .owl-pagination .owl-page.active >span{
+.page-home .section-seguro .box-content .owl-controls .owl-pagination .owl-page.active >span{
     background-color: #014d90;
     border-color: #014d90;
 }
-.section-seguro .box-content .owl-item img{
+.page-home .section-seguro .box-content .owl-item img{
     /*width: 200px;*/
     margin: auto;
     display: block;
@@ -843,30 +843,30 @@ header.box-header{
     cursor: hand;
     cursor: pointer;
 }
-.section-seguro .box-content .owl-item img:hover{
+.page-home .section-seguro .box-content .owl-item img:hover{
     filter: grayscale(0);
 }
 
 
 /* CLIENTES */
-.page.page-cliente > .box-content{ 
+.page-home .page.page-cliente > .box-content{ 
     padding-top: 5%;
     padding-bottom: 5%;
 } 
-.page.page-cliente h1{
+.page-home .page.page-cliente h1{
     text-align: center;
     padding-bottom: 28px;
 }
-.page.page-cliente .box-client{
+.page-home .page.page-cliente .box-client{
     margin-bottom: 15px;
 }
-.page.page-cliente .box-client .box-img{ 
+.page-home .page.page-cliente .box-client .box-img{ 
     text-align: center;
     border: 1px solid #e0e0e0;
     height: 200px;
     display: flex;
 }
-.page.page-cliente .box-client .box-img img{
+.page-home .page.page-cliente .box-client .box-img img{
     margin: auto;
 }
 /* ************ */
@@ -1090,6 +1090,181 @@ header.box-header{
     max-width: 100%;
     width: 100%;
 }*/
+
+/* ************************ */
+/*      ESPECIALIDADES      */
+/* ************************ */
+.page-esp .section-portada{
+    margin-top: 140px;
+    /*background-color: #0085b2;*/
+    /*padding-top: 60px;*/
+    position: relative;
+}
+.page-esp .section-portada .img-portada {
+    position: relative;
+}
+.page-esp .section-portada .texto-portada{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    padding-bottom: 60px;
+}
+.page-esp .section-portada .texto-portada h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0085b2;
+}
+.page-esp .section-portada .img-portada .bg-portada{
+    background-image: url(../images/portada-staff.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+.page-esp .section-especialidades .box-filtros{
+    padding: 0 14% 2%;
+}
+.page-esp .section-especialidades .box-content{
+    padding: 4% 14%;
+    background-color: #eaf6fb;
+}
+.page-esp .section-especialidades .box-footer-actions{
+    margin: 40px 0;
+    text-align: center;
+}
+.page-esp .section-especialidades .box-footer-actions a{
+    width: 180px;
+}
+.page-esp .section-especialidades h3{
+    color: #00488d;
+    font-weight: bold;
+    text-align: left;
+}
+.page-esp .section-especialidades .box-especialidad{
+    display: flex;
+}
+.page-esp .section-especialidades .box-especialidad input{
+    margin-right: 15px;
+}
+.page-esp .section-especialidades .box-especialidad button{
+    width: 260px;
+}
+.page-esp .section-especialidades .box-content .box-inner-content{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+}
+.page-esp .section-especialidades .box-content .box-items{
+    margin: 40px 0;
+    overflow: hidden;
+}
+.page-esp .section-especialidades .box-content .box-arrow{
+    text-align: center;
+}
+.page-esp .section-especialidades .box-content .box-arrow button{
+    border-radius: 50%;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item{
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: center;*/
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 16px 0;
+    border: 2px solid #9bc0d8;
+    transition-property: color, background-color, width, height, display;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    height: 114px;
+    /*margin-bottom: 40px;*/
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover{
+    background-color: #00488d;
+    border-color: #00488d;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover img{
+    filter: brightness(0) invert(1);
+    width: 60px;
+    height: 60px;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action{
+    display: block;
+    margin-top: 6px;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-icon{
+    width: 100%;
+    text-align: center;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action{
+    display: none;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action a{
+    background-color: white;
+    border-radius: 10px 0;
+    font-size: 12px;
+/*    height: 0;
+    padding: 0;
+    border: 0;*/
+    /*transition-property: color, background-color, width, height, padding;
+    transition-duration: .25s;
+    transition-timing-function: linear;*/
+}
+/*.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action a{
+    height: inherit;
+    padding: 6px 10px;
+}*/
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-nombre{
+    /*text-align: center;
+    padding-top: 8px;*/
+    /*margin-bottom: 40px;*/
+
+    position: absolute;
+    bottom: 40px;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item img{
+    width: 90px;
+    height: 90px;
+    transition-property: color, background-color, width, height, display;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+}
+
+/* ************************ */
+/*   FICHA ESPECIALIDADES   */
+/* ************************ */
+.page-fichesp .section-portada{
+    margin-top: 140px;
+    /*background-color: #0085b2;*/
+    /*padding-top: 60px;*/
+    position: relative;
+}
+.page-fichesp .section-portada .img-portada {
+    position: relative;
+}
+.page-fichesp .section-portada .texto-portada{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    padding-bottom: 60px;
+}
+.page-fichesp .section-portada .texto-portada h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0085b2;
+}
+.page-fichesp .section-portada .img-portada .bg-portada{
+    background-image: url(../images/portada-staff.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
 
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */

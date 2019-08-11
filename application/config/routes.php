@@ -54,8 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // other customs 
-$route['quienes-somos'] = 'quienes/index';
+$route['quienes-somos'] = 'Quienes/index';
 $route['contactanos'] = 'contacto';
 $route['staff-medico'] = 'StaffMedico/index';
+$route['especialidades'] = 'Especialidad/index';
 
-$route['servicio/(:any)'] = 'servicio/servicio/$1';
+$route['especialidad/(:any)'] = 'Especialidad/ficha/$1';

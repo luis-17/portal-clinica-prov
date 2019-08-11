@@ -76,6 +76,7 @@
 <script type="text/javascript" src="<?php echo base_url('libs/bootstrap-3.3.7/js/bootstrap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/jquery-mask-plugin/jquery.mask.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/owl-carousel/owl.carousel.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('libs/swiper/js/swiper.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/jquery-validate/jquery.validate.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/var.js'); ?>"></script>
 <!-- Include js plugin -->

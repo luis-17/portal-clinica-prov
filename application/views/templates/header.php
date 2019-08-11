@@ -12,6 +12,7 @@
 
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.carousel.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.theme.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('libs/swiper/css/swiper.min.css'); ?>">
 
 	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet"> 
