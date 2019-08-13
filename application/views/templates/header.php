@@ -74,7 +74,8 @@
 			<li>Convenios</li>
 			<li>Resultados de Laboratorio</li>
 			<li>Trabaja con Nosotros</li>
-			<li>¿Por qué elegirnos?</li>
+			<li>Novedades y Eventos</li>
+			<li>Testimonios</li>
 		</ul>
 	</div>
 	<div class="box-content-header-primary">
@@ -100,9 +101,9 @@
 		      				<li class="box-item <?php echo $active['especialidades']; ?>">
 		      					<a href="<?php echo site_url('especialidades'); ?>"> ESPECIALIDADES </a> 
 		      				</li>
-		      				<li class="box-item <?php echo $active['conocenos']; ?>">
+		      				<!-- <li class="box-item <?php echo $active['conocenos']; ?>">
 		      					<a href="<?php echo site_url('conocenos'); ?>"> CONÓCENOS </a> 
-		      				</li>
+		      				</li> -->
 		      				<li class="box-item <?php echo $active['staff_medico']; ?>">
 		      					<a href="<?php echo site_url('staff-medico'); ?>"> STAFF MÉDICO </a> 
 		      				</li>
@@ -117,7 +118,7 @@
 		      					</ul>
 		      				</li>
 		      				<li class="box-item <?php echo $active['noticias']; ?>">
-		      					<a href="<?php echo site_url('noticias'); ?>"> NOTICIAS </a> 
+		      					<a href="<?php echo site_url('noticias'); ?>"> VIDASALUD - BLOG </a> 
 		      				</li>
 		      				<li class="box-item <?php echo $active['contactanos']; ?>">
 		      					<a href="<?php echo site_url('contactanos'); ?>"> CONTÁCTANOS </a>

@@ -55,7 +55,7 @@
           <?php endforeach; ?>
         </div>
         <div class="box-action">
-          <button type="button" class="btn btn-rounded primary"> VER TODAS LAS ESPECIALIDADES </button>
+          <a href="<?php echo site_url('especialidades'); ?>" type="button" class="btn btn-rounded primary"> VER TODAS LAS ESPECIALIDADES </a>
         </div>
       </div>
     </div>

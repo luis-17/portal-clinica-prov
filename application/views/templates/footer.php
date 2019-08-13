@@ -16,7 +16,7 @@
 		  <div class="box-contacto"> 
 	      <div class="box-telefono">
 	      	<div class="box-icon">
-	      		<img src="assets/images/telefono.png" />
+	      		<img src="<?php echo base_url('assets/images/telefono.png'); ?>" />
 	      	</div>
 	      	<div class="box-items">
 	      		<div class="box-item telefono-1">
@@ -35,7 +35,7 @@
 	      </div>
 	      <div class="box-ubicación">
 	      	<div class="box-icon">
-	      		<img src="assets/images/ubicacion.png" />
+	      		<img src="<?php echo base_url('assets/images/ubicacion.png'); ?>" />
 	      	</div>
 	      	<div class="box-item">
 	      		<div class="box-key"> Ubicación: </div>
