@@ -1178,9 +1178,9 @@ header.box-header{
     transition-timing-function: linear;
 
     position: absolute;
-    left: 14%;
-    right: 14%;
-    height: 114px;
+    left: 20%;
+    right: 20%;
+    height: 94px;
     /*margin-bottom: 40px;*/
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover{
@@ -1189,12 +1189,12 @@ header.box-header{
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover img{
     filter: brightness(0) invert(1);
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action{
     display: block;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-icon{
     width: 100%;
@@ -1206,7 +1206,9 @@ header.box-header{
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action a{
     background-color: white;
     border-radius: 10px 0;
-    font-size: 12px;
+    
+    font-size: 11px;
+    padding: 4px 10px;
 /*    height: 0;
     padding: 0;
     border: 0;*/
@@ -1218,20 +1220,24 @@ header.box-header{
     height: inherit;
     padding: 6px 10px;
 }*/
+.page-esp .section-especialidades .box-content .swiper-pagination{
+    position: relative;
+    margin-top: 15px;
+}
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-nombre{
     /*text-align: center;
     padding-top: 8px;*/
     /*margin-bottom: 40px;*/
 
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     margin: 0;
     left: 0;
     right: 0;
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item img{
-    width: 90px;
-    height: 90px;
+    width: 64px;
+    height: 64px;
     transition-property: color, background-color, width, height, display;
     transition-duration: .25s;
     transition-timing-function: linear;
@@ -1266,7 +1272,21 @@ header.box-header{
     width: 100%;
     height: 340px;
 }
-
+.page-fichesp .section-describe{
+    padding: 8% 5%;
+}
+.page-fichesp .section-describe .box-content-describe{
+    display: flex;
+    align-items: center;
+}
+.page-fichesp .section-describe .box-content-describe img{
+    width: 450px;
+}
+.page-fichesp .section-describe .box-content-describe .box-descripcion{
+    font-size: 18px;
+    line-height: 1.75;
+    padding-left: 40px;
+}
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
 /* ************************* */

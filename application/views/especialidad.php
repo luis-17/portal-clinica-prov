@@ -33,7 +33,7 @@
 				<div id="swiper-especialidades" class="box-items col-xs-10 col-sm-10 col-lg-10">
 					<div class="row swiper-wrapper">
 						<?php foreach($arrEspecialidades as $key => $row): ?>
-							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 text-center swiper-slide" style="min-height: 180px;">
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 text-center swiper-slide" style="min-height: 140px;">
 								<div class="box-item">
 									<div class="box-icon">
 										<img alt="<?php echo $row['uri']; ?>" src="assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
