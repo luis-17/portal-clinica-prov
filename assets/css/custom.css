@@ -1287,6 +1287,83 @@ header.box-header{
     line-height: 1.75;
     padding-left: 40px;
 }
+.page-fichesp .section-staff{
+    padding: 2% 10%;
+    background-color: #eef9fb;
+}
+.page-fichesp .section-staff .box-title{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #6f7b7d;
+    margin-bottom: 30px;
+}
+.page-fichesp .section-staff .box-title .vineta{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-color: #0083b1;
+    border-radius: 6px 0;
+    margin-right: 10px;
+}
+.page-fichesp .section-staff .box-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-fichesp .section-staff .box-body .box-item{
+    /*width: 270px;*/
+    width: 340px;
+}
+.page-fichesp .section-staff .box-body .box-photo{
+    display: flex;
+    justify-content: center;
+    width: 236px;
+    border-radius: 10px;
+    border: 1px solid #004790;
+    margin: auto;
+}
+.page-fichesp .section-staff .box-body .box-photo img{
+    width: 150px;
+}
+.page-fichesp .section-staff .box-body .box-text{
+    width: 200px;
+    margin: auto;
+    padding-top: 15px;
+    color: #0083b1;
+    font-size: 20px;
+    text-align: center;
+}
+.page-fichesp .section-staff .box-action{
+    margin-top: 45px;
+    text-align: center;
+}
+.page-fichesp .section-servicios .box-title{
+    margin: 45px 0;
+    text-align: center;
+}
+.page-fichesp .section-servicios .box-title h2{
+    font-weight: bold;
+    font-size: 34px;
+    color: #0082b0;
+}
+.page-fichesp .section-servicios .box-content{
+    margin: 5% 2.5%;
+}
+.page-fichesp .section-servicios .box-content .box-item{
+    text-align: center;
+    padding: 24px;
+}
+.page-fichesp .section-servicios .box-content .box-item img{
+    width: 90px;
+}
+.page-fichesp .section-servicios .box-content .box-item p{
+    width: 150px;
+    margin: auto;
+    color: #0085b2;
+    padding-top: 10px;
+}
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
 /* ************************* */
