@@ -1364,6 +1364,99 @@ header.box-header{
     color: #0085b2;
     padding-top: 10px;
 }
+/* ************************ */
+/*        CONTACTANOS       */
+/* ************************ */
+.page-contacto .box-notificacion .alert.alert-success{
+    background-color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.page-contacto .box-notificacion .alert.alert-danger{
+    background-color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: red;
+}
+.page-contacto .section-portada{
+    margin-top: 140px;
+    /*background-color: #0085b2;*/
+    /*padding-top: 60px;*/
+    position: relative;
+}
+.page-contacto .section-portada .img-portada {
+    position: relative;
+}
+.page-contacto .section-portada .texto-portada{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    padding-bottom: 60px;
+}
+.page-contacto .section-portada .texto-portada h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0085b2;
+}
+.page-contacto .section-portada .img-portada .bg-portada{
+    background-image: url(../images/portada-staff.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+}
+
+.page-contacto .section-contacto{
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+}
+.page-contacto .section-contacto .box-content-img{
+    border-right: 3px solid #005eaa;
+}
+.page-contacto .section-contacto .box-form{
+    padding-left: 8rem;
+    padding-right: 14rem;
+}
+.page-contacto .section-contacto .box-form .box-header h3{
+    font-weight: bold;
+    color: #003d7e;
+    font-size: 30px;
+}
+.page-contacto .section-contacto .box-form .box-header small{
+    font-size: 26px;
+    display: block;
+    line-height: 1;
+    color: #00a0bd;
+}
+.page-contacto .section-contacto .box-form .box-form-detail{
+    padding: 2.5rem 0;
+}
+.page-contacto .section-contacto .box-form .box-form-detail label{
+    font-weight: 500;
+    color: #003d7e;
+    font-size: 15px;
+}
+.page-contacto .section-contacto .box-form .box-form-detail input{
+    background-color: #ededed;
+    border: unset;
+    box-shadow: unset;
+    border-radius: 0 8px;
+}
+.page-contacto .section-contacto .box-form .box-form-detail textarea{
+    background-color: #ededed;
+    border: unset;
+    box-shadow: unset;
+    border-radius: 0 8px;
+}
+.page-contacto .section-contacto .box-form .box-action button{
+    margin: auto;
+    display: block;
+    width: 260px;
+}
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
 /* ************************* */

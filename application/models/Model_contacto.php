@@ -5,7 +5,7 @@ class Model_contacto extends CI_Model {
 		parent::__construct();
 	}
 
-	public function registrar_contacto($arrData)
+	public function m_registrar_contacto($arrData)
 	{
 		return $this->db->insert('contacto', $arrData);
 	}

@@ -74,9 +74,9 @@
 <style type="text/css">
 	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
 		width: 60px;
-    border-radius: 4px;
-    background-color: #00488d;
-    height: 6px;
+	    border-radius: 4px;
+	    background-color: #00488d;
+	    height: 6px;
 	}
 </style>
 <script type="text/javascript">

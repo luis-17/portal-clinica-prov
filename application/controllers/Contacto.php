@@ -5,7 +5,7 @@ class Contacto extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        
+        $this->load->model(array('model_contacto'));
     }
 	public function index()
 	{
@@ -13,12 +13,13 @@ class Contacto extends CI_Controller {
         if( $this->input->post('nombres') ){ 
             $arrData = array(
                 'nombres'=> $this->input->post('nombres'),
+                'empresa'=> $this->input->post('empresa'),
                 'telefono'=> $this->input->post('telefono'),
-                'mail'=> $this->input->post('mail'),
-                'mensaje'=> $this->input->post('mensaje'),
+                'correo'=> $this->input->post('correo'),
+                'consulta'=> $this->input->post('consulta'),
                 'fecha_registro'=> date('Y-m-d H:i:s') 
             ); 
-            if($this->model_contacto->registrar_contacto($arrData)){
+            if($this->model_contacto->m_registrar_contacto($arrData)){
                 $this->session->set_flashdata('bool_info', 'ok');
             }else{
                 $this->session->set_flashdata('bool_info', 'error');
@@ -29,10 +30,12 @@ class Contacto extends CI_Controller {
         }else{
             $data['active'] = array( 
                 'inicio'=> NULL,
-                'nosotros'=> NULL,
+                'especialidades'=> NULL,
+                'conocenos'=> NULL,
+                'staff_medico'=> NULL,
                 'servicios'=> NULL,
-                'clientes'=> NULL,
-                'contacto'=> '-active' 
+                'noticias'=> NULL,
+                'contactanos'=> '-active',
             );
             $this->load->template('contacto',$data); 
         }
@@ -44,14 +47,13 @@ class Contacto extends CI_Controller {
             <h2 class="header"> ¡'.strtoupper($arrData['nombres']).' te quiere contactar! </h2> 
             <ul class="list-info">
                 <li> <label> NOMBRES Y APELLIDOS </label> <span>'.$arrData['nombres'].'</span> </li> 
-                <li> <label> TELEFONO </label> <span>'.$arrData['telefono'].'</span> </li> 
-                <li> <label> CORREO </label> <span>'.$arrData['mail'].'</span> </li> 
-                <li> <label> MENSAJE: </label> <span>'.$arrData['mensaje'].'</span> </li> 
+                <li> <label> EMPRESA </label> <span>'.$arrData['empresa'].'</span> </li> 
+                <li> <label> CORREO </label> <span>'.$arrData['correo'].'</span> </li> 
+                <li> <label> TELEFONO </label> <span>'.$arrData['telefono'].'</span> </li>
+                <li> <label> CONSULTA: </label> <span>'.$arrData['consulta'].'</span> </li> 
             </ul>
             <p>'.$arrData['fecha_registro'].'</p>
         </div>'; 
-
-        $para      = 'dcisneros@dcyjvasociados.com'; // 'dcisneros@dcyjvasociados.com';
         $asunto    = '¡'.$arrData['nombres'].' te quiere contactar!';
         // $mensaje   = 'Hola '.$arrData['nombres']; 
         // $cabeceras = 'From: dcisneros@dcyjvasociados.com' . "\r\n" .
@@ -69,22 +71,23 @@ class Contacto extends CI_Controller {
 
         $mail = new PHPMailer();
         $mail->IsSMTP(true);
-        $mail->SMTPDebug = 1;
+        $mail->SMTPDebug = false;
         $mail->SMTPAuth = TRUE;
         $mail->SMTPSecure = 'tls'; // ssl tls
-        $mail->Host = 'us2.smtp.mailhostbox.com';
-        $mail->Port = 25;// 143; // 587; // 25 465 587
-        $mail->Username =  'dcisneros@dcyjvasociados.com';
-        $mail->Password = 'C1sneros1979';
-        $mail->SetFrom('dcisneros@dcyjvasociados.com','DAVIS CISNEROS GOMEZ');
-        $mail->AddReplyTo('dcisneros@dcyjvasociados.com','DAVIS CISNEROS GOMEZ');
+        $mail->Host = 'mail.clinicaprovidencia.pe';
+        $mail->Port = 587;// 143; // 587; // 25 465 587
+        $mail->Username =  'citasenlinea@clinicaprovidencia.pe';
+        $mail->Password = 'Cp2019xyz';
+        $mail->SetFrom('citasenlinea@clinicaprovidencia.pe','Clinica Providencia');
+        $mail->AddReplyTo('citasenlinea@clinicaprovidencia.pe','Clinica Providencia');
         $mail->Subject = $asunto;
         $mail->IsHTML(true);
         $mail->AltBody = $htmlCorreo;
         $mail->MsgHTML($htmlCorreo);
         $mail->CharSet = 'UTF-8';
 
-        $mail->addAddress($para);
+        $mail->addAddress('jravello@clinicaprovidencia.pe');
+        $mail->addAddress('luisls1717@gmail.com');
         $mail->Send();
     }
 }

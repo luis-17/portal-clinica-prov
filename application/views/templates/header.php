@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('libs/swiper/css/swiper.min.css'); ?>">
 
 	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet"> 
+	<link href="<?php echo base_url('assets/css/custom-responsive.css'); ?>" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet"> 
 	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script> 
 	<script type="text/javascript" src="<?php echo base_url('libs/jquery-3.2.0.min.js'); ?>"></script>
