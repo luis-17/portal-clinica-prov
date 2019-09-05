@@ -64,7 +64,7 @@
 						<div class="form-check">
 						    <input type="checkbox" class="form-check-input" id="politPrivacidad" required>
 						    <label style="margin-left: 5px;" class="form-check-label" for="politPrivacidad">Si, he leído y acepto de manera expresa la 
-						    	<a href="/politica-privacidad.pdf"> Política de Privacidad (*) </a> 
+						    	<a href="<?php echo base_url().'assets/documentos/Políticas de Privacidad - 2019.pdf'; ?>"> Política de Privacidad (*) </a> 
 						    </label>
 						</div>
 					</div>
