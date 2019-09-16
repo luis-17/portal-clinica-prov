@@ -34,7 +34,7 @@ class Contacto extends CI_Controller {
                 'conocenos'=> NULL,
                 'staff_medico'=> NULL,
                 'servicios'=> NULL,
-                'noticias'=> NULL,
+                'vidasalud'=> NULL,
                 'contactanos'=> '-active',
             );
             $this->load->template('contacto',$data); 

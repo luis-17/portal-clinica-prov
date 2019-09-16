@@ -20,7 +20,7 @@ class StaffMedico extends CI_Controller {
             'conocenos'=> NULL,
             'staff_medico'=> '-active',
             'servicios'=> NULL,
-            'noticias'=> NULL,
+            'vidasalud'=> NULL,
             'contactanos'=> NULL,
         );
         $this->load->template('staff-medico',$data);

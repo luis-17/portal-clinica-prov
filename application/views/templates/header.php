@@ -118,8 +118,8 @@
 		      						<?php } ?> 
 		      					</ul>
 		      				</li>
-		      				<li class="box-item <?php echo $active['noticias']; ?>">
-		      					<a href="<?php echo site_url('noticias'); ?>"> VIDASALUD - BLOG </a> 
+		      				<li class="box-item <?php echo $active['vidasalud']; ?>">
+		      					<a href="<?php echo site_url('vidasalud'); ?>"> VIDASALUD - BLOG </a> 
 		      				</li>
 		      				<li class="box-item <?php echo $active['contactanos']; ?>">
 		      					<a href="<?php echo site_url('contactanos'); ?>"> CONTÁCTANOS </a>

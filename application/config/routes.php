@@ -58,5 +58,6 @@ $route['quienes-somos'] = 'Quienes/index';
 $route['contactanos'] = 'Contacto';
 $route['staff-medico'] = 'StaffMedico/index';
 $route['especialidades'] = 'Especialidad/index';
-
 $route['especialidad/(:any)'] = 'Especialidad/ficha/$1';
+$route['vidasalud'] = 'Blog/index';
+$route['vidasalud/(:any)'] = 'Blog/entrada/$1';

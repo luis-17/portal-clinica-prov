@@ -1,3 +1,70 @@
 /* =============================================*/
 /* CSS BY developer: luisls1717@gmail.com 		*/
 /* =============================================*/
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+	.box-header .box-header-primary .box-logo img{
+		height: 40px;
+	}
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	/* HEADER PRIMARY */
+	.box-header .box-header-primary .box-logo img{
+		height: 56px;
+	}
+	.box-header .box-header-primary .box-item a{
+		font-size: 14px;
+	}
+	.box-header .box-header-primary .box-nav-menu ul > li{
+		padding-left: 26px;
+	}
+	.btn-reserva{
+		padding: 4px 10px;
+	}
+	.btn-menu-lateral{
+		height: 30px;
+	}
+	.box-header .box-header-secondary .box-header-redes a.btn{
+		height: 32px;
+    	width: 32px;
+	}
+	.box-header .box-header-secondary .box-header-info{
+		position: absolute;
+	    left: 0;
+	    margin-left: 4em;
+	}
+	.box-header .box-header-primary .box-logo{
+	    margin-top: 10px;
+	}
+	/* PAGE: HOME; */
+	.page-home .section-galeria .box-text-lateral h1{
+		font-size: 55px;
+	}
+	.page-home .section-galeria .box-text-lateral p{
+		font-size: 20px;
+	}
+	.page-home .section-galeria .owl-carousel figure img.figura{
+		height: auto;
+    	width: 80%;
+	}
+	.page-home .section-galeria .box-image-lateral{
+		right: -8em;
+    	bottom: 8em;
+	}
+	.page-home .section-galeria .box-text-lateral{
+		margin-left: 0;
+	}
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}

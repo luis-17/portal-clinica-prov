@@ -12,7 +12,7 @@
             <figcaption>
               <div class="container-full box-galeria-content" style="height: 100%;">
                 <div class="box-image-lateral">
-                  <img alt="" src="assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
+                  <img class="figura" alt="" src="assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
                 </div>
                 <div class="box-text-lateral">
                   <h1><?php echo $row['lema']; ?></h1>

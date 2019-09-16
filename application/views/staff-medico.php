@@ -143,131 +143,131 @@
   	// if (typeof page == 'undefined') return false;
   	console.log($('.btn-buscarMedico'), 'load btn');
 		
-		$('.btn-letter').on('click', function() {
-			$('.btn-letter').removeClass('selected');
-			$(this).addClass('selected');
-			$('.hid-medico-abc').removeClass('selected');
-			$(this).prev().addClass('selected');
-			var arrParams = {
-				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
-		$('.btn-buscarMedico').on('click', function() {
-			// var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
-			console.log('click me xdddf');
-			var arrParams = {
-				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
-		$('.cbo-especialidad').on('change', function() {
-			var arrParams = {
-				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
-		$('.cbo-pageNumber').on('change', function() {
-			var arrParams = {
-				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
-		$('.cbo-pageSize').on('change', function() {
-			var arrParams = {
-				paginate: {
-					firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
-		$('.btn-direction').on('click', function() {
-			var $btnDirection = $(this);
-			if($btnDirection.hasClass('btn-next')){
-				var valPageNumber = $('.cbo-pageNumber').val();
-				valPageNumber += 1;
+	$('.btn-letter').on('click', function() {
+		$('.btn-letter').removeClass('selected');
+		$(this).addClass('selected');
+		$('.hid-medico-abc').removeClass('selected');
+		$(this).prev().addClass('selected');
+		var arrParams = {
+			paginate: {
+				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
+			}
+		};
+		listarStaffMedico(arrParams);
+	});
+	$('.btn-buscarMedico').on('click', function() {
+		// var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
+		console.log('click me xdddf');
+		var arrParams = {
+			paginate: {
+				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
+			}
+		};
+		listarStaffMedico(arrParams);
+	});
+	$('.cbo-especialidad').on('change', function() {
+		var arrParams = {
+			paginate: {
+				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
+			}
+		};
+		listarStaffMedico(arrParams);
+	});
+	$('.cbo-pageNumber').on('change', function() {
+		var arrParams = {
+			paginate: {
+				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
+			}
+		};
+		listarStaffMedico(arrParams);
+	});
+	$('.cbo-pageSize').on('change', function() {
+		var arrParams = {
+			paginate: {
+				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
+			}
+		};
+		listarStaffMedico(arrParams);
+	});
+	$('.btn-direction').on('click', function() {
+		var $btnDirection = $(this);
+		if($btnDirection.hasClass('btn-next')){
+			var valPageNumber = $('.cbo-pageNumber').val();
+			valPageNumber += 1;
+			$('.cbo-pageNumber').val(valPageNumber);
+		}
+		if($btnDirection.hasClass('btn-prev')){
+			var valPageNumber = $('.cbo-pageNumber').val();
+			if( valPageNumber > 1 ){
+				valPageNumber -= 1;
 				$('.cbo-pageNumber').val(valPageNumber);
 			}
-			if($btnDirection.hasClass('btn-prev')){
-				var valPageNumber = $('.cbo-pageNumber').val();
-				if( valPageNumber > 1 ){
-					valPageNumber -= 1;
-					$('.cbo-pageNumber').val(valPageNumber);
-				}
+		}
+		var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
+		if (paramsFirstRow < 0) {
+			paramsFirstRow = 0;
+		}
+		var arrParams = {
+			paginate: {
+				firstRow: paramsFirstRow,
+				pageNumber: $('.cbo-pageNumber').val(),
+				pageSize: $('.cbo-pageSize').val(),
+				sort: "ASC",
+				sortName: "md.ap_paterno"
+			},
+			datos: {
+				medicoAbc: $('.hid-medico-abc.selected').val(),
+				medicoStr: $('.txt-medico-str').val(),
+				idespecialidad: $('.cbo-especialidad').val()
 			}
-			var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
-			if (paramsFirstRow < 0) {
-				paramsFirstRow = 0;
-			}
-			var arrParams = {
-				paginate: {
-					firstRow: paramsFirstRow,
-					pageNumber: $('.cbo-pageNumber').val(),
-					pageSize: $('.cbo-pageSize').val(),
-					sort: "ASC",
-					sortName: "md.ap_paterno"
-				},
-				datos: {
-					medicoAbc: $('.hid-medico-abc.selected').val(),
-					medicoStr: $('.txt-medico-str').val(),
-					idespecialidad: $('.cbo-especialidad').val()
-				}
-			};
-			listarStaffMedico(arrParams);
-		});
+		};
+		listarStaffMedico(arrParams);
+	});
     function listarStaffMedico(params, callback) {
     	// var arrData = {
 	    // 	correo: $('.correo-suscripcion').val()
@@ -343,15 +343,7 @@
 						var objDl = $('<dl> <dt> <img src="assets/images/mini-stethoscope.png" /> '+val.dia+': </dt> <dd> '+val.hora_inicio+' - '+val.hora_fin+ ' </dd> </dl>');
 						$('.inputjson.horarios').append(objDl);
 					});
-					/*
-						<dl>
-							<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
-							<dd> 08:00 - 21:00 </dd>
-						</dl>
-					*/
 				}
-				
-
 				$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
 
 			}else{
@@ -364,12 +356,12 @@
 
     };
     $(document).mouseup(function(e) {
-		    var sectionMenuLat = $('.box-modal-perfil');
-		    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
-		        sectionMenuLat.removeClass('in').addClass('out');
-		        $('.page-sm').removeClass('op-25');
-		        $('#myHeaderTop').removeClass('op-25');
-		    }
-		});
+	    var sectionMenuLat = $('.box-modal-perfil');
+	    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
+	        sectionMenuLat.removeClass('in').addClass('out');
+	        $('.page-sm').removeClass('op-25');
+	        $('#myHeaderTop').removeClass('op-25');
+	    }
 	});
+});
 </script>

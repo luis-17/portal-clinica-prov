@@ -20,7 +20,7 @@ class Especialidad extends CI_Controller {
             'conocenos'=> NULL,
             'staff_medico'=> NULL,
             'servicios'=> NULL,
-            'noticias'=> NULL,
+            'vidasalud'=> NULL,
             'contactanos'=> NULL,
         );
         $this->load->template('especialidad',$data);
@@ -36,7 +36,7 @@ class Especialidad extends CI_Controller {
             'conocenos'=> NULL,
             'staff_medico'=> NULL,
             'servicios'=> NULL,
-            'noticias'=> NULL,
+            'vidasalud'=> NULL,
             'contactanos'=> NULL,
         );
         $this->load->template('ficha-especialidad',$data);

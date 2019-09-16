@@ -48,8 +48,6 @@
 						<?php endforeach; ?>
 					</div>
 					<div class="swiper-pagination"></div>
-					<!-- <div class="swiper-button-prev"></div>
-    			<div class="swiper-button-next"></div> -->
 				</div>
 				<div class="box-arrow box-right-arrow col-xs-1 col-sm-1 col-lg-1">
 					<button id="btn-rightSlider" class="btn btn-primary"> <i class="fa fa-angle-right"></i> </button>
