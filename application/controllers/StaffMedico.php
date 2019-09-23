@@ -6,6 +6,7 @@ class StaffMedico extends CI_Controller {
     {
         parent::__construct();
         $this->load->model(array('model_medico', 'model_especialidad'));
+        $this->load->helper(array('otros_helper'));
     }
     public function index()
     {
@@ -27,19 +28,21 @@ class StaffMedico extends CI_Controller {
     }
     public function listar_staff_medico()
     { 
+        // var_dump('hola');
         $allInputs = json_decode(trim($this->input->raw_input_stream),true);
         $paramPaginate = $allInputs['paginate'];
         $paramDatos = $allInputs['datos'];
         $lista = $this->model_medico->m_cargar_staff_medico($paramPaginate,$paramDatos);
         $fContador = $this->model_medico->m_count_staff_medico($paramPaginate,$paramDatos);
-        //var_dump('hola'); exit();
+        // var_dump($fContador); exit();
+        // var_dump('inicio foreach');
         $arrListado = array();
         foreach ($lista as $row) {
             $arrHorarios = $this->model_medico->m_cargar_horario_medico($row['idmedico']);
             array_push($arrListado,
                 array(
                     'idmedico' => $row['idmedico'],
-                    'medico'=> ucwords(strtolower($row['nombres'].', '.$row['ap_paterno'].' '.$row['ap_materno'])),
+                    'medico'=> ucwords(replaceAccentMayus($row['nombres'].', '.$row['ap_paterno'].' '.$row['ap_materno'])),
                     'nombres' => $row['nombres'],
                     'ap_paterno' => $row['ap_paterno'],
                     'ap_materno' => $row['ap_materno'],
@@ -49,21 +52,25 @@ class StaffMedico extends CI_Controller {
                     'lema' => $row['lema'],
                     'estudios_html' => $row['estudios_html'],
                     'foto' => $row['foto'],
+                    'foto_perfil' => $row['foto_perfil'],
                     'horarios'=> $arrHorarios
                 )
             );
         }
-        
+        // var_dump('end foreach');
         $arrData['datos'] = $arrListado;
         $arrData['paginate']['totalRows'] = $fContador['contador'];
         $arrData['paginate']['itemsByView'] = $paramPaginate['pageSize'];
         $arrData['message'] = '';
         $arrData['flag'] = 1;
+        // var_dump('222'); 
         if(empty($lista)){
             $arrData['flag'] = 0;
         }
+        // var_dump($arrData); exit();
         $this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($arrData));
+        // var_dump($arrData); exit();
     }
 }

@@ -44,7 +44,16 @@ function soloNumeros($laCadena) {
 function strtoupper_total($string){ 
   return strtr(strtoupper($string),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
 }
-
+function strtolower_total($string){ 
+  return strtr(strtolower($string),"ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ","àèìòùáéíóúçñäëïöü");
+}
+function replaceAccentMayus($phrase)
+{
+  $arrReplaceFrom = array('Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ');
+  $arrReplaceTo = array('á', 'é', 'í', 'ó', 'ú', 'ñ');
+  return str_ireplace($arrReplaceFrom, $arrReplaceTo, strtolower($phrase));
+  // return str_replace($arrReplaceFrom, $arrReplaceTo, $phrase);
+}
 function comprobar_email($email){ 
     $mail_correcto = FALSE; 
     //compruebo unas cosas primeras 

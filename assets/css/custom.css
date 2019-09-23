@@ -979,6 +979,7 @@ header.box-header{
     text-align: center;
     margin: 15px auto;
     width: 220px;
+    height: 40px;
 }
 .page-sm .section-medicos .box-result .item-medico{
     width: 220px;
@@ -997,11 +998,12 @@ header.box-header{
     transition-timing-function: linear;
 }
 .page-sm .section-medicos .box-result .item-medico img{
-    width: 170px;
+    /*width: 170px;*/
+    width: 100%;
     border-radius: 12px 0;
     margin: auto;
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;*/
+    /*bottom: 0;*/
 }
 .page-sm .section-medicos .box-result .item-medico .box-hovered{
     position: absolute;
@@ -1041,7 +1043,7 @@ header.box-header{
     font-weight: 100;
 }
 .page-sm .section-medicos .box-result .item-medico .box-hovered .box-info h5{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -1872,7 +1874,7 @@ header.box-header{
     margin-right: 4px;
 }
 .box-modal-perfil .box-perfil-medico .box-foto-perfil{
-    width: 100%;
+    width: 70%;
 }
 .box-modal-perfil .box-perfil-medico .box-foto-perfil img{
     max-width: 460px;

@@ -63,13 +63,13 @@
 					<div class="box-lateral-right">
 						<div> Página: </div>
 						<select class="form-control cbo-pageNumber" name="pagina">
-							<option value="1">1</option>
+							<!-- <option value="1">1</option>
 							<option value="2">2</option>
-							<option value="3">3</option>
+							<option value="3">3</option> -->
 						</select>
 						<div class="propos"> de <span class="txt-limit"></span> </div>
-						<button type="button" class="btn btn-direction btn-next"> <i class='next fa fa-angle-left'></i> </button>
-						<button type="button" class="btn btn-direction btn-prev"> <i class='prev fa fa-angle-right'></i> </button>
+						<button type="button" class="btn btn-direction btn-prev"> <i class="fa fa-angle-left"></i> </button>
+						<button type="button" class="btn btn-direction btn-next"> <i class="fa fa-angle-right"></i> </button>
 					</div>
 				</div>
 			</div>
@@ -129,11 +129,13 @@
 			</div>
 			<div class="box-estudios">
 				<h3> Estudios: </h3>
-				<p class="inputjson estudios"> - </p>
+				<p class="inputjson estudios">
+					No se muestra estudios en este momento. 
+				</p>
 			</div>
 		</div>
 		<div class="box-foto-perfil">
-			<img src="<?php echo base_url('assets/dinamic/medico/medico-perfil/perfil.png'); ?>" alt="" />
+			<img class="inputjson foto" src="" alt="" />
 		</div>
 	</div>
 </div>
@@ -154,7 +156,7 @@
 				pageNumber: $('.cbo-pageNumber').val(),
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -167,13 +169,14 @@
 	$('.btn-buscarMedico').on('click', function() {
 		// var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
 		console.log('click me xdddf');
+		var cboPageNumber = $('.cbo-pageNumber').val() || 1;
 		var arrParams = {
 			paginate: {
-				firstRow: ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val(),
-				pageNumber: $('.cbo-pageNumber').val(),
+				firstRow: (cboPageNumber - 1) * $('.cbo-pageSize').val(),
+				pageNumber: cboPageNumber,
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -190,7 +193,7 @@
 				pageNumber: $('.cbo-pageNumber').val(),
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -207,7 +210,7 @@
 				pageNumber: $('.cbo-pageNumber').val(),
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -224,7 +227,7 @@
 				pageNumber: $('.cbo-pageNumber').val(),
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -237,15 +240,15 @@
 	$('.btn-direction').on('click', function() {
 		var $btnDirection = $(this);
 		if($btnDirection.hasClass('btn-next')){
-			var valPageNumber = $('.cbo-pageNumber').val();
+			var valPageNumber = parseInt($('.cbo-pageNumber').val());
 			valPageNumber += 1;
-			$('.cbo-pageNumber').val(valPageNumber);
+			// $('.cbo-pageNumber').val(valPageNumber);
 		}
 		if($btnDirection.hasClass('btn-prev')){
-			var valPageNumber = $('.cbo-pageNumber').val();
+			var valPageNumber = parseInt($('.cbo-pageNumber').val());
 			if( valPageNumber > 1 ){
 				valPageNumber -= 1;
-				$('.cbo-pageNumber').val(valPageNumber);
+				// $('.cbo-pageNumber').val(valPageNumber);
 			}
 		}
 		var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
@@ -255,10 +258,10 @@
 		var arrParams = {
 			paginate: {
 				firstRow: paramsFirstRow,
-				pageNumber: $('.cbo-pageNumber').val(),
+				pageNumber: valPageNumber,
 				pageSize: $('.cbo-pageSize').val(),
 				sort: "ASC",
-				sortName: "md.ap_paterno"
+				sortName: "md.nombres"
 			},
 			datos: {
 				medicoAbc: $('.hid-medico-abc.selected').val(),
@@ -275,7 +278,7 @@
 	    var params = params || {};
 	    var paramsCallback = callback || function(){};
 	    var $contStaffMedico = $('.cont-staff-medico');
-	    		$contStaffMedico.html(loaderCP);
+	    $contStaffMedico.html(loaderCP);
 	    $.ajax({
 	      type: "POST",
 	      url: "StaffMedico/listar_staff_medico",
@@ -288,7 +291,7 @@
 	      	var paramPaginate = response.paginate;
 	      	console.log(paramPaginate, 'paramPaginateee');
 	      	var limitByView = Math.ceil(paramPaginate.totalRows / paramPaginate.itemsByView);
-	      	console.log(limitByView);
+	      	// console.log(limitByView, 'limitByView');
 	      	$contStaffMedico.empty();
 	      	$.each(paramData, function(key, val) {
 	      		var strJson = JSON.stringify(val);
@@ -308,6 +311,14 @@
 	      		$contStaffMedico.append($itemWrapped);
 	      	});
 			$('.txt-limit').html(limitByView);
+			// cargar combo paginador 
+			var optionsCombo =  '';
+			for (var i = 1; i <= limitByView;) {
+				optionsCombo += '<option>'+i+'</option>';
+				i += 1;
+			}
+			$('.cbo-pageNumber').html(optionsCombo);
+			$('.cbo-pageNumber').val(params.paginate.pageNumber);
 			onClickPerfilMedico();
 	      }
 	  	});
@@ -336,6 +347,11 @@
 				$('.inputjson.rne').html(arrPerfilJson.rne);
 
 				$('.inputjson.lema').html(arrPerfilJson.lema);
+				if(!arrPerfilJson.lema){
+					$('.inputjson.lema').hide();
+				}else{
+					$('.inputjson.lema').show();
+				}
 				/* horarios */
 				if( arrPerfilJson.horarios.length > 0 ){
 					$('.inputjson.horarios').empty();
@@ -344,8 +360,13 @@
 						$('.inputjson.horarios').append(objDl);
 					});
 				}
-				$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
-
+				if(arrPerfilJson.estudios_html){
+					$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
+				}else{
+					$('.inputjson.estudios').text('No se muestra estudios en este momento.');
+				}
+				
+				$('.inputjson.foto').attr("src", 'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
 			}else{
 				sectionPerfilMed.removeClass('in').addClass('out');
 				$('.page-sm').removeClass('op-25');

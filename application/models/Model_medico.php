@@ -39,7 +39,7 @@ class Model_medico extends CI_Model {
 		$this->db->where('md.visible', 1);
 		$this->db->where('em.estado_em', 1);
 		// $this->db->where('esp.visible_home', 1);
-		if( !empty($paramDatos['medicoAbc']) ){
+		if( !empty($paramDatos['medicoAbc']) && $paramDatos['medicoAbc'] !== 'ALL' ){
 			$this->db->like('UPPER(LEFT(md.nombres, 1))', strtoupper($paramDatos['medicoAbc']));
 		}
 		if( !empty($paramDatos['medicoStr']) ){
