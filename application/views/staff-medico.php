@@ -114,18 +114,6 @@
 				<div class="inputjson horarios">
 					No se muestra horarios en este momento. 
 				</div>
-				<!-- <dl>
-					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Lunes: </dt>
-					<dd> 08:00 - 21:00 </dd>
-				</dl> -->
-				<!-- <dl>
-					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Jueves: </dt>
-					<dd> 09:00 - 13:00 </dd>
-				</dl>
-				<dl>
-					<dt> <img src="<?php //echo base_url('assets/images/mini-stethoscope.png'); ?>"> Sábado: </dt>
-					<dd> 08:00 - 13:00 </dd>
-				</dl> -->
 			</div>
 			<div class="box-estudios">
 				<h3> Estudios: </h3>
@@ -368,6 +356,7 @@
 				
 				$('.inputjson.foto').attr("src", 'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
 			}else{
+				$('.inputjson.foto').attr("src", '');
 				sectionPerfilMed.removeClass('in').addClass('out');
 				$('.page-sm').removeClass('op-25');
 				$('#myHeaderTop').removeClass('op-25');
@@ -382,6 +371,7 @@
 	        sectionMenuLat.removeClass('in').addClass('out');
 	        $('.page-sm').removeClass('op-25');
 	        $('#myHeaderTop').removeClass('op-25');
+	        $('.inputjson.foto').attr("src", '');
 	    }
 	});
 });

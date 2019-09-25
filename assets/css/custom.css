@@ -1815,6 +1815,7 @@ header.box-header{
     position: absolute;
     right: 8px;
     top: 8px;
+    z-index: 1;
 }
 .box-modal-perfil .box-close.close-icon .line{
     border-color: #002661;
