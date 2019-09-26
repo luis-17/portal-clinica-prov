@@ -71,9 +71,11 @@
 			</div>
 		</div>
 		<ul class="content-list">
-			<li>Conócenos</li>
+			<li>Nosotros</li>
 			<li>Convenios</li>
+			<li>Productos Especiales</li>
 			<li>Resultados de Laboratorio</li>
+			<li>Pasos para reservar una cita</li>
 			<li>Trabaja con Nosotros</li>
 			<li>Novedades y Eventos</li>
 			<li>Testimonios</li>
