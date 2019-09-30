@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12 text-center">
-				<img src="<?php echo base_url().'assets/dinamic/especialidad/'.$fEspecialidad['image_banner']; ?>"  alt="<?php echo $fEspecialidad['nombre']; ?>" />
+				<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/<?php echo $fEspecialidad['image_banner']; ?>" alt="<?php echo $fEspecialidad['nombre']; ?>" />
 			</div>
 		</div>
 	</section>
@@ -30,24 +30,18 @@
 			<strong class="vineta"></strong> STAFF MÉDICO 
 		</div>
 		<div class="box-body">
+			<?php if(!empty($arrMedicos)): ?>
+			<?php foreach ($arrMedicos as $key => $row): ?>
 			<div class="box-item">
 				<div class="box-photo">
-					<img src="<?php echo base_url().'assets/dinamic/medico/medico-1.jpg'; ?>" alt="Juan Perez">
+					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/medico/<?php echo $row['foto']; ?>" alt="<?php echo $row['nombres']; ?>">
 				</div>
-				<h3 class="box-text"> Beatriz Lucero Mendoza Ortega </h3>
+				<h3 class="box-text"> <?php echo $row['nombres'].' '.$row['ap_paterno'].' '.$row['ap_materno']; ?> </h3>
 			</div>
-			<div class="box-item">
-				<div class="box-photo">
-					<img src="<?php echo base_url().'assets/dinamic/medico/medico-1.jpg'; ?>" alt="Juan Perez">
-				</div>
-				<h3 class="box-text"> Beatriz Lucero Mendoza Ortega </h3>
-			</div>
-			<div class="box-item">
-				<div class="box-photo">
-					<img src="<?php echo base_url().'assets/dinamic/medico/medico-1.jpg'; ?>" alt="Juan Perez">
-				</div>
-				<h3 class="box-text"> Beatriz Lucero Mendoza Ortega </h3>
-			</div>
+			<?php endforeach; ?>
+			<?php else: ?>
+				<p> No se encontraron médicos de la especialidad seleccionada. </p>
+			<?php endif; ?>
 		</div>
 		<div class="box-action">
 			<button type="button" class="btn btn-primary"> RESERVA TU CITA </button>
@@ -58,55 +52,14 @@
 			<h2> Mas servicios para ti </h2>
 		</div>
 		<div class="box-content row">
+			<?php foreach ($arrServicios as $key => $row): ?>
 			<div class="box-item col-md-3">
 				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-1.png'; ?>" alt="" />
-					<p> Ambulancia </p>
-				</a>
-				
-			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-2.png'; ?>" alt="" />
-					<p> Emergencia 24 horas </p>
+					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $row['image_servicio']; ?>" alt="" />
+					<p> <?php echo $row['nombre']; ?> </p>
 				</a>
 			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-3.png'; ?>" alt="" />
-					<p> Hospitalización </p>
-				</a>
-			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-4.png'; ?>" alt="" />
-					<p> Centro Quirúrgico </p>
-				</a>
-			</div>
-			<div class="box-item col-md-3">
-				<a href="">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-5.png'; ?>" alt="" />
-					<p> Farmacia </p>	
-				</a>
-			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-6.png'; ?>" alt="" />
-					<p> Laboratorio </p>
-				</a>
-			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-7.png'; ?>" alt="" />
-					<p> Departamento de Imágenes </p> 
-				</a>
-			</div>
-			<div class="box-item col-md-3">
-				<a href="#">
-					<img src="<?php echo base_url().'assets/dinamic/servicio/serv-8.png'; ?>" alt="" />
-					<p> Unidad de Cuidados Intensivos </p> 
-				</a>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</section>
 </div>

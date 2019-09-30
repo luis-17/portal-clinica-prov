@@ -36,7 +36,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 text-center swiper-slide" style="min-height: 140px;">
 								<div class="box-item">
 									<div class="box-icon">
-										<img alt="<?php echo $row['uri']; ?>" src="assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
+										<img class="img-responsive" alt="<?php echo $row['uri']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
 									</div>
 									<div class="box-action">
 										<a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" type="button" class="btn btn-sm">Ver Más</a>

@@ -23,7 +23,7 @@
 					</div>
 					<div class="col-lg-12 box-autor">
 						<div class="box-autor-foto">
-							<img src="<?php echo base_url('assets/dinamic/blog/foto-autor/').$fEntrada['foto_autor']; ?>" />
+							<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/blog/foto-autor/<?php echo $fEntrada['foto_autor']; ?>" />
 						</div>
 						<div class="box-info">
 							<h3> <?php echo $fEntrada['autor']; ?></h3>
@@ -37,11 +37,13 @@
 					También te puede interesar:
 				</div>
 				<div class="box-body-interes row">
-					<?php foreach($arrEntradasAle5 as $key => $row): ?>
-					<a href="<?php echo site_url('vidasalud/').$row['uri']; ?>" class="box-entrie col-lg-12">
-						<h2> <?php echo $row['titulo']; ?> </h2>
-						<small> <?php echo $row['fechaFormat']; ?> </small>
-					</a>
+					<?php foreach($arrListadoVideos as $key => $row): ?>
+					<h2> <?php echo $row['titulo']; ?> </h2>
+					<?php echo $row['embed']; ?>
+					<!-- <a href="<?php //echo site_url('vidasalud/').$row['uri']; ?>" class="box-entrie col-lg-12">
+						<h2> <?php //echo $row['titulo']; ?> </h2>
+						<small> <?php //echo $row['fechaFormat']; ?> </small>
+					</a> -->
 					<?php endforeach; ?>
 				</div>
 				<div class="box-comentario">
@@ -77,7 +79,7 @@
 			<?php foreach($arrEntradasAle as $key => $row): ?>
 			<div class="box-item col-lg-4 col-sm-4 col-xs-12 pre-item">
 				<div class="item-blog">
-					<img class="img-responsive" src="<?php echo base_url().'assets/dinamic/blog/'.$row['imagen_preview']; ?>" />
+					<img class="img-responsive" src=" <?php echo URL_PREVIEW; ?>assets/dinamic/blog/<?php echo $row['imagen_preview']; ?>" />
 					<div class="box-hovered">
 						<div class="box-action">
 							<a class="btn" target="blank" href="<?php echo site_url('vidasalud/').$row['uri']; ?>"> LEER MÁS </a>

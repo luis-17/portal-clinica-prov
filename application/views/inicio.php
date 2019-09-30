@@ -8,11 +8,11 @@
       <?php foreach($arrSliders as $key => $row):?> 
       <div class="owl-item">
         <figure class="item item-1">
-            <img src="assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
+            <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
             <figcaption>
               <div class="container-full box-galeria-content" style="height: 100%;">
                 <div class="box-image-lateral">
-                  <img class="figura" alt="" src="assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
+                  <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
                 </div>
                 <div class="box-text-lateral">
                   <h1><?php echo $row['lema']; ?></h1>
@@ -45,7 +45,7 @@
           <a href="#" class="owl-item">
             <div class="box-especialidad">
               <div class="box-img">
-                <img alt="<?php echo $row['nombre']; ?>" src="assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
+                <img alt="<?php echo $row['nombre']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
               </div>
               <div class="box-nombre">
                 <?php echo $row['nombre']; ?>
@@ -73,7 +73,7 @@
         <button type="button" class="btn btn-rounded">SABER MÁS</button>
       </div>
       <div class="box-image">
-        <img alt="Conocenos" src="assets/dinamic/conocenos/conocenos.jpg" />
+        <img alt="Conocenos" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/conocenos.jpg" />
       </div>
     </div>
   </section>
@@ -91,7 +91,7 @@
         <div class="box-item motivo">
           <div class="box-item-content">
             <div class="box-image">
-              <img src="assets/dinamic/porque-elegirnos/<?php echo $row['icon']; ?>">
+              <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/porque-elegirnos/<?php echo $row['icon']; ?>">
             </div>
             <div class="box-title">
               <?php echo $row['nombre']; ?>
@@ -118,7 +118,7 @@
           <div class="box-item testimonio">
             <div class="box-item-wrap">
               <div class="box-image">
-                <img src="assets/dinamic/testimonio/<?php echo $row['foto']; ?>">
+                <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/testimonio/<?php echo $row['foto']; ?>">
               </div>
               <div class="box-info">
                 <div class="box-title">
@@ -149,7 +149,7 @@
           <?php foreach($arrSeguros as $key => $row): ?> 
             <div class="box-seguro owl-item">
               <div class="box-img">
-                <img alt="<?php echo $row['nombre']; ?>" src="assets/dinamic/seguro/<?php echo $row['logo']; ?>" />
+                <img alt="<?php echo $row['nombre']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/seguro/<?php echo $row['logo']; ?>" />
               </div>
             </div>
           <?php endforeach; ?>

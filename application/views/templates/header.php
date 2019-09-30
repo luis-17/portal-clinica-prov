@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php 
-	$arrServicios = $this->model_servicio->cargar_servicios_menu(); 
+	$arrServicios = $this->model_servicio->m_cargar_servicios_menu(); 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,7 +63,7 @@
   	<div class="box-menu-lateral out">
 		<div class="content-header">
 			<div class="logo">
-				<img src="<?php echo base_url('assets/dinamic/logo_white.png'); ?>" alt="Clinica Providencia" />
+				<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo_white.png" alt="Clinica Providencia" />
 			</div>
 			<div class="close-icon">
 				<div class="line line-x"></div>
@@ -85,7 +85,7 @@
 		<div class="container-full">
 		  	<div class="box-header-primary" id="box-header-primary">
 	    		<div class="box-logo">
-	    			<a href="<?php echo site_url(); ?>"> <img src="<?php echo base_url('assets/dinamic/logo.png'); ?>" /> </a>
+	    			<a href="<?php echo site_url(); ?>"> <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo.png" /> </a>
 	    		</div>
 	    		<div class="box-menu">
 	    			<nav class="box-nav-menu collapse navbar-collapse">

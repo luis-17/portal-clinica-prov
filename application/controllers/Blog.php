@@ -5,7 +5,7 @@ class Blog extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('model_blog'));
+        $this->load->model(array('model_blog', 'model_video'));
         $this->load->helper(array('fechas_helper'));
     }
     public function index()
@@ -31,7 +31,7 @@ class Blog extends CI_Controller {
         $fEntrada = $this->model_blog->get_entrada_por_uri($uri);
         $fEntrada['fechaFormat'] = darFormatoFecha($fEntrada['fecha_publicacion']);
         $listaAle = $this->model_blog->m_cargar_entradas_aleatorias(3);
-        $listaAle5 = $this->model_blog->m_cargar_entradas_aleatorias(5);
+        $listaVideos = $this->model_video->cargar_videos_para_blog();
         $arrListado = array();
         foreach ($listaAle as $row) {
             $strFechaFormat = darFormatoFecha($row['fecha_publicacion']);
@@ -47,23 +47,23 @@ class Blog extends CI_Controller {
                 )
             );
         }
-        $arrListado5 = array();
-        foreach ($listaAle5 as $row) {
-            $strFechaFormat = darFormatoFecha($row['fecha_publicacion']);
-            array_push($arrListado5,
-                array(
-                    'idblog' => $row['idblog'],
-                    'uri' => $row['uri'],
-                    'fecha_publicacion' => $row['fecha_publicacion'],
-                    'imagen_preview' => $row['imagen_preview'],
-                    'titulo'=> $row['titulo'],
-                    'fechaFormat' => $strFechaFormat,
-                    'resumen' => $row['resumen'].'...'
-                )
-            );
-        }
+        // $arrListadoVideos = array();
+        // foreach ($listaVideos as $row) {
+        //     $strFechaFormat = darFormatoFecha($row['fecha_publicacion']);
+        //     array_push($arrListadoVideos,
+        //         array(
+        //             'idblog' => $row['idblog'],
+        //             'uri' => $row['uri'],
+        //             'fecha_publicacion' => $row['fecha_publicacion'],
+        //             'imagen_preview' => $row['imagen_preview'],
+        //             'titulo'=> $row['titulo'],
+        //             'fechaFormat' => $strFechaFormat,
+        //             'resumen' => $row['resumen'].'...'
+        //         )
+        //     );
+        // }
         $data['arrEntradasAle'] = $arrListado;
-        $data['arrEntradasAle5'] = $arrListado5;
+        $data['arrListadoVideos'] = $listaVideos;
         $data['fEntrada'] = $fEntrada;
         $data['activeSelected'] = 'vidasalud';
         $data['active'] = array(

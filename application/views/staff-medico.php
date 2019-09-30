@@ -286,7 +286,7 @@
 	      		console.log(key, val, 'keyval');
 	      		var $wrap1 = $('<div class="col-lg-3 pre-item"></div>');
 	      			var $wrap2 = $('<div class="item-medico"></div>');
-	      				var $wrap2_1 = $('<img alt="'+val.medico+'" src="assets/dinamic/medico/'+val.foto+'" />');
+	      				var $wrap2_1 = $('<img alt="'+val.medico+'" src="'+URLPreview+'assets/dinamic/medico/'+val.foto+'" />');
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');
 	      					var $wrap2_2_1 = $('<div class="box-info"></div>');
 	      						var $wrap2_2_1_1 = $('<h5 class="especialidad">'+val.especialidad+'</h5>');
@@ -354,7 +354,7 @@
 					$('.inputjson.estudios').text('No se muestra estudios en este momento.');
 				}
 				
-				$('.inputjson.foto').attr("src", 'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
+				$('.inputjson.foto').attr("src", URLPreview+'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
 			}else{
 				$('.inputjson.foto').attr("src", '');
 				sectionPerfilMed.removeClass('in').addClass('out');
