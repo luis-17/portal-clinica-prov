@@ -239,7 +239,7 @@
 				// $('.cbo-pageNumber').val(valPageNumber);
 			}
 		}
-		var paramsFirstRow = ($('.cbo-pageNumber').val() - 1) * $('.cbo-pageSize').val();
+		var paramsFirstRow = (valPageNumber- 1) * $('.cbo-pageSize').val();
 		if (paramsFirstRow < 0) {
 			paramsFirstRow = 0;
 		}
