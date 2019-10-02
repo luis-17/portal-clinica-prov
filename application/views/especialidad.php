@@ -42,7 +42,7 @@
 										<a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" type="button" class="btn btn-sm">Ver Más</a>
 									</div>
 								</div>
-								<div class="box-nombre"> <?php echo $row['nombre']; ?> </div>
+								<div class="box-nombre" title="<?php echo $row['nombre']; ?>"> <?php echo $row['nombre']; ?> </div>
 								<input type="hidden" name="uri" class="hid-uri" value="<?php echo $row['uri']; ?>" />
 							</div>
 						<?php endforeach; ?>

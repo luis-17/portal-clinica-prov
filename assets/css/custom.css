@@ -1246,9 +1246,13 @@ header.box-header{
 
     position: absolute;
     bottom: 20px;
-    margin: 0;
+    margin: auto;
     left: 0;
     right: 0;
+    width: 215px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item img{
     width: 64px;

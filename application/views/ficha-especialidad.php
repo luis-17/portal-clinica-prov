@@ -55,7 +55,7 @@
 			<?php foreach ($arrServicios as $key => $row): ?>
 			<div class="box-item col-md-3">
 				<a href="#">
-					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $row['image_servicio']; ?>" alt="" />
+					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $row['icono_servicio']; ?>" alt="" />
 					<p> <?php echo $row['nombre']; ?> </p>
 				</a>
 			</div>

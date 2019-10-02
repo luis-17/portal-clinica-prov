@@ -8,23 +8,23 @@
       <?php foreach($arrSliders as $key => $row):?> 
       <div class="owl-item">
         <figure class="item item-1">
-            <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
-            <figcaption>
-              <div class="container-full box-galeria-content" style="height: 100%;">
-                <div class="box-image-lateral">
-                  <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
+          <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
+          <figcaption>
+            <div class="container-full box-galeria-content" style="height: 100%;">
+              <div class="box-image-lateral">
+                <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
+              </div>
+              <div class="box-text-lateral">
+                <h1><?php echo $row['lema']; ?></h1>
+                <div class="box-description">
+                  <p><?php echo $row['lema_alt']; ?></p>
                 </div>
-                <div class="box-text-lateral">
-                  <h1><?php echo $row['lema']; ?></h1>
-                  <div class="box-description">
-                    <p><?php echo $row['lema_alt']; ?></p>
-                  </div>
-                  <div class="box-actions">
-                    <a class="btn primary btn-rounded" href="<?php echo site_url('contactanos'); ?>"><span><?php echo $row['text_button']; ?></span></a> 
-                  </div>
+                <div class="box-actions">
+                  <a class="btn primary btn-rounded" href="<?php echo site_url('contactanos'); ?>"><span><?php echo $row['text_button']; ?></span></a> 
                 </div>
               </div>
-            </figcaption>
+            </div>
+          </figcaption>
         </figure>
       </div>
       <?php endforeach; ?>
