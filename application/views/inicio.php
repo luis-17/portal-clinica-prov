@@ -177,7 +177,6 @@
     });
     // GALERIA ESPECIALIDADES  
     var owlEspec = $("#prov-especialidades");
-    // console.log($("#prov-especialidades"), '$("#prov-especialidades");');
     owlEspec.owlCarousel({
       pagination : false,
       navigation : true,
@@ -186,7 +185,6 @@
         "<i class='next fa fa-angle-left'></i>",
         "<i class='prev fa fa-angle-right'></i>"
       ]
-      // singleItem : true 
     });
     // GALERIA SEGUROS  
     var owlSeg = $("#prov-seguro");

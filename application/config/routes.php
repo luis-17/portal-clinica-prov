@@ -61,3 +61,4 @@ $route['especialidades'] = 'Especialidad/index';
 $route['especialidad/(:any)'] = 'Especialidad/ficha/$1';
 $route['vidasalud'] = 'Blog/index';
 $route['vidasalud/(:any)'] = 'Blog/entrada/$1';
+$route['servicio/(:any)'] = 'Servicio/ficha/$1';

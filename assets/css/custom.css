@@ -1268,8 +1268,6 @@ header.box-header{
 /* ************************ */
 .page-fichesp .section-portada{
     margin-top: 140px;
-    /*background-color: #0085b2;*/
-    /*padding-top: 60px;*/
     position: relative;
 }
 .page-fichesp .section-portada .img-portada {
@@ -1610,24 +1608,11 @@ header.box-header{
 /* ************************* */
 .page-fichablog .section-portada{
     margin-top: 140px;
-    /*background-color: #0085b2;*/
-    /*padding-top: 60px;*/
     position: relative;
 }
 .page-fichablog .section-portada .img-portada {
     position: relative;
 }
-/*.page-fichablog .section-portada .texto-portada{
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    padding-bottom: 60px;
-}*/
-/*.page-fichablog .section-portada .texto-portada h1{
-    font-size: 60px;
-    font-weight: bold;
-    color: #0085b2;
-}*/
 .page-fichablog .section-portada .img-portada .bg-portada{
     background-image: url(../images/portada-contactos.jpg);
     background-size: cover;
@@ -1799,6 +1784,113 @@ header.box-header{
     font-weight: bold;
     color: #004c94;
     border-radius: 2rem;
+}
+/* ************************* */
+/*        FICHA SERV.        */
+/* ************************* */
+.page-fichserv .section-portada{
+    margin-top: 140px;
+    position: relative;
+}
+.page-fichserv .section-portada .img-portada {
+    position: relative;
+}
+.page-fichserv .section-portada .texto-portada{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    padding-bottom: 60px;
+}
+.page-fichserv .section-portada .texto-portada h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0085b2;
+}
+.page-fichserv .section-portada .img-portada .bg-portada{
+    background-image: url(../images/portada-servicios.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+.page-fichserv .section-detalle .box-celeste{
+    width: 94%;
+    float: right;
+    height: 480px;
+    background-color: #c2d9e8;
+    border-radius: 100px 0 0 0;
+    margin-top: 4rem;
+    padding: 4rem 8rem;
+}
+.page-fichserv .section-detalle .box-celeste h2{
+    margin: 0;
+    font-weight: bold;
+    color: #004791;
+    font-size: 36px;
+}
+.page-fichserv .section-detalle .box-imagen{
+    position: relative;
+    text-align: center;
+}
+.page-fichserv .section-detalle .box-imagen img{
+    border-radius: 40px 0;
+    margin-top: -24%;
+    width: 75%;
+}
+.page-fichserv .section-detalle .box-description{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    padding-top: 7.5rem;
+    padding-bottom: 4rem;
+}
+.page-fichserv .section-detalle .box-description .box-letras{
+    font-size: 18px;
+}
+.page-fichserv .section-detalle .box-como-acceder{
+    width: 75%;
+    margin: auto;
+}
+.page-fichserv .section-detalle .box-como-acceder .box-letras h2{
+    color: #0085b2;
+    font-weight: bold;
+}
+.page-fichserv .section-detalle .box-como-acceder .box-letras p{
+    font-size: 18px;
+    margin-bottom: 5rem;
+}
+.page-fichserv .section-detalle .box-video{
+    text-align: center;
+}
+.page-fichserv .section-detalle .box-video iframe{
+    width: 90%;
+}
+.page-fichserv .section-mas-servicios{
+    padding-top: 5rem;
+}
+.page-fichserv .section-mas-servicios h2{
+    font-weight: bold;
+    color: #004791;
+    font-size: 32px;
+    padding-bottom: 3.5rem;
+}
+.page-fichserv .section-mas-servicios .owl-buttons .owl-prev{
+    position: absolute;
+    left: -30px;
+    top: 33%;
+}
+.page-fichserv .section-mas-servicios .owl-buttons .owl-next{
+    position: absolute;
+    right: -30px;
+    top: 33%;
+}
+.page-fichserv .section-mas-servicios .owl-buttons svg{
+    font-size: 45px;
+    color: #0085b2;
+}
+.page-fichserv .section-mas-servicios .box-item p{
+    color: #0085b2;
+    font-size: 18px;
+    margin-top: 15px;
 }
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
