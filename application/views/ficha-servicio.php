@@ -15,7 +15,7 @@
 	</div>
 	<section class="section-detalle">
 		<div class="box-celeste">
-			<h2> <?php echo $fServicio['nombre']; ?>: </h2>	
+			<h2> <?php echo $fServicio['nombre']; ?> </h2>	
 		</div>
 		<div class="box-imagen">
 			<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/imagenes/<?php echo $fServicio['imagen_servicio']; ?>" />

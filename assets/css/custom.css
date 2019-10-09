@@ -1185,7 +1185,7 @@ header.box-header{
     display: inline-block;
     padding: 10px 10px;
     border-radius: 16px 0;
-    border: 2px solid #9bc0d8;
+    /*border: 2px solid #9bc0d8;*/
     transition-property: color, background-color, width, height, display;
     transition-duration: .25s;
     transition-timing-function: linear;
@@ -1202,8 +1202,8 @@ header.box-header{
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover img{
     filter: brightness(0) invert(1);
-    width: 40px;
-    height: 40px;
+    /*width: 40px;
+    height: 40px;*/
 }
 .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action{
     display: block;
@@ -1621,9 +1621,15 @@ header.box-header{
 }
 .page-fichablog .section-entrie{
     padding: 4rem 0;
+    /*padding: 4rem 0 4rem 14rem;*/
+}
+.page-fichablog .section-entrie .box-body{
+    padding: 4rem 0 4rem 14rem;
+    display: flex;
 }
 .page-fichablog .section-entrie .box-header-entrie{
-    padding-bottom: 4rem;
+    /*padding-bottom: 4rem;*/
+    padding: 0 15rem;
 }
 .page-fichablog .section-entrie .box-header-entrie h1{
     text-align: center;
@@ -1679,8 +1685,10 @@ header.box-header{
     color: #02a0c3;
 }
 .page-fichablog .section-entrie .box-interes-right{
-    padding: 2.5rem 2.5rem 5rem;
+    padding: 3rem;
     background-color: #e5f4f8;
+    border-radius: 15px 0;
+    margin-left: 8rem;
 }
 .page-fichablog .section-entrie .box-interes-right .box-header-interes{
     text-transform: uppercase;
@@ -1689,8 +1697,9 @@ header.box-header{
     color: #00488d;
 }
 .page-fichablog .section-entrie .box-interes-right iframe{
-    max-width: 100%;
+    max-width: 80%;
     height: 225px;
+    border-radius: 15px;
 }
 .page-fichablog .section-entrie .box-interes-right h2{
     font-size: 18px;
@@ -1741,9 +1750,10 @@ header.box-header{
 }
 .page-fichablog .section-interes .item-blog{
     position: relative;
+    padding: 0 3rem;
 }
 .page-fichablog .section-interes .item-blog img{
-    padding: 0 3rem;
+    border-radius: 150px 0;
 }
 .page-fichablog .section-interes .item-blog-foot{
     padding: 0 3rem;
@@ -1771,13 +1781,17 @@ header.box-header{
     left: 3rem;
     right: 3rem;
 }
-.page-fichablog .section-interes .item-blog:hover .box-hovered{
+.page-fichablog .section-interes .box-item:hover img{
+    border-radius: 15px 0;
+}
+.page-fichablog .section-interes .box-item:hover .box-hovered{
     display: flex;
     background-color: rgba(0,38,178,.5);
     flex-wrap: wrap;
     justify-content: center;
     visibility: visible;
     align-items: center;
+    border-radius: 15px 0;
 }
 .page-fichablog .section-interes .item-blog .box-hovered .btn{
     background-color: white;

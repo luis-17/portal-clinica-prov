@@ -83,7 +83,7 @@
   <section class="section-porque-elegirnos">
     <div class="container">
       <div class="box-header">
-        <img src="assets/images/corazon-salud.png" />
+        <!-- <img src="assets/images/corazon-salud.png" /> -->
         <h2> ¿Por qué elegirnos? </h2>
       </div>
       <div class="box-content">
@@ -133,9 +133,9 @@
           </div>
         <?php endforeach; ?>
       </div>
-      <div class="box-action">
+      <!-- <div class="box-action">
         <button type="button" class="btn btn-rounded primary"> VER MÁS TESTIMONIOS </button>
-      </div>
+      </div> -->
     </div>
   </section>
   <section class="section-seguro">

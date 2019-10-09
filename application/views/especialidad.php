@@ -34,14 +34,13 @@
 					<div class="row swiper-wrapper">
 						<?php foreach($arrEspecialidades as $key => $row): ?>
 							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 text-center swiper-slide" style="min-height: 140px;">
-								<div class="box-item">
-									<div class="box-icon">
-										<img class="img-responsive" alt="<?php echo $row['uri']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
+								<a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" class="">
+									<div class="box-item">
+										<div class="box-icon">
+											<img class="img-responsive" alt="<?php echo $row['uri']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
+										</div>
 									</div>
-									<div class="box-action">
-										<a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" type="button" class="btn btn-sm">Ver Más</a>
-									</div>
-								</div>
+								</a>
 								<div class="box-nombre" title="<?php echo $row['nombre']; ?>"> <?php echo $row['nombre']; ?> </div>
 								<input type="hidden" name="uri" class="hid-uri" value="<?php echo $row['uri']; ?>" />
 							</div>
