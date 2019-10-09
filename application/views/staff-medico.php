@@ -130,9 +130,6 @@
 <!-- END PERFIL DE MEDICO -->
 <script type="text/javascript">
   $(document).ready(function() { 
-  	// if (typeof page == 'undefined') return false;
-  	console.log($('.btn-buscarMedico'), 'load btn');
-		
 	$('.btn-letter').on('click', function() {
 		$('.btn-letter').removeClass('selected');
 		$(this).addClass('selected');
@@ -363,7 +360,6 @@
 			}
 			event.preventDefault();
 		});
-
     };
     $(document).mouseup(function(e) {
 	    var sectionMenuLat = $('.box-modal-perfil');

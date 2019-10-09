@@ -74,11 +74,13 @@
 			<li>Nosotros</li>
 			<li>Convenios</li>
 			<li>Productos Especiales</li>
-			<li>Resultados de Laboratorio</li>
+			<li>
+				<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>
+			</li>
 			<li>Pasos para reservar una cita</li>
 			<li>Trabaja con Nosotros</li>
 			<li>Novedades y Eventos</li>
-			<li>Testimonios</li>
+			<!-- <li>Testimonios</li> -->
 		</ul>
 	</div>
 	<div class="box-content-header-primary">

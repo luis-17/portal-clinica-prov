@@ -33,10 +33,13 @@
 			<?php if(!empty($arrMedicos)): ?>
 			<?php foreach ($arrMedicos as $key => $row): ?>
 			<div class="box-item">
-				<div class="box-photo">
-					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/medico/<?php echo $row['foto']; ?>" alt="<?php echo $row['nombres']; ?>">
-				</div>
-				<h3 class="box-text"> <?php echo $row['nombres'].' '.$row['ap_paterno'].' '.$row['ap_materno']; ?> </h3>
+				<a class="btn-verMas" href="javascript:void;">
+					<div class="box-photo">
+						<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/medico/<?php echo $row['foto']; ?>" alt="<?php echo $row['nombres']; ?>">
+					</div>
+					<h3 class="box-text"> <?php echo $row['nombres'].' '.$row['ap_paterno'].' '.$row['ap_materno']; ?> </h3>
+				</a>
+				<code class="json-hide"><?php echo $row['json']; ?></code>
 			</div>
 			<?php endforeach; ?>
 			<?php else: ?>
@@ -66,9 +69,117 @@
 <div class="angle-separator-content">
   	<div class="angle-separator-bottom"></div>
 </div>
+<!-- 		PERFIL DE MEDICO 	-->
+<div class="box-modal-perfil out">
+	<div class="box-close close-icon">
+		<div class="line line-x"></div>
+		<div class="line line-y"></div>
+	</div>
+	<div class="box-perfil-medico">
+		<div class="box-info-medico">
+			<div class="box-present">
+				<div class="box-present-nombre">
+					<h2 class="inputjson nombre"> - </h2>
+				</div>
+				<div class="box-present-detail">
+					<dl>
+						<dt> Especialidad: </dt>
+						<dd class="inputjson especialidad"> - </dd>
+					</dl>
+					<dl>
+						<dt> CMP: </dt>
+						<dd class="inputjson cmp"> - </dd>
+					</dl>
+					<dl>
+						<dt> RNE: </dt>
+						<dd class="inputjson rne"> - </dd>
+					</dl>
+				</div>
+				<div class="box-present-lema">
+					<q class="inputjson lema"> - </q>
+				</div>
+			</div>
+			<div class="box-horario">
+				<h3> Horarios: </h3> 
+				<div class="inputjson horarios">
+					No se muestra horarios en este momento. 
+				</div>
+			</div>
+			<div class="box-estudios">
+				<h3> Estudios: </h3>
+				<p class="inputjson estudios">
+					No se muestra estudios en este momento. 
+				</p>
+			</div>
+		</div>
+		<div class="box-foto-perfil">
+			<img class="inputjson foto" src="" alt="" />
+		</div>
+	</div>
+</div>
+<!-- END PERFIL DE MEDICO -->
 <script type="text/javascript">
+	$(document).ready(function() { 
+		/* INTERACCION PERFIL MEDICO */
+    function onClickPerfilMedico() {
+    	$('.btn-verMas, .box-modal-perfil .box-close').off();
+    	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
+    		var thes = $(this);
+    		console.log('click mee xd');
+				var sectionPerfilMed = $('.box-modal-perfil');
+				if(sectionPerfilMed.hasClass('out')){
+					sectionPerfilMed.removeClass('out').addClass('in');
+					$('.page-sm').addClass('op-25');
+					$('#myHeaderTop').addClass('op-25');
+					// BINDEAR INFO
+					strPerfilJson = thes.next().text();
+					// console.log(strPerfilJson, 'strPerfilJson');
+					arrPerfilJson = JSON.parse(strPerfilJson);
+					// console.log(arrPerfilJson, 'arrPerfilJson');
+					$('.inputjson.nombre').html(arrPerfilJson.medico);
+					$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
+					$('.inputjson.cmp').html(arrPerfilJson.cmp);
+					$('.inputjson.rne').html(arrPerfilJson.rne);
 
-  	$(document).ready(function() { 
-    
+					$('.inputjson.lema').html(arrPerfilJson.lema);
+					if(!arrPerfilJson.lema){
+						$('.inputjson.lema').hide();
+					}else{
+						$('.inputjson.lema').show();
+					}
+					/* horarios */
+					if( arrPerfilJson.horarios.length > 0 ){
+						$('.inputjson.horarios').empty();
+						$.each(arrPerfilJson.horarios, function(key, val) {
+							var objDl = $('<dl> <dt> <img src="assets/images/mini-stethoscope.png" /> '+val.dia+': </dt> <dd> '+val.hora_inicio+' - '+val.hora_fin+ ' </dd> </dl>');
+							$('.inputjson.horarios').append(objDl);
+						});
+					}
+					if(arrPerfilJson.estudios_html){
+						$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
+					}else{
+						$('.inputjson.estudios').text('No se muestra estudios en este momento.');
+					}
+					
+					$('.inputjson.foto').attr("src", URLPreview+'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
+				}else{
+					$('.inputjson.foto').attr("src", '');
+					sectionPerfilMed.removeClass('in').addClass('out');
+					$('.page-sm').removeClass('op-25');
+					$('#myHeaderTop').removeClass('op-25');
+				}
+				event.preventDefault();
+			});
+    };
+    $(document).mouseup(function(e) {
+		    var sectionMenuLat = $('.box-modal-perfil');
+		    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
+		        sectionMenuLat.removeClass('in').addClass('out');
+		        $('.page-sm').removeClass('op-25');
+		        $('#myHeaderTop').removeClass('op-25');
+		        $('.inputjson.foto').attr("src", '');
+		    }
+		});
+		onClickPerfilMedico();
 	});
 </script>
