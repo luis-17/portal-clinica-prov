@@ -11,10 +11,10 @@
           <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
           <figcaption>
             <div class="container-full box-galeria-content" style="height: 100%;">
-              <div class="box-image-lateral">
+              <div class="box-image-lateral wow bounceInRight delay-05s">
                 <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
               </div>
-              <div class="box-text-lateral">
+              <div class="box-text-lateral wow bounceInLeft delay-1s">
                 <h1><?php echo $row['lema']; ?></h1>
                 <div class="box-description">
                   <p><?php echo $row['lema_alt']; ?></p>
@@ -35,12 +35,12 @@
   </div>
   <section class="section-especialidades">
     <div class="container">
-      <div class="box-title">
+      <div class="box-title wow bounceInDown" data-wow-duration="1s">
         <h2> Especialidades </h2>
         <p>Seleccione una de nuestras especialidades y conozca nuestro staff médico </p>
       </div>
       <div class="box-content">
-        <div id="prov-especialidades" class="owl-carousel"> 
+        <div id="prov-especialidades" class="owl-carousel wow bounceInRight delay-05s"> 
           <?php foreach($arrEspecialidades as $key => $row): ?> 
           <a href="#" class="owl-item">
             <div class="box-especialidad">
@@ -54,7 +54,7 @@
           </a>
           <?php endforeach; ?>
         </div>
-        <div class="box-action">
+        <div class="box-action wow bounceInLeft">
           <a href="<?php echo site_url('especialidades'); ?>" type="button" class="btn btn-rounded primary"> VER TODAS LAS ESPECIALIDADES </a>
         </div>
       </div>
@@ -83,25 +83,44 @@
   <section class="section-porque-elegirnos">
     <div class="container">
       <div class="box-header">
-        <!-- <img src="assets/images/corazon-salud.png" /> -->
         <h2> ¿Por qué elegirnos? </h2>
       </div>
       <div class="box-content">
-        <?php foreach($arrPorqueElegirnos as $key => $row): ?> 
+        <?php //foreach($arrPorqueElegirnos as $key => $row): ?> 
         <div class="box-item motivo">
           <div class="box-item-content">
             <div class="box-image">
-              <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/porque-elegirnos/<?php echo $row['icon']; ?>">
+              <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/porque-elegirnos/nuestros-profesionales.png">
             </div>
-            <div class="box-title">
-              <?php echo $row['nombre']; ?>
-            </div>
+            <div class="box-title"> Nuestros profesionales </div>
             <div class="box-action">
-              <a href="#" class="btn btn-rounded"> SABER MÁS </a>
+              <a target="_blank" href="<?php echo site_url('staff-medico'); ?>" class="btn btn-rounded"> SABER MÁS </a>
             </div>
           </div>
         </div>
-        <?php endforeach; ?>
+        <div class="box-item motivo">
+          <div class="box-item-content">
+            <div class="box-image">
+              <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/porque-elegirnos/nuestra-tecnologia-exclusiva.png">
+            </div>
+            <div class="box-title"> Nuestra reserva de citas en línea </div>
+            <div class="box-action">
+              <a target="_blank" href="#" class="btn btn-rounded"> SABER MÁS </a>
+            </div>
+          </div>
+        </div>
+        <div class="box-item motivo">
+          <div class="box-item-content">
+            <div class="box-image">
+              <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/porque-elegirnos/nuestras-alianzas-convenios.png">
+            </div>
+            <div class="box-title"> Nuestras alianzas y convenios </div>
+            <div class="box-action">
+              <a target="_blank" href="<?php echo site_url('alianzas-y-convenios'); ?>" class="btn btn-rounded"> SABER MÁS </a>
+            </div>
+          </div>
+        </div>
+        <?php //endforeach; ?>
       </div>
     </div>
   </section>
@@ -115,7 +134,7 @@
       </div>
       <div class="box-content">
         <?php foreach($arrTestimonios as $key => $row): ?>
-          <div class="box-item testimonio">
+          <div class="box-item testimonio wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">
             <div class="box-item-wrap">
               <div class="box-image">
                 <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/testimonio/<?php echo $row['foto']; ?>">

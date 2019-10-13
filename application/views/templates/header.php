@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.carousel.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.theme.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('libs/swiper/css/swiper.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate/animate.css'); ?>">
 
 	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet"> 
 	<link href="<?php echo base_url('assets/css/custom-responsive.css'); ?>" rel="stylesheet"> 
@@ -63,7 +64,7 @@
   	<div class="box-menu-lateral out">
 		<div class="content-header">
 			<div class="logo">
-				<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo_white.png" alt="Clinica Providencia" />
+				<img class="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo_white.png" alt="Clinica Providencia" />
 			</div>
 			<div class="close-icon">
 				<div class="line line-x"></div>
@@ -71,15 +72,23 @@
 			</div>
 		</div>
 		<ul class="content-list">
-			<li>Nosotros</li>
-			<li>Convenios</li>
-			<li>Productos Especiales</li>
+			<li>
+				<a href="<?php echo site_url('conocenos'); ?>" target="_blank"> Conócenos </a>
+			</li>
+			<li>
+				<a href="<?php echo site_url('alianzas-y-convenios'); ?>" target="_blank"> Convenios </a>
+			</li>
+			<li>
+				<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
+			</li>
 			<li>
 				<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>
 			</li>
 			<li>Pasos para reservar una cita</li>
-			<li>Trabaja con Nosotros</li>
-			<li>Novedades y Eventos</li>
+			<li>
+				<a href="https://www.computrabajo.com.pe/empresas/ofertas-de-trabajo-de-clinica-providencia-BEA07CFF8134E31A" target="_blank">Trabaja con Nosotros</a>
+			</li>
+			<!-- <li>Novedades y Eventos</li> -->
 			<!-- <li>Testimonios</li> -->
 		</ul>
 	</div>
@@ -87,7 +96,7 @@
 		<div class="container-full">
 		  	<div class="box-header-primary" id="box-header-primary">
 	    		<div class="box-logo">
-	    			<a href="<?php echo site_url(); ?>"> <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo.png" /> </a>
+	    			<a href="<?php echo site_url(); ?>"> <img data-wow-duration="3s" class="wow flipInX" src="<?php echo URL_PREVIEW; ?>assets/dinamic/logo.png" /> </a>
 	    		</div>
 	    		<div class="box-menu">
 	    			<nav class="box-nav-menu collapse navbar-collapse">

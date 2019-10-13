@@ -41,6 +41,7 @@ class Blog extends CI_Controller {
                     'uri' => $row['uri'],
                     'fecha_publicacion' => $row['fecha_publicacion'],
                     'imagen_preview' => $row['imagen_preview'],
+                    'imagen_portada' => $row['imagen_portada'],
                     'titulo'=> $row['titulo'],
                     'fechaFormat' => $strFechaFormat,
                     'resumen' => $row['resumen'].'...'
@@ -94,6 +95,7 @@ class Blog extends CI_Controller {
                     'uri' => $row['uri'],
                     'fecha_publicacion' => $row['fecha_publicacion'],
                     'imagen_preview' => $row['imagen_preview'],
+                    'imagen_portada' => $row['imagen_portada'],
                     'titulo'=> $row['titulo'],
                     'fechaFormat' => $strFechaFormat,
                     'resumen' => $row['resumen'].'...'

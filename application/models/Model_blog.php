@@ -7,7 +7,7 @@ class Model_blog extends CI_Model {
 	public function m_cargar_entradas_aleatorias($number)
 	{
 		$this->db->select('SUBSTRING(bl.contenido_html,1,120) AS resumen', FALSE);
-		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.fecha_publicacion');
+		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.imagen_portada, bl.fecha_publicacion');
 		$this->db->from('blog bl');
 		$this->db->where('bl.estado', 1);
 		$this->db->order_by('rand()', false);
@@ -17,7 +17,7 @@ class Model_blog extends CI_Model {
 	public function m_cargar_entradas($paramPaginate)
 	{
 		$this->db->select('SUBSTRING(bl.contenido_html,1,120) AS resumen', FALSE);
-		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.fecha_publicacion');
+		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.imagen_portada, bl.fecha_publicacion');
 		$this->db->from('blog bl');
 		$this->db->where('bl.estado', 1);
 		if( $paramPaginate['firstRow'] || $paramPaginate['pageSize'] ){
@@ -34,7 +34,7 @@ class Model_blog extends CI_Model {
 	}
 	public function get_entrada_por_uri($uri)
 	{
-		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.contenido_html, bl.autor, bl.cargo_autor, 
+		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.imagen_portada, bl.contenido_html, bl.autor, bl.cargo_autor, 
 			bl.fecha_publicacion, bl.fecha_creacion, bl.estado, bl.foto_autor');
 		$this->db->from('blog bl');
 		$this->db->where('bl.uri', $uri);

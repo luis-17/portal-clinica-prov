@@ -1530,7 +1530,7 @@ header.box-header{
     text-transform: uppercase;
 }
 .page-blog .section-portada .img-portada .bg-portada{
-    background-image: url(../images/portada-blog.jpg);
+    
     background-size: cover;
     width: 100%;
     height: 410px;
@@ -1548,9 +1548,14 @@ header.box-header{
 }
 .page-blog .section-listentries .item-blog{
     position: relative;
+    padding: 0 3rem;
 }
 .page-blog .section-listentries .item-blog img{
-    padding: 0 3rem;
+    /*padding: 0 3rem;*/
+    border-radius: 150px 0;
+}
+.page-blog .section-listentries .pre-item:hover img {
+    border-radius: 15px 0;
 }
 .page-blog .section-listentries .item-blog-foot{
     padding: 0 3rem;
@@ -1578,13 +1583,14 @@ header.box-header{
     left: 3rem;
     right: 3rem;
 }
-.page-blog .section-listentries .item-blog:hover .box-hovered{
+.page-blog .section-listentries .pre-item:hover .box-hovered{
     display: flex;
     background-color: rgba(0,38,178,.5);
     flex-wrap: wrap;
     justify-content: center;
     visibility: visible;
     align-items: center;
+    border-radius: 15px 0;
 }
 .page-blog .section-listentries .item-blog .box-hovered .btn{
     background-color: white;
@@ -1672,7 +1678,8 @@ header.box-header{
 }
 .page-fichablog .section-entrie .box-autor .box-autor-foto img{
     border-radius: 50%;
-    width: 90%;
+    width: 180px;
+    height: 180px;
 }
 .page-fichablog .section-entrie .box-autor .box-info{
     width: 100%;

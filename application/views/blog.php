@@ -11,7 +11,7 @@
 				<?php foreach($arrEntradasAle as $key => $row): ?>
 				<div class="swiper-slide">
 					<div class="img-portada">
-						<div class="bg-portada"></div>
+						<div class="bg-portada" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/blog/portadas/<?php echo $row['imagen_portada']; ?>);"></div>
 					</div>
 					<div class="texto-portada">
 						<h1> <?php echo $row['titulo']; ?> </h1>
