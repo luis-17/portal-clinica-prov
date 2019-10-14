@@ -6,12 +6,12 @@
 		<div class="img-portada">
 			<div class="bg-portada"></div>
 		</div>
-		<div class="texto-portada">
+		<div class="texto-portada wow bounceInRight delay-1s">
 			<h1> Staff Médico </h1>
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  <div class="angle-separator-up-style-2"></div>
+	  <div class="angle-separator-up-style-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>
 	</div>
 	<section class="section-medicos">
 		<div class="container">
@@ -77,7 +77,7 @@
 	</section>
 </div>
 <div class="angle-separator-content">
-  <div class="angle-separator-bottom"></div>
+  <div class="angle-separator-bottom wow slideInDown slow"></div>
 </div>
 <!-- 		PERFIL DE MEDICO 	-->
 <div class="box-modal-perfil out">
@@ -281,7 +281,7 @@
 	      	$.each(paramData, function(key, val) {
 	      		var strJson = JSON.stringify(val);
 	      		console.log(key, val, 'keyval');
-	      		var $wrap1 = $('<div class="col-lg-3 pre-item"></div>');
+	      		var $wrap1 = $('<div class="col-lg-3 pre-item wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>');
 	      			var $wrap2 = $('<div class="item-medico"></div>');
 	      				var $wrap2_1 = $('<img alt="'+val.medico+'" src="'+URLPreview+'assets/dinamic/medico/'+val.foto+'" />');
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');

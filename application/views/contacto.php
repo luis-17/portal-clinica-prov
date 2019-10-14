@@ -6,12 +6,12 @@
 		<div class="img-portada">
 			<div class="bg-portada"></div>
 		</div>
-		<div class="texto-portada">
+		<div class="texto-portada wow bounceInRight delay-1s">
 			<h1> Contáctanos </h1>
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  	<div class="angle-separator-up-style-2"></div>
+	  	<div class="angle-separator-up-style-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>
 	</div>
 	<div class="row box-notificacion">
 		<?php if( $this->session->flashdata('bool_info') == 'ok' ){ ?>
@@ -31,10 +31,10 @@
 	</div>
 	<section class="section-contacto">
 		<div class="row">
-			<div class="box-content-img col-sm-4">
+			<div class="box-content-img col-sm-4 wow bounceInUp delay-1s">
 				<img src="<?php echo base_url().'assets/images/chica-contacto.png'; ?>" alt="Contacto" />
 			</div>
-			<div class="box-form col-sm-8">
+			<div class="box-form col-sm-8 wow bounceInUp delay-1s">
 				<form class="form" method="post" name="form_contacto">
 					<div class="box-header">
 						<h3> Para cualquier duda o consulta: </h3>
@@ -80,10 +80,10 @@
 	</div> -->
 </div>
 <div class="angle-separator-content">
-  	<div class="angle-separator-bottom"></div>
+  	<div class="angle-separator-bottom wow slideInDown slow"></div>
 </div>
 <script type="text/javascript"> 
-	// Initialize and add the map  , AIzaSyAZooz66oNyefiGdO7JueDtqUGQBBUIUHY AIzaSyAZooz66oNyefiGdO7JueDtqUGQBBUIUHY
+	// Initialize and add the map  , AIzaSyAZooz66oNyefiGdO7JueDtqUGQBBUIUHY AIzaSyAZooz66oNyefiGdO7JueDtqUGQBBUIUHY slideInDown
 
 	// function initMap() {
 	//   var posdcjv = {lat: -12.023995, lng: -76.988537};

@@ -57,7 +57,7 @@
 	</section>
 </div>
 <div class="angle-separator-content">
-  	<div class="angle-separator-bottom"></div>
+  	<div class="angle-separator-bottom wow slideInDown slow"></div>
 </div>
 <script type="text/javascript">
   	$(document).ready(function() { 

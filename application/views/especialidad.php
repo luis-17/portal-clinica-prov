@@ -6,12 +6,12 @@
 		<div class="img-portada">
 			<div class="bg-portada"></div>
 		</div>
-		<div class="texto-portada">
+		<div class="texto-portada wow bounceInRight delay-1s">
 			<h1> Especialidades </h1>
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  	<div class="angle-separator-up-style-2"></div>
+	  	<div class="angle-separator-up-style-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>
 	</div>
 	<section class="section-especialidades">
 		<div class="box-filtros">
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="box-content">
+		<div class="box-content wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
 			<div class="box-inner-content">
 				<div class="box-arrow box-left-arrow col-xs-1 col-sm-1 col-lg-1">
 					<button id="btn-leftSlider" class="btn btn-primary"> <i class="fa fa-angle-left"></i> </button>
@@ -60,13 +60,13 @@
 				<div class="box-item-paginate"></div>
 			</div> -->
 		</div>
-		<div class="box-footer-actions">
+		<div class="box-footer-actions wow bounceInRight">
 			<a href="<?php echo site_url('staff-medico'); ?>" class="btn btn-primary btn-lg"> Ver Staff Médico </a>
 		</div>
 	</section>
 </div>
 <div class="angle-separator-content">
-  	<div class="angle-separator-bottom"></div>
+  	<div class="angle-separator-bottom wow slideInDown slow"></div>
 </div>
 <style type="text/css">
 	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{

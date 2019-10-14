@@ -42,7 +42,7 @@
       <div class="box-content">
         <div id="prov-especialidades" class="owl-carousel wow bounceInRight delay-05s"> 
           <?php foreach($arrEspecialidades as $key => $row): ?> 
-          <a href="#" class="owl-item">
+          <a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" class="owl-item">
             <div class="box-especialidad">
               <div class="box-img">
                 <img alt="<?php echo $row['nombre']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
@@ -178,7 +178,7 @@
   </section>
 </div>
 <div class="angle-separator-content">
-  <div class="angle-separator-bottom"></div>
+  <div class="angle-separator-bottom wow slideInDown slow"></div>
 </div>
 <script type="text/javascript">
 

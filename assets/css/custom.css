@@ -1347,11 +1347,40 @@ header.box-header{
     border-radius: 18px 0;
     border: 1px solid #004790;
     margin: auto;
+    position: relative;
 }
 .page-fichesp .section-staff .box-body .box-photo img{
     /*width: 150px;*/
     width: 100%;
     border-radius: 18px 0;
+}
+.page-fichesp .section-staff .box-body .box-photo .box-hovered{
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: 100%;
+    visibility: hidden;
+    transition-property: color, background-color, display;
+    transition-duration: .25s;
+    transition-timing-function: linear;
+    left: 3rem;
+    right: 3rem;
+}
+.page-fichesp .section-staff .box-body .box-photo .box-hovered h4{
+    color: white;
+    text-align: center;
+    margin: 0 2rem;
+}
+.page-fichesp .section-staff .box-body .box-item:hover .box-hovered{
+    display: flex;
+    background-color: rgba(0,38,178,.5);
+    flex-wrap: wrap;
+    justify-content: center;
+    visibility: visible;
+    align-items: center;
+    border-radius: 160px 0;
+    width: 100%;
+    left: 0;
 }
 .page-fichesp .section-staff .box-body .box-text{
     width: 200px;
@@ -1380,6 +1409,44 @@ header.box-header{
 .page-fichesp .section-servicios .box-content .box-item{
     text-align: center;
     padding: 24px;
+    /*transition-property: color, background-color, display;
+    transition-duration: .5s;
+    transition-timing-function: linear;*/
+}
+.page-fichesp .section-servicios .box-content .box-item a{
+    /*right: 0;*/
+    padding-top: 1.25rem;
+    display: inline-block;
+    transition-property: color, background-color, display;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    border-radius: 15px 0;
+    position: relative;
+}
+.page-fichesp .section-servicios .box-content .box-item a > .box-hovered{
+    padding: 1.25rem 0;
+    position: absolute;
+    width: 0px;
+    height: 0;
+    top: 0;
+    left: 0;
+    transition-property: color, background-color, display, width, height;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    border-radius: 15px 0;
+    z-index: -1;
+}
+.page-fichesp .section-servicios .box-content .box-item:hover a > .box-hovered{
+    background-color: #00488d;
+    width: 150px;
+    height: 156px;
+    /*right: 100%;*/
+}
+.page-fichesp .section-servicios .box-content .box-item:hover a > img{
+    /*filter: brightness(0) invert(1);*/
+}
+.page-fichesp .section-servicios .box-content .box-item:hover a > p{
+    color:white;
 }
 .page-fichesp .section-servicios .box-content .box-item img{
     width: 90px;
@@ -1388,101 +1455,105 @@ header.box-header{
     width: 150px;
     margin: auto;
     color: #0085b2;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 /* ************************ */
 /*        CONTACTANOS       */
 /* ************************ */
-.page-contacto .box-notificacion .alert.alert-success{
-    background-color: white;
-    font-size: 28px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-.page-contacto .box-notificacion .alert.alert-danger{
-    background-color: white;
-    font-size: 28px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-    color: red;
-}
-.page-contacto .section-portada{
-    margin-top: 140px;
-    /*background-color: #0085b2;*/
-    /*padding-top: 60px;*/
-    position: relative;
-}
-.page-contacto .section-portada .img-portada {
-    position: relative;
-}
-.page-contacto .section-portada .texto-portada{
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    padding-bottom: 60px;
-}
-.page-contacto .section-portada .texto-portada h1{
-    font-size: 60px;
-    font-weight: bold;
-    color: #0085b2;
-}
-.page-contacto .section-portada .img-portada .bg-portada{
-    background-image: url(../images/portada-contactos.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 340px;
-}
+    .page-contacto .box-notificacion .alert.alert-success{
+        background-color: white;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .page-contacto .box-notificacion .alert.alert-danger{
+        background-color: white;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+        color: red;
+    }
+    .page-contacto .section-portada{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-contacto .section-portada .img-portada {
+        position: relative;
+    }
+    .page-contacto .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;
+    }
+    .page-contacto .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: #0085b2;
+    }
+    .page-contacto .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-contactos.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+    }
 
-.page-contacto .section-contacto{
-    padding: 10rem;
-    display: flex;
-    align-items: center;
-}
-.page-contacto .section-contacto .box-content-img{
-    border-right: 3px solid #005eaa;
-}
-.page-contacto .section-contacto .box-form{
-    padding-left: 8rem;
-    padding-right: 14rem;
-}
-.page-contacto .section-contacto .box-form .box-header h3{
-    font-weight: bold;
-    color: #003d7e;
-    font-size: 30px;
-}
-.page-contacto .section-contacto .box-form .box-header small{
-    font-size: 26px;
-    display: block;
-    line-height: 1;
-    color: #00a0bd;
-}
-.page-contacto .section-contacto .box-form .box-form-detail{
-    padding: 2.5rem 0;
-}
-.page-contacto .section-contacto .box-form .box-form-detail label{
-    font-weight: 500;
-    color: #003d7e;
-    font-size: 15px;
-}
-.page-contacto .section-contacto .box-form .box-form-detail input{
-    background-color: #ededed;
-    border: unset;
-    box-shadow: unset;
-    border-radius: 0 8px;
-}
-.page-contacto .section-contacto .box-form .box-form-detail textarea{
-    background-color: #ededed;
-    border: unset;
-    box-shadow: unset;
-    border-radius: 0 8px;
-}
-.page-contacto .section-contacto .box-form .box-action button{
-    margin: auto;
-    display: block;
-    width: 260px;
-}
+    .page-contacto .section-contacto{
+        padding: 10rem;
+        display: flex;
+        align-items: center;
+    }
+    .page-contacto .section-contacto .box-content-img{
+        border-right: 3px solid #005eaa;
+    }
+    .page-contacto .section-contacto .box-form{
+        padding-left: 8rem;
+        padding-right: 14rem;
+    }
+    .page-contacto .section-contacto .box-form .box-header h3{
+        font-weight: bold;
+        color: #003d7e;
+        font-size: 30px;
+    }
+    .page-contacto .section-contacto .box-form .box-header small{
+        font-size: 26px;
+        display: block;
+        line-height: 1;
+        color: #00a0bd;
+    }
+    .page-contacto .section-contacto .box-form .box-form-detail{
+        padding: 2.5rem 0;
+    }
+    .page-contacto .section-contacto .box-form .box-form-detail label{
+        font-weight: 500;
+        color: #003d7e;
+        font-size: 15px;
+    }
+    .page-contacto .section-contacto .box-form .box-form-detail input{
+        background-color: #ededed;
+        border: unset;
+        box-shadow: unset;
+        border-radius: 0 8px;
+    }
+    .page-contacto .section-contacto .box-form .box-form-detail textarea{
+        background-color: #ededed;
+        border: unset;
+        box-shadow: unset;
+        border-radius: 0 8px;
+    }
+    .page-contacto .section-contacto .box-form .box-action button{
+        margin: auto;
+        display: block;
+        width: 260px;
+    }
 /* ************************* */
 /*            BLOG           */
 /* ************************* */
