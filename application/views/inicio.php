@@ -11,8 +11,8 @@
           <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
           <figcaption>
             <div class="container-full box-galeria-content" style="height: 100%;">
-              <div class="box-image-lateral wow bounceInRight delay-05s">
-                <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_lateral']; ?>" />
+              <div class="box-image-lateral wow bounceInRight delay-500ms">
+                <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/lateral/<?php echo $row['image_lateral']; ?>" />
               </div>
               <div class="box-text-lateral wow bounceInLeft delay-1s">
                 <h1><?php echo $row['lema']; ?></h1>

@@ -4,46 +4,44 @@
 <div class="page-fichserv">
 	<section class="section-portada">
 		<div class="img-portada">
-			<div class="bg-portada"></div>
+			<div class="bg-portada" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/imagenes/<?php echo $fServicio['imagen_portada']; ?>);"></div>
 		</div>
-		<div class="texto-portada">
-			<h1> Servicios </h1>
+		<div class="texto-portada wow bounceInDown delay-1s">
+			<h1> <?php echo $fServicio['nombre']; ?> </h1>
+			<img src="<?php echo base_url(); ?>assets/images/favicon.png" />
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  	<div class="angle-separator-up-style-2"></div>
+	  	<div class="angle-separator-up-style-2 wow slideInUp slow"></div>
 	</div>
 	<section class="section-detalle">
-		<div class="box-celeste">
-			<h2> <?php echo $fServicio['nombre']; ?> </h2>	
-		</div>
-		<div class="box-imagen">
-			<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/imagenes/<?php echo $fServicio['imagen_servicio']; ?>" />
-		</div>
 		<div class="box-description">
-			<div class="box-letras col-lg-6 col-sm-12">
-				<?php echo $fServicio['descripcion_html']; ?>
+			<div class="box-icono col-lg-4 col-sm-12 text-center">
+				<div class="box-icono-content wow bounceInLeft">
+					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $fServicio['icono_servicio']; ?>" />
+				</div>
+				<div class="line-dashed wow bounceInUp delay-1s"></div>
 			</div>
-			<div class="box-icono col-lg-6 col-sm-12 text-center">
-				<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/iconos-lg/<?php echo $fServicio['icono_servicio_lg']; ?>" />
+			<div class="box-letras col-lg-8 col-sm-12 text-center wow bounceInRight delay-1s">
+				<?php echo $fServicio['descripcion_html']; ?>
 			</div>
 		</div>
 		<div class="box-como-acceder">
-			<div class="box-letras col-lg-12">
+			<div class="box-letras col-lg-12 wow bounceInLeft">
 				<h2> ¿Cómo acceder al servicio? </h2>
 				<p> <?php echo $fServicio['como_acceder']; ?> </p>
 			</div>
-			<div class="box-video">
+			<div class="box-video wow bounceInRight">
 				<?php echo $fServicio['embed_video']; ?>
 			</div>
 		</div>
 	</section>
 	<section class="section-mas-servicios container">
 		<div class="row">
-			<h2 class="col-lg-12 text-center"> Más servicios para tí </h2>
+			<h2 class="col-lg-12 text-center wow bounceInDown"> Más servicios para tí </h2>
 			<div class="box-content-items col-lg-12 owl-carousel" id="prov-servicio">
 				<?php foreach ($arrServicios as $key => $row): ?>
-				<div class="box-item owl-item text-center">
+				<div class="box-item owl-item text-center wow bounceInRight delay-500ms">
 					<a href="<?php echo site_url('servicio').'/'.$row['alias']; ?>">
 						<div class="box-icono">
 							<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $row['icono_servicio']; ?>" alt="" />
@@ -73,4 +71,20 @@
 	      ]
 	    });
 	});
+	// Y axis scroll speed
+	// var velocity = 0.5;
+
+	// function update(){ 
+	//     var pos = $(window).scrollTop(); 
+	//     $('.bg-portada').each(function() { 
+	//         var $element = $(this);
+	//         // subtract some from the height b/c of the padding
+
+	//         var height = 2;
+	//         console.log(height, pos, velocity, 'height, pos, velocity');
+	//         $(this).css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
+	//     }); 
+	// };
+
+	// $(window).bind('scroll', update);
 </script>

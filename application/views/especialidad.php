@@ -40,8 +40,8 @@
 											<img class="img-responsive" alt="<?php echo $row['uri']; ?>" src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/iconos-home/<?php echo $row['icono_home']; ?>" />
 										</div>
 									</div>
+									<div class="box-nombre" title="<?php echo $row['nombre']; ?>"> <?php echo $row['nombre']; ?> </div>
 								</a>
-								<div class="box-nombre" title="<?php echo $row['nombre']; ?>"> <?php echo $row['nombre']; ?> </div>
 								<input type="hidden" name="uri" class="hid-uri" value="<?php echo $row['uri']; ?>" />
 							</div>
 						<?php endforeach; ?>
