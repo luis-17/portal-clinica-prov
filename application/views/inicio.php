@@ -6,27 +6,27 @@
     <div id="prov-homeslider" class="owl-carousel">
       <?php // var_dump($arrSliders); ?>
       <?php foreach($arrSliders as $key => $row):?> 
-      <div class="owl-item">
-        <figure class="item item-1">
-          <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="image description">
-          <figcaption>
-            <div class="container-full box-galeria-content" style="height: 100%;">
-              <div class="box-image-lateral wow bounceInRight delay-500ms">
-                <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/lateral/<?php echo $row['image_lateral']; ?>" />
+      <!-- <div class="owl-item"> -->
+      <figure class="item item-1">
+        <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/<?php echo $row['image_background']; ?>" alt="">
+        <figcaption>
+          <div class="container-full box-galeria-content" style="height: 100%;">
+            <div class="box-image-lateral">
+              <img class="figura" alt="" src="<?php echo URL_PREVIEW; ?>assets/dinamic/slider/lateral/<?php echo $row['image_lateral']; ?>" />
+            </div>
+            <div class="box-text-lateral">
+              <h1><?php echo $row['lema']; ?></h1>
+              <div class="box-description">
+                <p><?php echo $row['lema_alt']; ?></p>
               </div>
-              <div class="box-text-lateral wow bounceInLeft delay-1s">
-                <h1><?php echo $row['lema']; ?></h1>
-                <div class="box-description">
-                  <p><?php echo $row['lema_alt']; ?></p>
-                </div>
-                <div class="box-actions">
-                  <a class="btn primary btn-rounded" href="<?php echo site_url('contactanos'); ?>"><span><?php echo $row['text_button']; ?></span></a> 
-                </div>
+              <div class="box-actions">
+                <a class="btn primary btn-rounded" href="<?php echo site_url('contactanos'); ?>"><span><?php echo $row['text_button']; ?></span></a> 
               </div>
             </div>
-          </figcaption>
-        </figure>
-      </div>
+          </div>
+        </figcaption>
+      </figure>
+      <!-- </div> -->
       <?php endforeach; ?>
     </div>
   </section>
@@ -60,20 +60,30 @@
       </div>
     </div>
   </section>
-  <div class="angle-separator-content">
+  <!-- <div class="angle-separator-content">
     <div class="angle-separator-bottom"></div>
-  </div>
+  </div> -->
   <section class="section-conocenos">
     <div class="box-conocenos">
-      <div class="box-text">
-        <h2> Conócenos </h2>
-        <p> 
-          Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso en sus servicios asistenciales clínicos y quirúrgicos, acreditados y certificados dentro de los más altos estándares nacionales e internacionales. Garantizando a nuestros usuarios calidad en nuestro servicio médico hospitalario.
-        </p>
-        <button type="button" class="btn btn-rounded">SABER MÁS</button>
-      </div>
-      <div class="box-image">
-        <img alt="Conocenos" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/conocenos.jpg" />
+      <h2> Conócenos </h2>
+      <div class="box-images">
+        <div class="box-image image-1" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image2_conocenos.jpg);">
+          <div class="box-hovered-1">
+            <p> 
+              Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso.
+              <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a> 
+            </p>
+          </div>
+        </div>
+        <div class="box-image image-2" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image1_conocenos.jpg);"></div>
+        <div class="box-image image-3" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image3_conocenos.jpg);">
+          <div class="box-hovered-2">
+            <p> 
+              Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso.
+              <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a> 
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -192,7 +202,19 @@
       navigationText: [
         "<i class='vc-btnnext fa fa-angle-left'></i>",
         "<i class='vc-btnprev fa fa-angle-right'></i>"
-      ]
+      ],
+      beforeInit: function(elem) {
+        elem.find(".item").eq(0).find(".box-image-lateral").addClass('animated bounceInRight delay-500ms');
+        elem.find(".item").eq(0).find(".box-text-lateral").addClass('animated bounceInLeft delay-1s');
+      },
+      afterMove: function(elem) {
+        var current = this.currentItem;
+        elem.find(".box-image-lateral").removeClass('animated bounceInRight delay-500ms');
+        elem.find(".box-text-lateral").removeClass('animated bounceInLeft delay-1s');
+
+        elem.find(".item").eq(current).find(".box-image-lateral").addClass('animated bounceInRight delay-500ms');
+        elem.find(".item").eq(current).find(".box-text-lateral").addClass('animated bounceInLeft delay-1s');
+      },
     });
     // GALERIA ESPECIALIDADES  
     var owlEspec = $("#prov-especialidades");
@@ -207,19 +229,17 @@
     });
     // GALERIA SEGUROS  
     var owlSeg = $("#prov-seguro");
-    // console.log($("#prov-seguro"), '$("#prov-seguro");');
     owlSeg.owlCarousel({
       pagination : true,
       navigation : false,
       items: 4,
       autoPlay: true,
-      // stopOnHover: true,
-      // navigationText: [
-      //   "<i class='next fa fa-angle-left'></i>",
-      //   "<i class='prev fa fa-angle-right'></i>"
-      // ]
-      // singleItem : true 
     });
+    // carganos animacion dinámica en slider Principal
+    var $objItems = $('#prov-homeslider .owl-item');
+    // $objItems.each(function(key, row) {
+      
+    // });
   });
 
 </script>

@@ -22,7 +22,7 @@
 				</div>
 				<div class="line-dashed wow bounceInUp delay-1s"></div>
 			</div>
-			<div class="box-letras col-lg-8 col-sm-12 text-center wow bounceInRight delay-1s">
+			<div class="box-letras col-lg-8 col-sm-12 wow bounceInRight delay-1s">
 				<?php echo $fServicio['descripcion_html']; ?>
 			</div>
 		</div>
@@ -71,6 +71,10 @@
 	      ]
 	    });
 	});
+  	var heightLetras = $('.box-letras').height();
+  	$('.line-dashed').height(heightLetras + 80);
+
+
 	// Y axis scroll speed
 	// var velocity = 0.5;
 
