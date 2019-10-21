@@ -11,7 +11,7 @@
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  	<div class="angle-separator-up-style-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>
+	  	<div class="angle-separator-up-style-2 wow slideInUp slow"></div>
 	</div>
 	<div class="row box-notificacion">
 		<?php if( $this->session->flashdata('bool_info') == 'ok' ){ ?>

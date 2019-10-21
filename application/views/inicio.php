@@ -31,7 +31,7 @@
     </div>
   </section>
   <div class="angle-separator-content">
-    <div class="angle-separator-up"></div>
+    <div class="angle-separator-up wow slideInUp slow"></div>
   </div>
   <section class="section-especialidades">
     <div class="container">
@@ -69,19 +69,26 @@
       <div class="box-images">
         <div class="box-image image-1" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image2_conocenos.jpg);">
           <div class="box-hovered-1">
-            <p> 
+            <!-- <p> 
               Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso.
               <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a> 
+            </p> -->
+          </div>
+        </div>
+        <div class="box-image image-2" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image1_conocenos.jpg);">
+          <div class="box-hovered-center">
+            <p> 
+              ¿Por qué elegir Clínica Providencia? 
+              <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a>
             </p>
           </div>
         </div>
-        <div class="box-image image-2" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image1_conocenos.jpg);"></div>
         <div class="box-image image-3" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image3_conocenos.jpg);">
           <div class="box-hovered-2">
-            <p> 
+            <!-- <p> 
               Somos una institución hospitalaria privada de alto nivel resolutivo, dedicada al cuidado de la salud de los peruanos con un enfoque novedoso.
               <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a> 
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -170,7 +177,7 @@
   <section class="section-seguro">
     <div class="container">
       <div class="box-header">
-        <h2> Seguros </h2>
+        <h2> Seguros y Autoseguros </h2>
         <p> Para su tranquilidad trabajamos con las siguientes compañias de seguros </p>
       </div>
       <div class="box-content">

@@ -32,10 +32,10 @@
 	    				<div class="box-icon"> <i class="fa fa-phone"></i> </div> 
 	    				<div class="box-value"> (511) 660 6000 </div>
 	    			</div>
-	    			<div class="box-item box-mail">
+	    			<!-- <div class="box-item box-mail">
 	    				<div class="box-icon"> <i class="fa fa-envelope"></i> </div>
 	    				<div class="box-value"> <a href="mailto:contacto@clinicaprovidencia.pe">contacto@clinicaprovidencia.pe </a></div>
-	    			</div>
+	    			</div> -->
 	    		</div>
 	    		<div class="box-header-redes">
 	    			<div class="box-item ">
@@ -80,6 +80,9 @@
 			</li>
 			<li>
 				<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
+			</li>
+			<li>
+				<a href="<?php echo site_url('nuestras-promociones'); ?>" target="_blank"> Nuestras Promociones </a>
 			</li>
 			<li>
 				<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>

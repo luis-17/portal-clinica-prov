@@ -287,6 +287,9 @@ header.box-header{
 .box-header .box-header-secondary .box-header-info .box-item.box-telefono{
     border-right: 1px solid;
     padding-right: 16px;
+    font-size: 20px;
+    margin-top: 4px;
+    font-weight: bold;
 }
 .box-header .box-header-secondary .box-header-info .box-item.box-rs{
     right: 2%;
@@ -298,7 +301,6 @@ header.box-header{
 }
 
 /* HEADER PRIMARY */
-
 .box-header .box-header-primary{
 	float: left;
 	width: 100%;
@@ -686,20 +688,16 @@ header.box-header{
     position: relative;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-1, 
-.page-home .section-conocenos .box-conocenos .box-images .box-hovered-2{
+.page-home .section-conocenos .box-conocenos .box-images .box-hovered-2,
+.page-home .section-conocenos .box-conocenos .box-images .box-hovered-center{
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 6rem;
     font-size: 20px;
     text-align: center;
-}
-.page-home .section-conocenos .box-conocenos .box-images .box-hovered-1{
-    /*display: none;*/
-    position: absolute;
-    /*height: 480px;*/
-    /*background-color: rgba(255,255,255, 0.65);*/
-    /*width: 0px;*/
+    width: 100%;
     height: 0;
     top: 0;
     left: 0;
@@ -708,38 +706,42 @@ header.box-header{
     transition-timing-function: linear;
     overflow: hidden;
 }
-.page-home .section-conocenos .box-conocenos .box-images:hover .box-hovered-1{
+.page-home .section-conocenos .box-conocenos .box-images:hover .box-hovered-1, 
+.page-home .section-conocenos .box-conocenos .box-images:hover .box-hovered-2,
+.page-home .section-conocenos .box-conocenos .box-images:hover .box-hovered-center{
     height: 480px;
-    /*background-color: rgba(255,255,255, 0.65);*/
     background-color: rgba(0,38,178,.5);
 }
-.page-home .section-conocenos .box-conocenos .box-images .box-hovered-2{
-    /*display: none;*/
-    position: absolute;
-    /*height: 480px;*/
-    /*background-color: rgba(255,255,255, 0.65);*/
-    /*width: 0px;*/
-    height: 0;
-    bottom: 0;
-    left: 0;
-    transition-property: color, background-color, display, width, height;
-    transition-duration: 0.25s;
-    transition-timing-function: linear;
-    overflow: hidden;
-}
-.page-home .section-conocenos .box-conocenos .box-images:hover .box-hovered-2{
-    height: 480px;
-    /*background-color: rgba(255,255,255, 0.65);*/
-    background-color: rgba(0,38,178,.5);
-}
+
 .page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
     width: 55%;
     background-position-y: 400%;
 }
+.page-home .section-conocenos .box-conocenos .box-images .box-hovered-center{
+    bottom: 0;
+    top: inherit;
+}
+.page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p{
+    font-size: 26px;
+    font-weight: bold;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+}
+.page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p .btn{
+    background-color: white;
+    font-weight: 800;
+    color: #00498d;
+    margin: auto;
+    display: block;
+    padding: 8px;
+    margin-top: 30px;
+    width: 160px;
+}
 /*.page-home .section-conocenos .box-conocenos .box-image{
     width: 50%;
 }*/
-.page-home .section-conocenos .box-conocenos .btn{
+/*.page-home .section-conocenos .box-conocenos .btn{
     background-color: white;
     font-weight: 800;
     color: #00498d;
@@ -748,7 +750,7 @@ header.box-header{
     padding: 10px 25px;
     margin-top: 30px;
     width: 200px;
-}
+}*/
 /* SECTION PORQUE ELEGIRNOS */
 .page-home .section-porque-elegirnos{
     /*background-color: rgba(232,232,232);*/
@@ -1344,199 +1346,199 @@ header.box-header{
 /* ************************ */
 /*   FICHA ESPECIALIDADES   */
 /* ************************ */
-.page-fichesp .section-portada{
-    margin-top: 140px;
-    position: relative;
-}
-.page-fichesp .section-portada .img-portada {
-    position: relative;
-}
-.page-fichesp .section-portada .texto-portada{
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    padding-bottom: 60px;
-}
-.page-fichesp .section-portada .texto-portada h1{
-    font-size: 60px;
-    font-weight: bold;
-    color: #0085b2;
-}
-.page-fichesp .section-portada .img-portada .bg-portada{
-    background-image: url(../images/portada-staff.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 340px;
-}
-.page-fichesp .section-describe{
-    padding: 8% 5%;
-}
-.page-fichesp .section-describe .box-content-describe{
-    display: flex;
-    align-items: center;
-}
-.page-fichesp .section-describe .box-content-describe img{
-    width: 450px;
-}
-.page-fichesp .section-describe .box-content-describe .box-descripcion{
-    font-size: 18px;
-    line-height: 1.75;
-    padding-left: 40px;
-}
-.page-fichesp .section-staff{
-    padding: 2% 10%;
-    background-color: #eef9fb;
-}
-.page-fichesp .section-staff .box-title{
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: #6f7b7d;
-    margin-bottom: 30px;
-}
-.page-fichesp .section-staff .box-title .vineta{
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    background-color: #0083b1;
-    border-radius: 6px 0;
-    margin-right: 10px;
-}
-.page-fichesp .section-staff .box-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/*
+    .page-fichesp .section-portada{
+        margin-top: 140px;
+        position: relative;
+    }
+    .page-fichesp .section-portada .img-portada {
+        position: relative;
+    }
+    .page-fichesp .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;
+    }
+    .page-fichesp .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: #0085b2;
+    }
+    .page-fichesp .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-staff.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+    }
+    .page-fichesp .section-describe{
+        padding: 8% 5%;
+    }
+    .page-fichesp .section-describe .box-content-describe{
+        display: flex;
+        align-items: center;
+    }
+    .page-fichesp .section-describe .box-content-describe img{
+        width: 450px;
+    }
+    .page-fichesp .section-describe .box-content-describe .box-descripcion{
+        font-size: 18px;
+        line-height: 1.75;
+        padding-left: 40px;
+    }
+    .page-fichesp .section-staff{
+        padding: 2% 10%;
+        background-color: #eef9fb;
+    }
+    .page-fichesp .section-staff .box-title{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        color: #6f7b7d;
+        margin-bottom: 30px;
+    }
+    .page-fichesp .section-staff .box-title .vineta{
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        background-color: #0083b1;
+        border-radius: 6px 0;
+        margin-right: 10px;
+    }
+    .page-fichesp .section-staff .box-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*
 
-*/
-.page-fichesp .section-staff .box-body .box-item{
-    /*width: 270px;*/
-    width: 340px;
-}
-.page-fichesp .section-staff .box-body .box-photo{
-    display: flex;
-    justify-content: center;
-    width: 220px;
-    height: 240px;
-    border-radius: 18px 0;
-    border: 1px solid #004790;
-    margin: auto;
-    position: relative;
-}
-.page-fichesp .section-staff .box-body .box-photo img{
-    /*width: 150px;*/
-    width: 100%;
-    border-radius: 18px 0;
-}
-.page-fichesp .section-staff .box-body .box-photo .box-hovered{
-    position: absolute;
-    top: 0;
-    width: auto;
-    height: 100%;
-    visibility: hidden;
-    transition-property: color, background-color, display;
-    transition-duration: .25s;
-    transition-timing-function: linear;
-    left: 3rem;
-    right: 3rem;
-}
-.page-fichesp .section-staff .box-body .box-photo .box-hovered h4{
-    color: white;
-    text-align: center;
-    margin: 0 2rem;
-}
-.page-fichesp .section-staff .box-body .box-item:hover .box-hovered{
-    display: flex;
-    background-color: rgba(0,38,178,.5);
-    flex-wrap: wrap;
-    justify-content: center;
-    visibility: visible;
-    align-items: center;
-    border-radius: 160px 0;
-    width: 100%;
-    left: 0;
-}
-.page-fichesp .section-staff .box-body .box-text{
-    width: 200px;
-    margin: auto;
-    padding-top: 15px;
-    color: #0083b1;
-    font-size: 20px;
-    text-align: center;
-}
-.page-fichesp .section-staff .box-action{
-    margin-top: 45px;
-    text-align: center;
-}
-.page-fichesp .section-servicios .box-title{
-    margin: 45px 0;
-    text-align: center;
-}
-.page-fichesp .section-servicios .box-title h2{
-    font-weight: bold;
-    font-size: 34px;
-    color: #0082b0;
-}
-.page-fichesp .section-servicios .box-content{
-    margin: 5% 2.5%;
-}
-.page-fichesp .section-servicios .box-content .box-item{
-    text-align: center;
-    padding: 24px;
-    /*transition-property: color, background-color, display;
-    transition-duration: .5s;
-    transition-timing-function: linear;*/
-}
-.page-fichesp .section-servicios .box-content .box-item a{
-    /*right: 0;*/
-    padding-top: 1.25rem;
-    display: inline-block;
-    transition-property: color, background-color, display;
-    transition-duration: 0.25s;
-    transition-timing-function: linear;
-    border-radius: 15px 0;
-    position: relative;
-}
-.page-fichesp .section-servicios .box-content .box-item a > .box-hovered{
-    padding: 1.25rem 0;
-    position: absolute;
-    width: 0px;
-    height: 0;
-    top: 0;
-    left: 0;
-    transition-property: color, background-color, display, width, height;
-    transition-duration: 0.25s;
-    transition-timing-function: linear;
-    border-radius: 15px 0;
-    z-index: -1;
-}
-.page-fichesp .section-servicios .box-content .box-item:hover a > .box-hovered{
-    background-color: #00488d;
-    width: 150px;
-    height: 156px;
-    /*right: 100%;*/
-}
-.page-fichesp .section-servicios .box-content .box-item:hover a > img{
-    /*filter: brightness(0) invert(1);*/
-}
-.page-fichesp .section-servicios .box-content .box-item:hover a > p{
-    color:white;
-}
-.page-fichesp .section-servicios .box-content .box-item img{
-    width: 90px;
-}
-.page-fichesp .section-servicios .box-content .box-item p{
-    width: 150px;
-    margin: auto;
-    color: #0085b2;
-    /*padding-top: 10px;*/
-    height: 40px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
+    */
+    .page-fichesp .section-staff .box-body .box-item{
+        /*width: 270px;*/
+        width: 340px;
+    }
+    .page-fichesp .section-staff .box-body .box-photo{
+        display: flex;
+        justify-content: center;
+        width: 220px;
+        height: 240px;
+        border-radius: 18px 0;
+        border: 1px solid #004790;
+        margin: auto;
+        position: relative;
+    }
+    .page-fichesp .section-staff .box-body .box-photo img{
+        /*width: 150px;*/
+        width: 100%;
+        border-radius: 18px 0;
+    }
+    .page-fichesp .section-staff .box-body .box-photo .box-hovered{
+        position: absolute;
+        top: 0;
+        width: auto;
+        height: 100%;
+        visibility: hidden;
+        transition-property: color, background-color, display;
+        transition-duration: .25s;
+        transition-timing-function: linear;
+        left: 3rem;
+        right: 3rem;
+    }
+    .page-fichesp .section-staff .box-body .box-photo .box-hovered h4{
+        color: white;
+        text-align: center;
+        margin: 0 2rem;
+    }
+    .page-fichesp .section-staff .box-body .box-item:hover .box-hovered{
+        display: flex;
+        background-color: rgba(0,38,178,.5);
+        flex-wrap: wrap;
+        justify-content: center;
+        visibility: visible;
+        align-items: center;
+        border-radius: 160px 0;
+        width: 100%;
+        left: 0;
+    }
+    .page-fichesp .section-staff .box-body .box-text{
+        width: 200px;
+        margin: auto;
+        padding-top: 15px;
+        color: #0083b1;
+        font-size: 20px;
+        text-align: center;
+    }
+    .page-fichesp .section-staff .box-action{
+        margin-top: 45px;
+        text-align: center;
+    }
+    .page-fichesp .section-servicios .box-title{
+        margin: 45px 0;
+        text-align: center;
+    }
+    .page-fichesp .section-servicios .box-title h2{
+        font-weight: bold;
+        font-size: 34px;
+        color: #0082b0;
+    }
+    .page-fichesp .section-servicios .box-content{
+        margin: 5% 2.5%;
+    }
+    .page-fichesp .section-servicios .box-content .box-item{
+        text-align: center;
+        padding: 24px;
+        /*transition-property: color, background-color, display;
+        transition-duration: .5s;
+        transition-timing-function: linear;*/
+    }
+    .page-fichesp .section-servicios .box-content .box-item a{
+        /*right: 0;*/
+        padding-top: 1.25rem;
+        display: inline-block;
+        transition-property: color, background-color, display;
+        transition-duration: 0.25s;
+        transition-timing-function: linear;
+        border-radius: 15px 0;
+        position: relative;
+    }
+    .page-fichesp .section-servicios .box-content .box-item a > .box-hovered{
+        padding: 1.25rem 0;
+        position: absolute;
+        width: 0px;
+        height: 0;
+        top: 0;
+        left: 0;
+        transition-property: color, background-color, display, width, height;
+        transition-duration: 0.25s;
+        transition-timing-function: linear;
+        border-radius: 15px 0;
+        z-index: -1;
+    }
+    .page-fichesp .section-servicios .box-content .box-item:hover a > .box-hovered{
+        background-color: #00488d;
+        width: 150px;
+        height: 156px;
+        /*right: 100%;*/
+    }
+    .page-fichesp .section-servicios .box-content .box-item:hover a > img{
+        /*filter: brightness(0) invert(1);*/
+    }
+    .page-fichesp .section-servicios .box-content .box-item:hover a > p{
+        color:white;
+    }
+    .page-fichesp .section-servicios .box-content .box-item img{
+        width: 90px;
+    }
+    .page-fichesp .section-servicios .box-content .box-item p{
+        width: 150px;
+        margin: auto;
+        color: #0085b2;
+        /*padding-top: 10px;*/
+        height: 40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
 /* ************************ */
 /*        CONTACTANOS       */
 /* ************************ */
@@ -1964,267 +1966,366 @@ header.box-header{
 /* ************************* */
 /*        FICHA SERV.        */
 /* ************************* */
-.page-fichserv .section-portada{
-    margin-top: 140px;
-    position: relative;
-}
-.page-fichserv .section-portada .img-portada {
-    position: relative;
-}
-.page-fichserv .section-portada .texto-portada{
-    position: absolute;
-    /*bottom: 0;
-    right: 10%;
-    padding-bottom: 60px;*/
-    display: block;
-    text-align: center;
-    margin: auto;
-    top: 70%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.page-fichserv .section-portada .texto-portada h1{
-    font-size: 60px;
-    font-weight: bold;
-    color: white;
-    display: inline-block;
-    margin: 0;
-    padding: 15px;
-}
-.page-fichserv .section-portada .texto-portada img{
-    position: relative;
-    top: -55px;
-    left: -35px;
-}
-.page-fichserv .section-portada .img-portada .bg-portada{
-    background-size: cover;
-    width: 100%;
-    height: 620px;
-    /*background-position: center;*/
-    background-position: 50% 25%;
-    background-attachment: fixed;
-}
-.page-fichserv .section-detalle .box-celeste{
-    width: 94%;
-    float: right;
-    height: 480px;
-    background-color: #c2d9e8;
-    border-radius: 100px 0 0 0;
-    margin-top: 4rem;
-    padding: 4rem 8rem;
-}
-.page-fichserv .section-detalle .box-celeste h2{
-    margin: 0;
-    font-weight: bold;
-    color: #004791;
-    font-size: 36px;
-}
-.page-fichserv .section-detalle .box-imagen{
-    position: relative;
-    text-align: center;
-}
-.page-fichserv .section-detalle .box-imagen img{
-    border-radius: 40px 0;
-    margin-top: -24%;
-    width: 75%;
-}
-.page-fichserv .section-detalle .box-description{
-    width: 70%;
-    margin: auto;
-    display: flex;
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
-    /*align-items: center;*/
-    align-items: baseline;
-}
-.page-fichserv .section-detalle .box-description .box-icono .box-icono-content{
-    display: inline-block;
-    border-radius: 50%;
-    padding: 20px;
-    background-color: #0085b2;
-    transition-property: background-color, border-radius;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;    
-}
-.page-fichserv .section-detalle .box-description .box-icono .line-dashed{
-    color: #0085b2;
-    position: absolute;
-    /*width: 50%;*/
-    width: 250%;
-    left: 50%;
-    right: 0;
-    top: 10px;
-    bottom: 0;
-    /*height: 260px;*/
-    border-left: 2px dashed;
-    z-index: -1;
-    border-bottom: 2px dashed;
-    /*border-right: 2px dashed;*/
-    border-radius: 15px 0 0 15px;
-}
-.page-fichserv .section-detalle .box-description .box-icono .box-icono-content:hover {
-    border-radius: 15px 0;
-}
-.page-fichserv .section-detalle .box-description .box-icono img{
-    padding: 5px;
-    filter: brightness(0) invert(1);
-    /*border: 2px dashed #0085b2;
-    border-radius: 15px;*/
-}
-.page-fichserv .section-detalle .box-description .box-letras{
-    font-size: 18px;
-    padding: 0 5rem;
-}
-.page-fichserv .section-detalle .box-como-acceder{
-    width: 75%;
-    margin: auto;
-    padding-top: 10rem;
-}
-.page-fichserv .section-detalle .box-como-acceder .box-letras h2{
-    color: #0085b2;
-    font-weight: bold;
-}
-.page-fichserv .section-detalle .box-como-acceder .box-letras p{
-    font-size: 18px;
-    margin-bottom: 5rem;
-}
-.page-fichserv .section-detalle .box-video{
-    text-align: center;
-}
-.page-fichserv .section-detalle .box-video iframe{
-    width: 90%;
-}
-.page-fichserv .section-mas-servicios{
-    padding-top: 5rem;
-}
-.page-fichserv .section-mas-servicios h2{
-    font-weight: bold;
-    color: #004791;
-    font-size: 32px;
-    padding-bottom: 3.5rem;
-}
-.page-fichserv .section-mas-servicios .owl-buttons .owl-prev{
-    position: absolute;
-    left: -30px;
-    top: 33%;
-}
-.page-fichserv .section-mas-servicios .owl-buttons .owl-next{
-    position: absolute;
-    right: -30px;
-    top: 33%;
-}
-.page-fichserv .section-mas-servicios .owl-buttons svg{
-    font-size: 45px;
-    color: #0085b2;
-}
-.page-fichserv .section-mas-servicios .box-item p{
-    color: #0085b2;
-    font-size: 18px;
-    margin-top: 15px;
-}
+    .page-fichserv .section-portada{
+        margin-top: 140px;
+        position: relative;
+    }
+    .page-fichserv .section-portada .img-portada {
+        position: relative;
+    }
+    .page-fichserv .section-portada .texto-portada{
+        position: absolute;
+        /*bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;*/
+        display: block;
+        text-align: center;
+        margin: auto;
+        top: 70%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .page-fichserv .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        display: inline-block;
+        margin: 0;
+        padding: 15px;
+    }
+    .page-fichserv .section-portada .texto-portada img{
+        position: relative;
+        top: -55px;
+        left: -35px;
+    }
+    .page-fichserv .section-portada .img-portada .bg-portada{
+        background-size: cover;
+        width: 100%;
+        height: 620px;
+        /*background-position: center;*/
+        background-position: 50% 25%;
+        background-attachment: fixed;
+    }
+    .page-fichserv .section-detalle .box-celeste{
+        width: 94%;
+        float: right;
+        height: 480px;
+        background-color: #c2d9e8;
+        border-radius: 100px 0 0 0;
+        margin-top: 4rem;
+        padding: 4rem 8rem;
+    }
+    .page-fichserv .section-detalle .box-celeste h2{
+        margin: 0;
+        font-weight: bold;
+        color: #004791;
+        font-size: 36px;
+    }
+    .page-fichserv .section-detalle .box-imagen{
+        position: relative;
+        text-align: center;
+    }
+    .page-fichserv .section-detalle .box-imagen img{
+        border-radius: 40px 0;
+        margin-top: -24%;
+        width: 75%;
+    }
+    .page-fichserv .section-detalle .box-description{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        padding-top: 7.5rem;
+        padding-bottom: 7.5rem;
+        /*align-items: center;*/
+        align-items: baseline;
+    }
+    .page-fichserv .section-detalle .box-description .box-icono .box-icono-content{
+        display: inline-block;
+        border-radius: 50%;
+        padding: 20px;
+        background-color: #0085b2;
+        transition-property: background-color, border-radius;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;    
+    }
+    .page-fichserv .section-detalle .box-description .box-icono .line-dashed{
+        color: #0085b2;
+        position: absolute;
+        /*width: 50%;*/
+        width: 250%;
+        left: 50%;
+        right: 0;
+        top: 10px;
+        bottom: 0;
+        /*height: 260px;*/
+        border-left: 2px dashed;
+        z-index: -1;
+        border-bottom: 2px dashed;
+        /*border-right: 2px dashed;*/
+        border-radius: 15px 0 0 15px;
+    }
+    .page-fichserv .section-detalle .box-description .box-icono .box-icono-content:hover {
+        border-radius: 15px 0;
+    }
+    .page-fichserv .section-detalle .box-description .box-icono img{
+        padding: 5px;
+        filter: brightness(0) invert(1);
+        /*border: 2px dashed #0085b2;
+        border-radius: 15px;*/
+    }
+    .page-fichserv .section-detalle .box-description .box-letras{
+        font-size: 18px;
+        padding: 0 5rem;
+    }
+    .page-fichserv .section-detalle .box-como-acceder{
+        width: 75%;
+        margin: auto;
+        padding-top: 10rem;
+    }
+    .page-fichserv .section-detalle .box-como-acceder .box-letras h2{
+        color: #0085b2;
+        font-weight: bold;
+    }
+    .page-fichserv .section-detalle .box-como-acceder .box-letras p{
+        font-size: 18px;
+        margin-bottom: 5rem;
+    }
+    .page-fichserv .section-detalle .box-video{
+        text-align: center;
+    }
+    .page-fichserv .section-detalle .box-video iframe{
+        width: 90%;
+    }
+    .page-fichserv .section-mas-servicios{
+        padding-top: 5rem;
+    }
+    .page-fichserv .section-mas-servicios h2{
+        font-weight: bold;
+        color: #004791;
+        font-size: 32px;
+        padding-bottom: 3.5rem;
+    }
+    .page-fichserv .section-mas-servicios .owl-buttons .owl-prev{
+        position: absolute;
+        left: -30px;
+        top: 33%;
+    }
+    .page-fichserv .section-mas-servicios .owl-buttons .owl-next{
+        position: absolute;
+        right: -30px;
+        top: 33%;
+    }
+    .page-fichserv .section-mas-servicios .owl-buttons svg{
+        font-size: 45px;
+        color: #0085b2;
+    }
+    .page-fichserv .section-mas-servicios .box-item p{
+        color: #0085b2;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+/* ************************ */
+/*          CONOCENOS       */
+/* ************************ */
+    .page-conocenos{
+        background-color: #d5dee5;
+    }
+    .page-conocenos .section-portada{
+        margin-top: 140px;
+        position: relative;
+    }
+    .page-conocenos .angle-separator-up-style-2{
+        background-color: #d5dee5;
+    }
+    .page-conocenos .angle-separator-bottom{
+        background-color: #d5dee5;
+    }
+    .page-conocenos .section-portada .img-portada {
+        position: relative;
+    }
+    .page-conocenos .section-portada .texto-portada{
+        /*position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;*/
+        position: absolute;
+        display: block;
+        text-align: center;
+        margin: auto;
+        top: 60%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .page-conocenos .section-portada .texto-portada img{
+        position: relative;
+        top: -55px;
+        left: -35px;
+    }
+    .page-conocenos .section-portada .texto-portada h1{
+        font-size: 60px;
+        color: #0085b2;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0;
+        padding: 15px;
+    }
+    .page-conocenos .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-conocenos.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 420px;
+        background-attachment: fixed;
+    }
+    .page-conocenos .section-conocenos{
+        display: flex;
+        z-index: 5;
+        position: relative;
+        height: 640px;
+        margin-top: 3rem;
+    }
+    .page-conocenos .section-conocenos .box-background{
+        width: 56%;
+        position: absolute;
+        height: 640px;
+        top: 0;
+        border-top-right-radius: 10% 50%;
+        border-bottom-right-radius: 10% 50%;
+        background-size: cover;
+        z-index: 3;
+    }
+    .page-conocenos .section-conocenos .box-barra{
+        /*position: relative;*/
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-1{
+        position: absolute;
+        left: 52%;
+        width: 100px;
+        height: 100%;
+        border-top-right-radius: 76% 50%;
+        border-bottom-right-radius: 76% 50%;
+        background-color: #d5dee5;
+        z-index: 2;
+        /* background-color: white; */
+        /* border: 1px solid;*/
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2{
+        position: absolute;
+        left: 54%;
+        width: 100px;
+        height: 100%;
+        background-color: white;
+        border-top-right-radius: 100% 50%;
+        border-bottom-right-radius: 100% 50%;
+    }
+    .page-conocenos .section-conocenos .box-info{
+        position: absolute;
+        right: 0;
+    }
+
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
 /* ************************* */
-.box-modal-perfil{
-    width: 60%;
-    position: fixed;
-    height: 100%;
-    right: 0;
-    top: 0;
-    z-index: 220;
-    background-image: url('../images/fondo-perfil-medico-2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: -4px -1px 10px 2px rgba(70, 70, 70, 0.34);
-    -webkit-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-    -moz-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-    -o-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-    -ms-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-    transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-}
-.box-modal-perfil.out{
-    /*visibility: hidden;*/
-    right: -60%;
-}
-.box-modal-perfil.in{
-    right: 0;
-}
-.box-modal-perfil .box-close.close-icon{
-    /*background-color: #002661;*/
-    border-color: #002661;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    z-index: 1;
-}
-.box-modal-perfil .box-close.close-icon .line{
-    border-color: #002661;
-}
-.box-modal-perfil .box-close.close-icon:hover{
-    background-color: #002661;
-}
-.box-modal-perfil .box-close.close-icon:hover .line{
-    border-color: white;
-}
-.box-modal-perfil .box-perfil-medico{
-    margin: 45px;
-    color: #00488d;
-    display: flex;
-}
-.box-modal-perfil .box-perfil-medico .box-present{
-    padding-top: 6px;
-}
-.box-modal-perfil .box-perfil-medico h3{
-    font-size: 22px;
-    font-weight: 700;
-}
-.box-modal-perfil .box-perfil-medico .box-present h2{
-    font-weight: 700;
-}
-.box-modal-perfil .box-perfil-medico .box-present .box-present-detail{
-    margin-bottom: 10px;
-}
-.box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl{
-    display: flex;
-    margin-bottom: 2px;
-}
-.box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl dt {
-    width: 120px;
-}
-.box-modal-perfil .box-perfil-medico .box-present .box-present-lema{
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px 0;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    text-align: center;
-}
-.box-modal-perfil .box-perfil-medico .box-horario{
-    border-bottom: 2px solid;
-    padding-bottom: 16px;
-}
-.box-modal-perfil .box-perfil-medico .box-horario dl{
-    display: flex;
-    margin-bottom: 2px;
-}
-.box-modal-perfil .box-perfil-medico .box-horario dl dt {
-    width: 120px;
-}
-.box-modal-perfil .box-perfil-medico .box-horario dl dt img{
-    width: 16px;
-    margin-right: 4px;
-}
-.box-modal-perfil .box-perfil-medico .box-foto-perfil{
-    width: 70%;
-}
-.box-modal-perfil .box-perfil-medico .box-foto-perfil img{
-    max-width: 460px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
+    .box-modal-perfil{
+        width: 60%;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        z-index: 220;
+        background-image: url('../images/fondo-perfil-medico-2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: -4px -1px 10px 2px rgba(70, 70, 70, 0.34);
+        -webkit-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        -moz-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        -o-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        -ms-transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        transition: right 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99), top 1000ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
+    }
+    .box-modal-perfil.out{
+        /*visibility: hidden;*/
+        right: -60%;
+    }
+    .box-modal-perfil.in{
+        right: 0;
+    }
+    .box-modal-perfil .box-close.close-icon{
+        /*background-color: #002661;*/
+        border-color: #002661;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        z-index: 1;
+    }
+    .box-modal-perfil .box-close.close-icon .line{
+        border-color: #002661;
+    }
+    .box-modal-perfil .box-close.close-icon:hover{
+        background-color: #002661;
+    }
+    .box-modal-perfil .box-close.close-icon:hover .line{
+        border-color: white;
+    }
+    .box-modal-perfil .box-perfil-medico{
+        margin: 45px;
+        color: #00488d;
+        display: flex;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present{
+        padding-top: 6px;
+    }
+    .box-modal-perfil .box-perfil-medico h3{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present h2{
+        font-weight: 700;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present .box-present-detail{
+        margin-bottom: 10px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl{
+        display: flex;
+        margin-bottom: 2px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present .box-present-detail dl dt {
+        width: 120px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-present .box-present-lema{
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 0;
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+        text-align: center;
+    }
+    .box-modal-perfil .box-perfil-medico .box-horario{
+        border-bottom: 2px solid;
+        padding-bottom: 16px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-horario dl{
+        display: flex;
+        margin-bottom: 2px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-horario dl dt {
+        width: 120px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-horario dl dt img{
+        width: 16px;
+        margin-right: 4px;
+    }
+    .box-modal-perfil .box-perfil-medico .box-foto-perfil{
+        width: 70%;
+    }
+    .box-modal-perfil .box-perfil-medico .box-foto-perfil img{
+        max-width: 460px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 /* ******** */
 /*  FOOTER  */
 /* ******** */

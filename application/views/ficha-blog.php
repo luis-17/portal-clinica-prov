@@ -8,7 +8,7 @@
 		</div>
 	</section>
 	<div class="angle-separator-content">
-	  	<div class="angle-separator-up-style-2"></div>
+	  	<div class="angle-separator-up-style-2 wow slideInUp slow"></div>
 	</div>
 	<section class="section-entrie container-fluid">
 		<div class="box-content-describe">
