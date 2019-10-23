@@ -722,11 +722,10 @@ header.box-header{
     top: inherit;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p{
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 24px;
     width: 300px;
     position: absolute;
-    top: 30%;
+    top: 20%;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p .btn{
     background-color: white;
@@ -1591,6 +1590,9 @@ header.box-header{
     }
     .page-contacto .section-contacto .box-content-img{
         border-right: 3px solid #005eaa;
+    }
+    .page-contacto .section-contacto .box-content-img img{
+        border-radius: 150px 0;
     }
     .page-contacto .section-contacto .box-form{
         padding-left: 8rem;

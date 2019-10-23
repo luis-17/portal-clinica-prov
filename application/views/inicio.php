@@ -78,7 +78,7 @@
         <div class="box-image image-2" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/image1_conocenos.jpg);">
           <div class="box-hovered-center">
             <p> 
-              ¿Por qué elegir Clínica Providencia? 
+              Somos un equipo humano comprometido con tu salud. Ver a nuestros pacientes sanos es recompensa de nuestro arduo trabajo. 
               <a target="_blank" href="<?php echo site_url('conocenos'); ?>" class="btn btn-rounded">SABER MÁS</a>
             </p>
           </div>
