@@ -714,8 +714,8 @@ header.box-header{
 }
 
 .page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
-    width: 55%;
-    background-position-y: 400%;
+    width: 60%;
+    background-position-y: 200%;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center{
     bottom: 0;
@@ -2221,9 +2221,85 @@ header.box-header{
         border-top-right-radius: 100% 50%;
         border-bottom-right-radius: 100% 50%;
     }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option{
+        width: 80px;
+        height: 80px;
+        z-index: 3;
+        position: absolute;
+        transition-property: visibility;
+        transition-duration: .35s;
+        transition-timing-function: linear;
+        cursor: pointer;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img{
+        width: 80px;
+        /*transition-property: visibility;
+        transition-duration: .35s;
+        transition-timing-function: linear;*/
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img.no-alt{
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        /*transition-property: visibility;
+        transition-duration: .35s;
+        transition-timing-function: linear;*/
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option:hover .box-icon img.no-alt{
+        visibility: visible;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.selected .box-icon img.no-alt{
+        visibility: visible;
+    }
+    /*{
+       visibility: visible; 
+    }*/
+    /*.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-icon img:hover{
+
+    }*/
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-mision{
+        top: 15%;
+        left: 28%;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-vision{
+        top: 45%;
+        left: 45%;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-valores{
+        bottom: 15%;
+        left: 28%;
+    }
     .page-conocenos .section-conocenos .box-info{
         position: absolute;
-        right: 0;
+        left: 65%;
+        right: 6%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page-conocenos .section-conocenos .box-info .box-title{
+        padding-bottom: 1rem;
+    }
+    .page-conocenos .section-conocenos .box-info .box-title h3{
+        color: #0b2864;
+        font-size: 32px;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    .page-conocenos .section-conocenos .box-info .box-parrafo p{
+        font-size: 15px;
+    }
+    .page-conocenos .section-conocenos .box-info .box-title small{
+        font-size: 16px;
+        color: #0085b2;
+    }
+    .page-conocenos .section-conocenos .box-info .box-options-detail{
+        width: 100%;
+    }
+    .page-conocenos .section-conocenos .box-info .box-options-detail .box-option{
+        display: none;
     }
 
 /* ************************* */
