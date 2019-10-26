@@ -16,7 +16,7 @@
 	</div>
 	<section class="section-conocenos">
 		<div class="box-content-bg">
-			<div class="box-background" style="
+			<div class="box-background wow zoomIn" data-wow-offset="200" style="
 			background-image: linear-gradient(to top, rgba(213, 222, 229, 1) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgba(213, 222, 229, 1) 100%), 
 			url(<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/conocenos-ficha.png);">
 			</div>
@@ -24,18 +24,21 @@
 		<div class="box-barra">
 			<div class="box-barra-1"></div>
 			<div class="box-barra-2">
-				<div class="box-option box-option-mision selected" data-destino="mision">
+				<div class="box-option box-option-mision selected wow bounceInDown" data-destino="mision">
 					<div class="box-icon">
+						<img class="si-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/mision-alt.png" />
 						<img class="no-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/mision.png" />
 					</div>
 				</div>
-				<div class="box-option box-option-vision" data-destino="vision">
+				<div class="box-option box-option-vision wow bounceInDown delay-500ms" data-destino="vision">
 					<div class="box-icon">
+						<img class="si-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/vision-alt.png" />
 						<img class="no-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/vision.png" />
 					</div>
 				</div>
-				<div class="box-option box-option-valores" data-destino="valores">
+				<div class="box-option box-option-valores wow bounceInDown delay-1s" data-destino="valores">
 					<div class="box-icon">
+						<img class="si-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/valores-alt.png" />
 						<img class="no-alt" src="<?php echo URL_PREVIEW; ?>assets/dinamic/conocenos/iconos/valores.png" />
 					</div>
 				</div>
@@ -86,6 +89,7 @@
 <script type="text/javascript">
   	$(document).ready(function() {
   		var objSelected = $('.box-barra-2 .box-option.selected');
+  		$('.box-barra-2 .box-option img.si-alt').hide();
   		var destino = objSelected.attr('data-destino');
   		var classDestino = 'box-option-' + destino;
   		$('.box-options-detail .box-option.'+classDestino).fadeIn(2000);
@@ -113,6 +117,11 @@
   				$('.box-barra-2 .box-option.box-option-vision').css({left: '36%', top: '24%'});
   			}
   			thes.css({left: '45%', top: '45%'});
+  			$('.box-barra-2 .box-option img.si-alt').hide();
+  			$('.box-barra-2 .box-option img.no-alt').fadeIn(1000);
+  			$('.box-barra-2 .box-option.'+classDestino+' img.no-alt').hide();
+  			$('.box-barra-2 .box-option.'+classDestino+' img.si-alt').fadeIn(1000);
+
   		});
   	});
 </script> 	
