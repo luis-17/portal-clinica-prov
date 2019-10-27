@@ -93,6 +93,8 @@
   		var destino = objSelected.attr('data-destino');
   		var classDestino = 'box-option-' + destino;
   		$('.box-options-detail .box-option.'+classDestino).fadeIn(2000);
+  		$('.box-barra-2 .box-option.'+classDestino+' img.no-alt').hide();
+  		$('.box-barra-2 .box-option.'+classDestino+' img.si-alt').fadeIn(1000);
   		$('.box-barra-2 .box-option').on('click', function() {
   			var thes = $(this);
   			$('.box-barra-2 .box-option').removeClass('selected');

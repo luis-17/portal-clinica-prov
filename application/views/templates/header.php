@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.carousel.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('libs/owl-carousel/owl.theme.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('libs/swiper/css/swiper.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('libs/fancybox/jquery.fancybox.min.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate/animate.css'); ?>">
 
 	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet"> 

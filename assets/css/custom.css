@@ -726,6 +726,8 @@ header.box-header{
     width: 300px;
     position: absolute;
     top: 20%;
+    font-weight: 100;
+    font-family: Raleway;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p .btn{
     background-color: white;
@@ -1181,166 +1183,147 @@ header.box-header{
 /* ************************ */
 /*      ESPECIALIDADES      */
 /* ************************ */
-.page-esp .section-portada{
-    margin-top: 140px;
-    /*background-color: #0085b2;*/
-    /*padding-top: 60px;*/
-    position: relative;
-}
-.page-esp .section-portada .img-portada {
-    position: relative;
-}
-.page-esp .section-portada .texto-portada{
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    padding-bottom: 60px;
-}
-.page-esp .section-portada .texto-portada h1{
-    font-size: 60px;
-    font-weight: bold;
-    color: #0085b2;
-}
-.page-esp .section-portada .img-portada .bg-portada{
-    background-image: url(../images/portada-especialidades.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 340px;
-}
-.page-esp .section-especialidades .box-filtros{
-    padding: 0 14% 2%;
-}
-.page-esp .section-especialidades .box-content{
-    padding: 4% 14%;
-    background-color: #eaf6fb;
-}
-.page-esp .section-especialidades .box-footer-actions{
-    margin: 40px 0;
-    text-align: center;
-}
-.page-esp .section-especialidades .box-footer-actions a{
-    width: 180px;
-}
-.page-esp .section-especialidades h3{
-    color: #00488d;
-    font-weight: bold;
-    text-align: left;
-}
-.page-esp .section-especialidades .box-especialidad{
-    display: flex;
-}
-.page-esp .section-especialidades .box-especialidad input{
-    margin-right: 15px;
-}
-.page-esp .section-especialidades .box-especialidad button{
-    width: 260px;
-}
-.page-esp .section-especialidades .box-content .box-inner-content{
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 15px;
-}
-.page-esp .section-especialidades .box-content .box-items{
-    margin: 40px 0;
-    overflow: hidden;
-}
-.page-esp .section-especialidades .box-content .box-arrow{
-    text-align: center;
-}
-.page-esp .section-especialidades .box-content .box-arrow button{
-    border-radius: 50%;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items a{
-    display: block;
-    padding: 0 15px;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item{
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: center;*/
-    display: inline-block;
-    padding: 10px 10px;
-    border-radius: 16px 0;
-    /*border: 2px solid #9bc0d8;*/
-    transition-property: color, background-color, width, height, display;
-    transition-duration: .25s;
-    transition-timing-function: linear;
+    .page-esp .section-portada{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-esp .section-portada .img-portada {
+        position: relative;
+    }
+    .page-esp .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;
+    }
+    .page-esp .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: #0085b2;
+    }
+    .page-esp .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-especialidades.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+    }
+    .page-esp .section-especialidades .box-filtros{
+        padding: 0 14% 2%;
+    }
+    .page-esp .section-especialidades .box-content{
+        padding: 4% 14%;
+        background-color: #eaf6fb;
+    }
+    .page-esp .section-especialidades .box-footer-actions{
+        margin: 40px 0;
+        text-align: center;
+    }
+    .page-esp .section-especialidades .box-footer-actions a{
+        width: 180px;
+    }
+    .page-esp .section-especialidades h3{
+        color: #00488d;
+        font-weight: bold;
+        text-align: left;
+    }
+    .page-esp .section-especialidades .box-especialidad{
+        display: flex;
+    }
+    .page-esp .section-especialidades .box-especialidad input{
+        margin-right: 15px;
+    }
+    .page-esp .section-especialidades .box-especialidad button{
+        width: 260px;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+    }
+    .page-esp .section-especialidades .box-content .box-items{
+        margin: 40px 0;
+        overflow: hidden;
+    }
+    .page-esp .section-especialidades .box-content .box-arrow{
+        text-align: center;
+    }
+    .page-esp .section-especialidades .box-content .box-arrow button{
+        border-radius: 50%;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items a{
+        display: block;
+        padding: 0 15px;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item{
+        /*display: flex;
+        flex-wrap: wrap;
+        justify-content: center;*/
+        display: inline-block;
+        padding: 10px 10px;
+        border-radius: 16px 0;
+        /*border: 2px solid #9bc0d8;*/
+        transition-property: color, background-color, width, height, display;
+        transition-duration: .25s;
+        transition-timing-function: linear;
 
-    /*position: absolute;
-    left: 20%;
-    right: 20%;*/
-    height: 94px;
-    /*margin-bottom: 40px;*/
-    width: 100%;
-    border: 1px dashed #00276c;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover{
-    background-color: #00488d;
-    border-color: #00488d;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover img{
-    filter: brightness(0) invert(1);
-    /*width: 40px;
-    height: 40px;*/
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action{
-    display: block;
-    margin-top: 10px;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-icon{
-    width: 100%;
-    text-align: center;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action{
-    display: none;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action a{
-    background-color: white;
-    border-radius: 10px 0;
-    
-    font-size: 11px;
-    padding: 4px 10px;
-    max-width: 100%;
-    overflow: hidden;
-/*    height: 0;
-    padding: 0;
-    border: 0;*/
-    /*transition-property: color, background-color, width, height, padding;
-    transition-duration: .25s;
-    transition-timing-function: linear;*/
-}
-/*.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action a{
-    height: inherit;
-    padding: 6px 10px;
-}*/
-.page-esp .section-especialidades .box-content .swiper-pagination{
-    position: relative;
-    margin-top: 15px;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-nombre{
-    /*text-align: center;
-    padding-top: 8px;*/
-    /*margin-bottom: 40px;*/
-
-    /*position: absolute;*/
-    /*bottom: 20px;*/
-    margin: auto;
-    /*left: 0;*/
-    /*right: 0;*/
-    /*width: 215px;*/
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item img{
-    width: 64px;
-    height: 64px;
-    transition-property: color, background-color, width, height, display;
-    transition-duration: .25s;
-    transition-timing-function: linear;
-    margin: auto;
-}
+        /*position: absolute;
+        left: 20%;
+        right: 20%;*/
+        height: 94px;
+        /*margin-bottom: 40px;*/
+        width: 100%;
+        border: 1px dashed #00276c;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover{
+        background-color: #00488d;
+        border-color: #00488d;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover img{
+        filter: brightness(0) invert(1);
+        /*width: 40px;
+        height: 40px;*/
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item:hover .box-action{
+        display: block;
+        margin-top: 10px;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-icon{
+        width: 100%;
+        text-align: center;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action{
+        display: none;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item .box-action a{
+        background-color: white;
+        border-radius: 10px 0;
+        
+        font-size: 11px;
+        padding: 4px 10px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .page-esp .section-especialidades .box-content .swiper-pagination{
+        position: relative;
+        margin-top: 15px;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-nombre{
+        margin: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-item img{
+        width: 64px;
+        height: 64px;
+        transition-property: color, background-color, width, height, display;
+        transition-duration: .25s;
+        transition-timing-function: linear;
+        margin: auto;
+    }
 
 /* ************************ */
 /*   FICHA ESPECIALIDADES   */
@@ -2066,6 +2049,7 @@ header.box-header{
         border-bottom: 2px dashed;
         /*border-right: 2px dashed;*/
         border-radius: 15px 0 0 15px;
+        min-height: 200px;
     }
     .page-fichserv .section-detalle .box-description .box-icono .box-icono-content:hover {
         border-radius: 15px 0;
@@ -2136,6 +2120,7 @@ header.box-header{
     .page-conocenos .section-portada{
         margin-top: 140px;
         position: relative;
+        /*display: none;*/
     }
     .page-conocenos .angle-separator-up-style-2{
         background-color: #d5dee5;
@@ -2147,10 +2132,6 @@ header.box-header{
         position: relative;
     }
     .page-conocenos .section-portada .texto-portada{
-        /*position: absolute;
-        bottom: 0;
-        right: 10%;
-        padding-bottom: 60px;*/
         position: absolute;
         display: block;
         text-align: center;
@@ -2184,8 +2165,10 @@ header.box-header{
         display: flex;
         z-index: 5;
         position: relative;
-        height: 640px;
+        min-height: 640px;
         margin-top: 3rem;
+        /*padding-top: 12rem;*/
+        overflow: hidden;
     }
     .page-conocenos .section-conocenos .box-content-bg{
         height: 100%;
@@ -2224,7 +2207,6 @@ header.box-header{
         pointer-events: none;
     }
     .page-conocenos .section-conocenos .box-barra{
-        /*position: relative;*/
         width: 100%;
     }
     .page-conocenos .section-conocenos .box-barra::after {
@@ -2341,6 +2323,71 @@ header.box-header{
     }
     .page-conocenos .section-conocenos .box-info .box-options-detail .box-option{
         display: none;
+    }
+
+/* ************************ */
+/*        PROMOCIONES       */
+/* ************************ */
+    .page-promocion .section-portada{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-promocion .section-portada .img-portada {
+        position: relative;
+    }
+    .page-promocion .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 60px;
+    }
+    .page-promocion .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: #0085b2;
+    }
+    .page-promocion .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-especialidades.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 280px;
+    }
+    .page-promocion .section-list{
+        margin: 10rem 0;
+    }
+    .page-promocion .box-result .box-item{
+        width: 240px;
+        display: block;
+        margin: auto;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    }
+    .page-promocion .box-result .box-item .box-image{
+        display: block;
+        height: 280px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        -webkit-transition: -webkit-transform 0.45s ease-in-out;
+        transition: transform 0.45s ease-in-out;
+        
+    }
+    .page-promocion .box-result .box-item .box-image:hover{
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+    .page-promocion .box-result .box-description{
+        font-weight: bold;
+        font-size: 16px;
+        width: 240px;
+        margin: auto;
+        color: #00488d;
+        margin-bottom: 4rem;
     }
 
 /* ************************* */

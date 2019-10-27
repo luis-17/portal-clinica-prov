@@ -151,7 +151,7 @@
       </div>
       <div class="box-content">
         <?php foreach($arrTestimonios as $key => $row): ?>
-          <div class="box-item testimonio wow fadeIn" data-wow-delay="1s" data-wow-duration="1s">
+          <div class="box-item testimonio wow fadeIn slow">
             <div class="box-item-wrap">
               <div class="box-image">
                 <img src="<?php echo URL_PREVIEW; ?>assets/dinamic/testimonio/<?php echo $row['foto']; ?>">

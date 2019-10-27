@@ -10,6 +10,7 @@ class Model_seguro extends CI_Model {
 		$this->db->select('sg.idseguro, sg.nombre, sg.descripcion, sg.logo');
 		$this->db->from('seguro sg');
 		$this->db->where('sg.estado_seg', 1); 
+		$this->db->where('sg.visible', 1); 
 		return $this->db->get()->result_array();
 	}
 }

@@ -78,6 +78,7 @@
 <script type="text/javascript" src="<?php echo base_url('libs/owl-carousel/owl.carousel.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/swiper/js/swiper.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/jquery-validate/jquery.validate.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('libs/fancybox/jquery.fancybox.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/wow/wow.min.js'); ?>"></script>
 <script>
 	new WOW().init();
@@ -173,5 +174,6 @@ $( document ).ready( function() {
 });
 </script>
 <!--End of Tawk.to Script-->
+
 </body>
 </html>
