@@ -221,7 +221,7 @@
 
         elem.find(".item").eq(current).find(".box-image-lateral").addClass('animated bounceInRight delay-500ms');
         elem.find(".item").eq(current).find(".box-text-lateral").addClass('animated bounceInLeft delay-1s');
-      },
+      }
     });
     // GALERIA ESPECIALIDADES  
     var owlEspec = $("#prov-especialidades");
@@ -232,7 +232,8 @@
       navigationText: [
         "<i class='next fa fa-angle-left'></i>",
         "<i class='prev fa fa-angle-right'></i>"
-      ]
+      ],
+      itemsDesktopSmall: [992,3]
     });
     // GALERIA SEGUROS  
     var owlSeg = $("#prov-seguro");
@@ -241,6 +242,7 @@
       navigation : false,
       items: 4,
       autoPlay: true,
+      itemsDesktopSmall: [992,3]
     });
     // carganos animacion dinámica en slider Principal
     var $objItems = $('#prov-homeslider .owl-item');

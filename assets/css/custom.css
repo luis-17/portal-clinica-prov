@@ -187,6 +187,7 @@ header.box-header{
 .box-menu-lateral.out{
     /*visibility: hidden;*/
     right: -20%;
+    box-shadow: unset;
 }
 .box-menu-lateral.in{
     right: 0;
@@ -344,6 +345,9 @@ header.box-header{
     /*display: flex;*/
     align-items: center;
 }
+.box-header .box-header-primary .box-menu-resp{
+    display: none;
+}
 .box-header .box-header-primary .box-item a{
     color: #00488d; 
     position: relative;
@@ -483,7 +487,7 @@ header.box-header{
     line-height: 70px;
     border-radius: 50%;
     position: absolute;
-    background-color: rgba(255,255,255, .5);
+    background-color: rgba(255,255,255, .15);
     border: unset;
     display: flex;
     align-items: center;
@@ -500,10 +504,10 @@ header.box-header{
 	border: 2px solid #00488d;
 }
 .page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-next{
-	right: 20px;
+	right: 0;
 }
 .page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div.owl-prev{
-	left: 20px;
+	left: 0;
 }
 .page-home .section-galeria .owl-carousel .owl-controls .owl-buttons div svg{
 	display: block;
@@ -548,7 +552,7 @@ header.box-header{
     margin-top: 40px;
 }
 .page-home .section-galeria .box-text-lateral .box-actions > a{
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-family: 'Leelawade', 'Raleway', Arial, Helvetica, sans-serif;
     padding: 17px 40px;
     line-height: 21px;
     font-size: 18px;
@@ -722,12 +726,13 @@ header.box-header{
     top: inherit;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p{
-    font-size: 24px;
+    font-size: 22px;
     width: 300px;
     position: absolute;
     top: 20%;
     font-weight: 100;
     font-family: Raleway;
+    padding: 0 1.75rem;
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p .btn{
     background-color: white;

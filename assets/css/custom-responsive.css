@@ -2,20 +2,7 @@
 /* CSS BY developer: luisls1717@gmail.com 		*/
 /* =============================================*/
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-
-}
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991px) {
-	.box-header .box-header-primary .box-logo img{
-		height: 40px;
-	}
-}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 1199px){ /*1199 a 993*/
 	/* HEADER PRIMARY */
 	.box-header .box-header-primary .box-logo img{
 		height: 56px;
@@ -26,24 +13,27 @@
 	.box-header .box-header-primary .box-nav-menu ul > li{
 		padding-left: 26px;
 	}
-	.btn-reserva{
+	.box-header .box-menu-resp .btn{
 		padding: 4px 10px;
 	}
 	.btn-menu-lateral{
-		height: 30px;
+		height: 28px;
 	}
 	.box-header .box-header-secondary .box-header-redes a.btn{
 		height: 32px;
     	width: 32px;
 	}
-	.box-header .box-header-secondary .box-header-info{
+	/*.box-header .box-header-secondary .box-header-info{
 		position: absolute;
 	    left: 0;
 	    margin-left: 4em;
+	}*/
+	.box-header .box-header-secondary .box-header-info .box-item.box-telefono{
+		/*border-right: unset;*/
 	}
-	.box-header .box-header-primary .box-logo{
+	/*.box-header .box-header-primary .box-logo{
 	    margin-top: 10px;
-	}
+	}*/
 	/* PAGE: HOME; */
 	.page-home .section-galeria .box-text-lateral h1{
 		font-size: 55px;
@@ -52,17 +42,251 @@
 		font-size: 20px;
 	}
 	.page-home .section-galeria .owl-carousel figure img.figura{
-		height: auto;
-    	width: 80%;
+		/*height: auto;*/
+    	width: 450px;
 	}
 	.page-home .section-galeria .box-image-lateral{
-		right: -8em;
-    	bottom: 8em;
+		right: 0;
+    	bottom: 3em;
 	}
 	.page-home .section-galeria .box-text-lateral{
 		margin-left: 0;
 	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
+		width: 85%;
+	}
+	.page-home .section-porque-elegirnos .box-content{
+		margin: 0;
+	}
+	.box-menu-lateral {
+    	width: 36%;
+	}
+	.box-menu-lateral.out{
+		right: -36%;
+	}
 }
+
+@media (max-width: 992px){ /* 992 a 769*/
+	.box-header .box-header-primary .box-logo img{
+		/*height: 40px;*/
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
+		width: 100%;
+	}
+	.box-header .box-header-primary .box-menu{
+		display: none;
+	}
+	.box-header .box-header-secondary{
+		display: none;
+	}
+	.box-header .box-header-primary{
+		margin-top: 1rem;
+	}
+	.box-header .box-header-primary .box-logo img{
+		margin-top: 0;
+	}
+	.box-header .box-header-primary .box-menu-resp{
+		display: flex;
+		align-items: center;
+	}
+	.box-header .box-header-primary .box-menu-resp .box-telefono{
+		padding-right: 16px;
+	    font-size: 16px;
+	    color: #004281;
+	    display: flex;
+    	align-items: center;
+	}
+	.box-header .box-header-primary .box-menu-resp .box-telefono .box-icon{
+		margin-right: 5px;
+	}
+	.box-header .box-header-primary .box-menu-resp .btn-menu-lateral .svg-inline--fa{
+		vertical-align: unset;
+	}
+	.page-home .section-galeria .box-text-lateral h1{
+		font-size: 44px;
+	}
+	.page-home .section-galeria .box-text-lateral{
+		/*bottom: 40%;*/
+	}
+	.page-home .section-galeria .owl-carousel figure > img{
+		height: 680px;
+	}
+	.page-home .section-galeria .owl-carousel figure img.figura{
+		width: 380px;
+	}
+	.page-home .section-galeria .box-image-lateral{
+		bottom: 0;
+	}
+	.page-home .section-galeria .owl-carousel figure > img{
+		max-width: inherit;
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-hovered-center p{
+		font-size: 20px;
+		padding: 0 4rem;
+	}
+	.page-home .section-porque-elegirnos .box-content .box-item .box-item-content{
+		width: 200px;
+    	height: 230px;
+	}
+	.page-home .section-testimonio .box-item{
+		width: 100%;
+	}
+	.section-footer{
+		padding-bottom: 30px;
+	}
+	.section-footer .form-suscripcion{
+		display: block;
+	}
+	.section-footer .box-suscripcion {
+	    margin-bottom: 50px;
+	    margin-left: 16px;
+	    margin-right: 16px;
+	}
+	.section-footer .box-contacto > div{
+		margin-top: 16px;
+	}
+	.section-post-footer {
+    	padding: 16px 40px;
+	}
+	.box-menu-lateral {
+    	width: 50%;
+	}
+	.box-menu-lateral.out{
+		right: -50%;
+	}
+}
+@media (max-width: 768px) { /* 768 a 577 */
+	.container-full{
+	    width: 100%;
+		overflow: hidden;
+		padding: 0 1.25rem;
+	}
+	.page-home .section-galeria .box-text-lateral{
+		width: 100%;
+	    bottom: unset;
+	    top: 8%;
+	    margin: auto;
+	    padding: 0 2.5rem;
+	    text-align: center;
+	    height: 100%;
+	}
+	.page-home .section-galeria .box-text-lateral h1{
+		font-size: 40px;
+    	margin-bottom: 8px;
+	}
+	.page-home .section-galeria .box-text-lateral .box-actions{
+		position: absolute;
+	    bottom: 25%;
+	    left: 0;
+	    right: 0;
+	}
+	.page-home .section-galeria .box-text-lateral .box-actions > a{
+		padding: 10px;
+	    font-size: 16px;
+	}
+	.page-home .section-galeria .box-image-lateral{
+		width: 100%;
+	}
+	.page-home .section-galeria .owl-carousel figure img.figura{
+		width: 328px;
+	}
+	.page-home .section-especialidades{
+		margin-top: 0;
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-3{
+		display: none;
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-2 .box-hovered-center{
+		height: 480px;
+    	background-color: rgba(0,38,178,.5);
+	}
+	.page-home .section-porque-elegirnos .box-content .box-item{
+		width: 100%;
+	}
+	.page-home .section-testimonio .box-item .box-item-wrap{
+		width: 85%;
+		margin-right: 2.5rem;
+	}
+	.section-footer .box-contacto{
+		display: block;
+	}
+	.section-footer .box-contacto > div{
+		justify-content: start;
+	}
+	.section-post-footer{
+		flex-wrap: wrap;
+    	justify-content: center;
+	}
+	.section-post-footer .box-autor{
+		text-align: center;
+	}
+	.section-footer .box-contacto > div.box-redes{
+		justify-content: center;
+	}
+}
+@media (max-width: 576px) {
+	.box-header .box-header-primary .box-menu-resp .box-telefono{
+		display: none;
+	}
+	.box-header .box-menu-resp .btn.btn-home{
+		display: none;
+	}
+	.page-home .section-galeria .box-text-lateral h1{
+		font-size: 32px;
+	}
+	.page-home .section-galeria .box-text-lateral p{
+		font-size: 18px;
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
+		background-position-y: 100%;
+	}
+	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-1{
+		display: none;
+	}
+	.page-home .section-testimonio .box-item .box-title{
+		font-size: 16px;
+	}
+	.page-home .section-testimonio .box-item .box-item-wrap{
+		width: 90%;
+    	margin-right: 0;
+    	font-size: 13px;
+	}
+	.page-home .section-porque-elegirnos .box-content .box-item .box-item-content{
+		width: 280px;
+	}
+	.page-home .section-seguro {
+	    padding: 0;
+	}
+}
+@media (max-width: 375px) {
+	.box-header .box-header-primary .box-logo img{
+		height: 48px;
+	}
+	.box-header .box-menu-resp .btn{
+		margin: 0;
+		font-size: 12px;
+	}
+	.page-home .section-especialidades .box-content .box-action .btn{
+		font-size: 14px;
+    	padding: 10px 12px;
+	}
+	.box-header .box-header-primary .box-menu-resp .btn-menu-lateral .svg-inline--fa{
+		vertical-align: -.125em;
+	}
+	.box-header .box-header-primary .box-menu-resp .btn-menu-lateral{
+		height: 25px;
+     	width: 35px;
+	}
+	.section-footer .box-contacto .box-icon{
+		display: none;
+	}
+	.section-footer .box-contacto .box-icon{
+		display: none;
+	}
+}
+
+
+/*Medium devices (tablets, 768px and up)
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {

@@ -6,6 +6,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title> Clínica Providencia </title> 
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap-social.css'); ?>" rel="stylesheet">
@@ -92,8 +93,6 @@
 			<li>
 				<a href="https://www.computrabajo.com.pe/empresas/ofertas-de-trabajo-de-clinica-providencia-BEA07CFF8134E31A" target="_blank">Trabaja con Nosotros</a>
 			</li>
-			<!-- <li>Novedades y Eventos</li> -->
-			<!-- <li>Testimonios</li> -->
 		</ul>
 	</div>
 	<div class="box-content-header-primary">
@@ -119,9 +118,6 @@
 		      				<li class="box-item <?php echo $active['especialidades']; ?>">
 		      					<a href="<?php echo site_url('especialidades'); ?>"> ESPECIALIDADES </a> 
 		      				</li>
-		      				<!-- <li class="box-item <?php echo $active['conocenos']; ?>">
-		      					<a href="<?php echo site_url('conocenos'); ?>"> CONÓCENOS </a> 
-		      				</li> -->
 		      				<li class="box-item <?php echo $active['staff_medico']; ?>">
 		      					<a href="<?php echo site_url('staff-medico'); ?>"> STAFF MÉDICO </a> 
 		      				</li>
@@ -143,6 +139,17 @@
 		      				</li>
 		      			</ul>
 	    			</nav>
+	    		</div>
+	    		<div class="box-menu-resp">
+	    			<div class="box-telefono">
+	    				<div class="box-icon"> <i class="fa fa-phone"></i> </div> 
+	    				<div class="box-value"> (511) 660 6000 </div>
+	    			</div>
+	    			<div class="box-header-buttons">
+	    				<a href="<?php echo site_url('inicio'); ?>" class="btn btn-primary btn-home" title="Ir al Home"> <i class="fa fa-home"></i> </a>
+		    			<button type="button" class="btn btn-primary btn-reserva">RESERVA TU CITA</button>
+		    			<button type="button" class="btn btn-menu-lateral"> <i class="fas fa-bars"></i> </button>
+		    		</div>
 	    		</div>
 		  	</div>
 	  	</div>
