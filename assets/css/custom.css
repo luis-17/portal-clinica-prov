@@ -125,7 +125,8 @@ header.box-header{
     top: 0;
     z-index: 10;
     left:0;
-    height: 140px;
+    height: 76px;
+    /*height: 140px;*/
     /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 /* HEADER LATERAL */
@@ -195,13 +196,16 @@ header.box-header{
 .box-menu-lateral img{
     width: 140px;
 }
+.box-menu-lateral .content-nav{
+    overflow: auto;
+    height: 100%;
+}
 .box-menu-lateral ul.content-list{
     list-style: none;
     margin: 0;
     padding: 0;
     color: white;
-    overflow: auto;
-    height: 100%;
+    
 }
 .box-menu-lateral ul.content-list li:nth-child(1){
     border-top: 1px solid rgba(224, 224, 224, 0.18);
@@ -214,15 +218,35 @@ header.box-header{
     transition-property: color,background-color,border-color;
     transition-duration: .35s;
     transition-timing-function: linear;
-    height: 60px;
+    height: auto;
     line-height: 2.6;
     font-size: 15px;
+    /*display: flex;
+    align-items: center;*/
+}
+.box-menu-lateral ul.content-list li > ul > li.box-subitem{
+    padding: 0;
+}
+.box-menu-lateral ul.content-list li > ul > li.box-subitem > a{
+    line-height: 1.5;
+}
+.box-menu-lateral ul.content-list li svg{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.box-menu-lateral ul.content-list li.box-end{
+    height: 250px;
+    background-color: inherit;
 }
 .box-menu-lateral ul.content-list li.hidden-desktop{
     display: none;
 }
 .box-menu-lateral ul.content-list li a{
+    position: relative;
     color: inherit;
+    display: flex;
+    align-items: center;
 }
 .box-menu-lateral ul.content-list li:hover{
     /*background-color: #21b8c6;*/
@@ -1214,7 +1238,7 @@ header.box-header{
         color: #0085b2;
     }
     .page-esp .section-portada .img-portada .bg-portada{
-        background-image: url(../images/portada-especialidades.jpg);
+        background-image: url(../images/portada-especialidades.png);
         background-size: cover;
         width: 100%;
         height: 340px;
@@ -1256,6 +1280,9 @@ header.box-header{
     .page-esp .section-especialidades .box-content .box-items{
         margin: 40px 0;
         overflow: hidden;
+    }
+    .page-esp .section-especialidades .box-content .box-items .swiper-slide{
+        padding: 0 1rem;
     }
     .page-esp .section-especialidades .box-content .box-arrow{
         text-align: center;
@@ -1407,7 +1434,9 @@ header.box-header{
     */
     .page-fichesp .section-staff .box-body .box-item{
         /*width: 270px;*/
-        width: 340px;
+        /*width: 340px;*/
+        padding: 0 2rem;
+        min-height: 310px;
     }
     .page-fichesp .section-staff .box-body .box-photo{
         display: flex;

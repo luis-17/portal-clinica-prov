@@ -27,13 +27,13 @@
 		</div>
 		<div class="box-content wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
 			<div class="box-inner-content">
-				<div class="box-arrow box-left-arrow col-xs-1 col-sm-1 col-lg-1">
+				<div class="box-arrow box-left-arrow">
 					<button id="btn-leftSlider" class="btn btn-primary"> <i class="fa fa-angle-left"></i> </button>
 				</div>
 				<div id="swiper-especialidades" class="box-items col-xs-10 col-sm-10 col-lg-10">
-					<div class="row swiper-wrapper">
+					<div class="swiper-wrapper">
 						<?php foreach($arrEspecialidades as $key => $row): ?>
-							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 text-center swiper-slide" style="min-height: 140px;">
+							<div class="text-center swiper-slide" style="min-height: 140px;">
 								<a href="<?php echo site_url('especialidad').'/'.$row['uri']; ?>" class="">
 									<div class="box-item">
 										<div class="box-icon">
@@ -48,7 +48,7 @@
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
-				<div class="box-arrow box-right-arrow col-xs-1 col-sm-1 col-lg-1">
+				<div class="box-arrow box-right-arrow">
 					<button id="btn-rightSlider" class="btn btn-primary"> <i class="fa fa-angle-right"></i> </button>
 				</div>
 			</div>
@@ -88,6 +88,24 @@
         el: '.swiper-pagination',
         clickable: true,
       },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          // spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          // spaceBetween: 40,
+        },
+        576: {
+          slidesPerView: 2,
+          // spaceBetween: 50,
+        },
+        420: {
+          slidesPerView: 1,
+          // spaceBetween: 50,
+        },
+      }
      //  nextButton: '#btn-rightSlider',
     	// prevButton: '#btn-leftSlider',
     });

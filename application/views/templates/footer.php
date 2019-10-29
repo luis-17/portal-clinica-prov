@@ -171,9 +171,12 @@ $( document ).ready( function() {
 		     return false;
 	 	}
 	});
+	/* toogle menu */
+	$(".option-toggle .box-content-subitems").hide();
+	$(".option-toggle").click(function() {
+	  $(".option-toggle .box-content-subitems").toggle("slow");
+	});
 });
 </script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>

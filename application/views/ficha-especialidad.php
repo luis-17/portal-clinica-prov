@@ -20,7 +20,7 @@
 					<?php echo $fEspecialidad['descripcion_html']; ?>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12 text-center wow bounceInRight">
+			<div class="box-image-esp col-md-6 col-sm-12 text-center wow bounceInRight">
 				<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/especialidad/<?php echo $fEspecialidad['image_banner']; ?>" alt="<?php echo $fEspecialidad['nombre']; ?>" />
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 		</div>
 		<div class="box-content row">
 			<?php foreach ($arrServicios as $key => $row): ?>
-			<div class="box-item col-md-3 wow fadeIn" data-wow-delay="500ms" data-wow-duration="1s">
+			<div class="box-item col-md-3 col-sm-4 col-xs-6 wow fadeIn" data-wow-delay="500ms" data-wow-duration="1s">
 				<a href="<?php echo site_url('servicio').'/'.$row['alias']; ?>">
 					<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/servicio/<?php echo $row['icono_servicio']; ?>" alt="" />
 					<p> <?php echo $row['nombre']; ?> </p>

@@ -73,42 +73,52 @@
 				<div class="line line-y"></div>
 			</div>
 		</div>
-		<ul class="content-list">
-			<li class="hidden-desktop">
-				<a href="<?php echo site_url('conocenos'); ?>"> Especialidades </a>
-			</li>
-			<li class="hidden-desktop">
-				<a href="<?php echo site_url('conocenos'); ?>"> Staff Médico </a>
-			</li>
-			<li class="hidden-desktop">
-				<a href="<?php echo site_url('conocenos'); ?>"> Servicios </a>
-			</li>
-			<li class="hidden-desktop">
-				<a href="<?php echo site_url('conocenos'); ?>"> VidaSalud - Blog </a>
-			</li>
-			<li class="hidden-desktop">
-				<a href="<?php echo site_url('conocenos'); ?>"> Contáctanos </a>
-			</li>
-			<li>
-				<a href="<?php echo site_url('conocenos'); ?>"> Conócenos </a>
-			</li>
-			<li>
-				<a href="<?php echo site_url('alianzas-y-convenios'); ?>"> Convenios </a>
-			</li>
-			<li>
-				<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
-			</li>
-			<li>
-				<a href="<?php echo site_url('nuestras-promociones'); ?>"> Nuestras Promociones </a>
-			</li>
-			<li>
-				<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>
-			</li>
-			<li>Pasos para reservar una cita</li>
-			<li>
-				<a href="https://www.computrabajo.com.pe/empresas/ofertas-de-trabajo-de-clinica-providencia-BEA07CFF8134E31A" target="_blank">Trabaja con Nosotros</a>
-			</li>
-		</ul>
+		<nav class="content-nav">
+			<ul class="content-list">
+				<li class="hidden-desktop">
+					<a href="<?php echo site_url('especialidades'); ?>"> Especialidades </a>
+				</li>
+				<li class="hidden-desktop">
+					<a href="<?php echo site_url('staff-medico'); ?>"> Staff Médico </a>
+				</li>
+				<li class="hidden-desktop option-toggle">
+					<a href="javascript:void;"> Servicios <i class="fa fa-angle-right"></i> </a>
+					<ul class="box-content-subitems">
+						<?php foreach($arrServicios as $key => $row): ?> 
+  						<li class="box-subitem"> 
+  							<a href="<?php echo site_url('servicio/'.$row['alias']); ?>"> <?php echo $row['nombre']; ?> </a>
+  						</li>
+  						<?php endforeach; ?> 
+					</ul>
+				</li>
+				<li class="hidden-desktop">
+					<a href="<?php echo site_url('conocenos'); ?>"> VidaSalud - Blog </a>
+				</li>
+				<li class="hidden-desktop">
+					<a href="<?php echo site_url('conocenos'); ?>"> Contáctanos </a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('conocenos'); ?>"> Conócenos </a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('alianzas-y-convenios'); ?>"> Convenios </a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('nuestras-promociones'); ?>"> Nuestras Promociones </a>
+				</li>
+				<li>
+					<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>
+				</li>
+				<li>Pasos para reservar una cita</li>
+				<li>
+					<a href="https://www.computrabajo.com.pe/empresas/ofertas-de-trabajo-de-clinica-providencia-BEA07CFF8134E31A" target="_blank">Trabaja con Nosotros</a>
+				</li>
+				<li class="box-end"></li>
+			</ul>
+		</nav>
 	</div>
 	<div class="box-content-header-primary">
 		<div class="container-full">

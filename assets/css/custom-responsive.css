@@ -23,17 +23,6 @@
 		height: 32px;
     	width: 32px;
 	}
-	/*.box-header .box-header-secondary .box-header-info{
-		position: absolute;
-	    left: 0;
-	    margin-left: 4em;
-	}*/
-	.box-header .box-header-secondary .box-header-info .box-item.box-telefono{
-		/*border-right: unset;*/
-	}
-	/*.box-header .box-header-primary .box-logo{
-	    margin-top: 10px;
-	}*/
 	/* PAGE: HOME; */
 	.page-home .section-galeria .box-text-lateral h1{
 		font-size: 55px;
@@ -42,7 +31,6 @@
 		font-size: 20px;
 	}
 	.page-home .section-galeria .owl-carousel figure img.figura{
-		/*height: auto;*/
     	width: 450px;
 	}
 	.page-home .section-galeria .box-image-lateral{
@@ -64,6 +52,8 @@
 	.box-menu-lateral.out{
 		right: -36%;
 	}
+	/* PAGE ESPECIALIDAD */
+	/*  */
 }
 
 @media (max-width: 992px){ /* 992 a 769*/
@@ -157,6 +147,50 @@
 	.box-menu-lateral.out{
 		right: -50%;
 	}
+	/* PAGE ESPECIALIDAD */
+	.page-esp .section-portada{
+		margin-top: 76px;
+	}
+	.page-esp .section-especialidades .box-content{
+		padding: 4%;
+	}
+	.page-esp .section-especialidades .box-filtros{
+		padding: 0 4%;
+	}
+	.page-esp .section-portada .texto-portada{
+		display: flex;
+	    justify-content: center;
+	    right: 0;
+	    left: 0;
+	}
+	.page-esp .section-portada .texto-portada h1{
+		font-size: 48px;
+	    background-color: rgba(255,255,255,0.5);
+	    padding: 4px 8px;
+	    border-radius: 15px;
+	}
+	/* PAGE FICHA ESPECIALIDAD */
+	.page-fichesp .section-portada{
+		margin-top: 76px;
+	}
+	.page-fichesp .section-portada .texto-portada{
+		display: flex;
+	    justify-content: center;
+	    right: 0;
+	    left: 0;
+	}
+	.page-fichesp .section-portada .texto-portada h1{
+		font-size: 48px;
+	    background-color: rgba(255,255,255,0.5);
+	    padding: 4px 8px;
+	    border-radius: 15px;
+	}
+	.page-fichesp .section-describe .box-content-describe{
+		display: block;
+	}
+	.page-fichesp .section-describe .box-content-describe .box-image-esp{
+		margin-top: 4rem;
+	}
 }
 @media (max-width: 768px) { /* 768 a 577 */
 	.container-full{
@@ -232,8 +266,40 @@
 	.box-menu-lateral.out{
 		right: -65%;
 	}
+	/* PAGE ESPECIALIDAD */
+	.page-esp .section-especialidades .box-content .box-items .swiper-slide{
+        padding: 0;
+    }
+    /* PAGE FICHA ESPECIALIDAD */
+    .page-fichesp .section-staff{
+    	padding: 2% 4%;
+    }
+    .page-fichesp .section-staff .box-body .box-item{
+    	padding: 0;
+    	width: 100%;
+    	min-height: 240px;
+    }
+    .page-fichesp .section-staff .box-body .box-item .box-hovered {
+	    display: flex;
+	    background-color: rgba(0,38,178,.5);
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    visibility: visible;
+	    align-items: center;
+	    border-radius: 160px 0;
+	    width: 100%;
+	    left: 0;
+	}
+	.page-fichesp .section-staff .box-body .box-photo{
+		width: 160px;
+    	height: 200px;
+	}
+	.page-fichesp .section-staff .box-body .box-text{
+		width: inherit;
+		display: none;
+	}
 }
-@media (max-width: 576px) {
+@media (max-width: 576px) { /*576 a 376*/
 	.box-header .box-header-primary .box-menu-resp .box-telefono{
 		display: none;
 	}
@@ -280,6 +346,32 @@
 	}
 	.box-menu-lateral.out{
 		right: -95%;
+	}
+	/* PAGE ESPECIALIDAD */
+	.page-esp .section-especialidades .box-content{
+		background-color: white;
+	}
+	.page-esp .section-portada .texto-portada h1{
+		font-size: 35px;
+	}
+	/* PAGE FICHA ESP */
+	.page-fichesp .section-portada .texto-portada h1{
+		font-size: 35px;
+	}
+	.page-fichesp .section-staff .box-body{
+		display: block;
+	}
+	.page-fichesp .section-describe .box-content-describe img{
+		width: 100%;
+	}
+	.page-fichesp .section-servicios .box-content .box-item{
+		padding: 0;
+	}
+	.page-fichesp .section-servicios .box-content .box-item img{
+		width: 60px;
+	}
+	.page-fichesp .section-servicios .box-content .box-item p{
+		height: 25px;
 	}
 }
 @media (max-width: 375px) {
