@@ -74,17 +74,32 @@
 			</div>
 		</div>
 		<ul class="content-list">
-			<li>
-				<a href="<?php echo site_url('conocenos'); ?>" target="_blank"> Conócenos </a>
+			<li class="hidden-desktop">
+				<a href="<?php echo site_url('conocenos'); ?>"> Especialidades </a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="<?php echo site_url('conocenos'); ?>"> Staff Médico </a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="<?php echo site_url('conocenos'); ?>"> Servicios </a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="<?php echo site_url('conocenos'); ?>"> VidaSalud - Blog </a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="<?php echo site_url('conocenos'); ?>"> Contáctanos </a>
 			</li>
 			<li>
-				<a href="<?php echo site_url('alianzas-y-convenios'); ?>" target="_blank"> Convenios </a>
+				<a href="<?php echo site_url('conocenos'); ?>"> Conócenos </a>
+			</li>
+			<li>
+				<a href="<?php echo site_url('alianzas-y-convenios'); ?>"> Convenios </a>
 			</li>
 			<li>
 				<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
 			</li>
 			<li>
-				<a href="<?php echo site_url('nuestras-promociones'); ?>" target="_blank"> Nuestras Promociones </a>
+				<a href="<?php echo site_url('nuestras-promociones'); ?>"> Nuestras Promociones </a>
 			</li>
 			<li>
 				<a href="https://www.multilab.com.pe/resultados" target="_blank">Resultados de Laboratorio </a>

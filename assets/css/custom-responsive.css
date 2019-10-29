@@ -73,6 +73,9 @@
 	.page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
 		width: 100%;
 	}
+	.box-menu-lateral ul.content-list li.hidden-desktop{
+	    display: block;
+	}
 	.box-header .box-header-primary .box-menu{
 		display: none;
 	}
@@ -223,6 +226,12 @@
 	.section-footer .box-contacto > div.box-redes{
 		justify-content: center;
 	}
+	.box-menu-lateral {
+    	width: 65%;
+	}
+	.box-menu-lateral.out{
+		right: -65%;
+	}
 }
 @media (max-width: 576px) {
 	.box-header .box-header-primary .box-menu-resp .box-telefono{
@@ -256,6 +265,21 @@
 	}
 	.page-home .section-seguro {
 	    padding: 0;
+	}
+	.section-post-footer{
+		font-size: 12px;
+	}
+	.page-home .section-seguro .box-content .owl-item img{
+		filter: unset;
+	}
+	.page-home .section-testimonio{
+		display: none;
+	}
+	.box-menu-lateral {
+    	width: 95%;
+	}
+	.box-menu-lateral.out{
+		right: -95%;
 	}
 }
 @media (max-width: 375px) {
