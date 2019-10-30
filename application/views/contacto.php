@@ -31,10 +31,10 @@
 	</div>
 	<section class="section-contacto">
 		<div class="row">
-			<div class="box-content-img col-sm-4 wow bounceInUp delay-1s">
-				<img src="<?php echo base_url().'assets/images/chica-contacto.png'; ?>" alt="Contacto" />
+			<div class="box-content-img col-lg-4 col-md-4 col-sm-12 col-xs-12 wow bounceInUp delay-1s">
+				<img class="img-responsive" src="<?php echo base_url().'assets/images/chica-contacto.png'; ?>" alt="Contacto" />
 			</div>
-			<div class="box-form col-sm-8 wow bounceInUp delay-1s">
+			<div class="box-form col-lg-8 col-md-8 col-sm-12 col-xs-12 wow bounceInUp delay-1s">
 				<form class="form" method="post" name="form_contacto">
 					<div class="box-header">
 						<h3> Para cualquier duda o consulta: </h3>

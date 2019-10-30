@@ -142,7 +142,7 @@
     </div>
   </section>
   <div class="angle-separator-content">
-    <div class="angle-separator-bottom"></div>
+    <div class="angle-separator-bottom entre-test-y-pe"></div>
   </div>
   <section class="section-testimonio">
     <div class="container">
@@ -233,7 +233,9 @@
         "<i class='next fa fa-angle-left'></i>",
         "<i class='prev fa fa-angle-right'></i>"
       ],
-      itemsDesktopSmall: [992,3]
+      itemsDesktopSmall: [992,3],
+      itemsTablet: [768,3],
+      itemsMobile: [380,2],
     });
     // GALERIA SEGUROS  
     var owlSeg = $("#prov-seguro");
@@ -241,8 +243,10 @@
       pagination : true,
       navigation : false,
       items: 4,
-      autoPlay: true,
-      itemsDesktopSmall: [992,3]
+      // autoPlay: true,
+      itemsDesktopSmall: [992,3],
+      itemsTablet: [768,3],
+      itemsMobile: [380,2]
     });
     // carganos animacion dinámica en slider Principal
     var $objItems = $('#prov-homeslider .owl-item');

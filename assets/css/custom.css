@@ -6,6 +6,10 @@
 /* font base color: #484848  					*/
 /* background selected : #f7f7f7;				*/
 /* =============================================*/
+html{
+    max-width: 1920px;
+    margin: auto;
+}
 body{
     font-family: 'Leelawade', 'Raleway', 'sans-serif';
     color: #484848;
@@ -126,6 +130,8 @@ header.box-header{
     z-index: 10;
     left:0;
     height: 76px;
+    max-width: 1920px;
+    margin: auto;
     /*height: 140px;*/
     /*background-color: rgba(255, 255, 255, 0.8);*/
 }
@@ -547,6 +553,7 @@ header.box-header{
 .page-home .section-galeria .box-galeria-content{
     height: 100%;
     position: relative;
+    padding: 0;
 }
 .page-home .section-galeria .box-image-lateral{
     position: absolute;
@@ -622,6 +629,11 @@ header.box-header{
 }
 .page-home .section-especialidades .box-especialidad .box-nombre{
     color: #0085b2;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+    padding: 0 15px;
+    line-height: 1.2;
 }
 .page-home .section-especialidades .box-content .box-action{
     text-align: center;
@@ -748,7 +760,8 @@ header.box-header{
 
 .page-home .section-conocenos .box-conocenos .box-images .box-image.image-2{
     width: 60%;
-    background-position-y: 200%;
+    background-position: 0 100%;
+    /*background-position-y: 200%;*/
 }
 .page-home .section-conocenos .box-conocenos .box-images .box-hovered-center{
     bottom: 0;
@@ -961,12 +974,12 @@ header.box-header{
     border-color: #014d90;
 }
 .page-home .section-seguro .box-content .owl-item img{
-    /*width: 200px;*/
     margin: auto;
     display: block;
     filter: grayscale(1);
     cursor: hand;
     cursor: pointer;
+
 }
 .page-home .section-seguro .box-content .owl-item img:hover{
     filter: grayscale(0);
@@ -1515,12 +1528,19 @@ header.box-header{
     .page-fichesp .section-servicios .box-content .box-item a{
         /*right: 0;*/
         padding-top: 1.25rem;
-        display: inline-block;
+        /*display: inline-block;*/
         transition-property: color, background-color, display;
         transition-duration: 0.25s;
         transition-timing-function: linear;
         border-radius: 15px 0;
         position: relative;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        margin: auto;
     }
     .page-fichesp .section-servicios .box-content .box-item a > .box-hovered{
         padding: 1.25rem 0;
@@ -1542,7 +1562,7 @@ header.box-header{
         /*right: 100%;*/
     }
     .page-fichesp .section-servicios .box-content .box-item:hover a > img{
-        /*filter: brightness(0) invert(1);*/
+        filter: brightness(0) invert(1);
     }
     .page-fichesp .section-servicios .box-content .box-item:hover a > p{
         color:white;
@@ -1555,10 +1575,11 @@ header.box-header{
         margin: auto;
         color: #0085b2;
         /*padding-top: 10px;*/
-        height: 40px;
+        height: 50px;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: center;
+        line-height: 1.25;
     }
 /* ************************ */
 /*        CONTACTANOS       */
@@ -1618,7 +1639,7 @@ header.box-header{
     }
     .page-contacto .section-contacto .box-form{
         padding-left: 8rem;
-        padding-right: 14rem;
+        /*padding-right: 14rem;*/
     }
     .page-contacto .section-contacto .box-form .box-header h3{
         font-weight: bold;
@@ -2005,24 +2026,24 @@ header.box-header{
         display: block;
         text-align: center;
         margin: auto;
-        top: 70%;
+        top: 65%;
         left: 0;
         bottom: 0;
         right: 0;
     }
     .page-fichserv .section-portada .texto-portada h1{
-        font-size: 60px;
+        font-size: 58px;
         font-weight: bold;
         color: white;
         display: inline-block;
         margin: 0;
         padding: 15px;
     }
-    .page-fichserv .section-portada .texto-portada img{
+    /*.page-fichserv .section-portada .texto-portada img{
         position: relative;
         top: -55px;
         left: -35px;
-    }
+    }*/
     .page-fichserv .section-portada .img-portada .bg-portada{
         background-size: cover;
         width: 100%;
@@ -2107,6 +2128,7 @@ header.box-header{
         width: 75%;
         margin: auto;
         padding-top: 10rem;
+        overflow: hidden;
     }
     .page-fichserv .section-detalle .box-como-acceder .box-letras h2{
         color: #0085b2;
@@ -2133,12 +2155,12 @@ header.box-header{
     }
     .page-fichserv .section-mas-servicios .owl-buttons .owl-prev{
         position: absolute;
-        left: -30px;
+        left: -10px;
         top: 33%;
     }
     .page-fichserv .section-mas-servicios .owl-buttons .owl-next{
         position: absolute;
-        right: -30px;
+        right: -10px;
         top: 33%;
     }
     .page-fichserv .section-mas-servicios .owl-buttons svg{
