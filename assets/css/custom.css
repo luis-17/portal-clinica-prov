@@ -1705,6 +1705,7 @@ header.box-header{
         right: 10%;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     .page-blog .section-portada .action-portada{
         position: absolute;
