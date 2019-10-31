@@ -76,6 +76,54 @@
 	.page-contacto .section-contacto{
 		padding: 4rem;
 	}
+	/* PAGE BLOG */
+	.page-blog .section-listentries .item-blog{
+		width: 78%;
+    	margin: auto;
+	}
+	.page-blog .section-listentries .pre-item{
+		margin-bottom: 5rem;
+	}
+	.page-blog .section-listentries .pre-item > a{
+		overflow: hidden;
+	    display: block;
+	    width: 78%;
+	    margin: auto;
+	}
+	/* PAGE BLOG DETALLE */
+	.page-fichablog .section-interes .item-blog{
+		width: 90%;
+    	margin: auto;
+    	padding: 0;
+	}
+	.page-fichablog .section-interes .pre-item{
+		margin-bottom: 5rem;
+	}
+	.page-fichablog .section-interes .pre-item > a{
+		overflow: hidden;
+	    display: block;
+	    width: 90%;
+	    margin: auto;
+	    
+	}
+	.page-fichablog .section-interes .item-blog-foot{
+		padding: 0;
+	}
+	.page-fichablog .section-interes .item-blog .box-hovered{
+		left: 0;
+    	right: 0;
+	}
+	.page-fichablog .section-entrie .box-body{
+		padding-left: 5rem;
+	}
+	.page-fichablog .section-entrie .box-interes-right{
+		margin-left: 5rem;
+	}
+	.page-fichablog .section-entrie .box-header-entrie{
+		padding: 0 6rem;
+	}
+	/* PAGE STAFF MEDICO */
+
 }
 
 @media (max-width: 992px){ /* 992 a 769*/
@@ -264,6 +312,78 @@
 	.page-contacto .section-contacto .box-form{
 		padding-left: 2rem;
 	}
+	/* PAGE BLOG */
+	.page-blog .section-portada{
+		margin-top: 76px;
+	}
+	.page-blog .section-portada .texto-portada h1{
+		font-size: 35px;
+	}
+	.page-blog .section-listentries .item-blog img{
+		border-radius: 120px 0;
+	}
+	.page-blog .section-listentries .item-blog{
+		width: 90%;
+	}
+	.page-blog .section-listentries .pre-item > a{
+		width: 90%;
+	}
+	.page-blog .section-portada .img-portada .bg-portada{
+		height: 360px;
+	}
+	.page-blog .section-portada .action-portada a{
+		width: 200px;
+		display: block;
+    	margin: auto;
+	}
+	.page-blog .section-portada .action-portada{
+		left: 0;
+    	right: 0;
+	}
+	/* PAGE FICHA BLOG */
+	.page-fichablog .section-portada{
+		margin-top: 76px;
+	}
+	.page-fichablog .section-entrie .box-header-entrie h1{
+		font-size: 40px;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info{
+		height: 200px;
+    	border-radius: 0 15px 15px 0;
+        margin-left: -10rem;
+        padding: 3.25rem 3.25rem 3.25rem 11rem;
+        display: flex;
+	    align-items: center;
+	    flex-wrap: wrap;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info h3{
+		margin: 0;
+	}
+	.page-fichablog .section-entrie .box-interes-right{
+		padding: 2rem 1rem;
+	}
+	.page-fichablog .section-entrie .box-interes-right iframe{
+		width: 90%;
+	}
+	.page-fichablog .section-interes .item-blog-foot h4{
+		font-size: 14px;
+	}
+	/*.page-fichablog .section-interes .item-blog{
+		width: 100%;
+	}
+	.page-fichablog .section-interes .pre-item > a{
+		width: 100%;
+	}*/
+	.page-fichablog .section-entrie .box-contenido{
+		font-size: 1.75rem;
+	}
+	/* PAGE STAFF */
+	.page-sm .section-portada{
+		margin-top: 76px;
+	}
+	.page-sm .section-portada .texto-portada h1{
+		font-size: 50px;
+	}
 }
 @media (max-width: 768px) { /* 768 a 577 */
 	.container-full{
@@ -435,6 +555,57 @@
 	.page-contacto .section-contacto .box-form .box-header small{
 		font-size: 20px;
 	}
+	/* PAGE BLOG */
+	.page-blog .section-portada .texto-portada h1{
+		font-size: 26px;
+	}
+	.page-blog .section-portada .img-portada .bg-portada{
+		height: 320px;
+	}
+	.page-blog .section-listentries .pre-item .box-hovered{
+		display: flex;
+	    background-color: rgba(0,38,178,.5);
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    visibility: visible;
+	    align-items: center;
+	    border-radius: 15px 0;
+	}
+	.page-blog .section-listentries .pre-item img {
+	    border-radius: 15px 0;
+	}
+	.page-blog .section-listentries .item-blog{
+		width: 100%;
+	}
+	.page-blog .section-listentries .pre-item > a{
+		width: 100%;
+	}
+	.page-blog .section-listentries{
+		padding-bottom: 2rem;
+    	padding-top: 7rem;
+	}
+	.page-blog .section-listentries .pre-item {
+	    margin-bottom: 1rem;
+	}
+
+	/* PAGE FICHA BLOG*/
+	.page-fichablog .section-entrie .box-interes-right{
+		display: none;
+	}
+	.page-fichablog .section-entrie .box-body{
+		padding: 0 2rem;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info small{
+		font-size: 16px;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info{
+		padding: 6rem 3.25rem 6rem 11rem;
+	}
+	/* PAGE STAFF */
+	.page-sm .section-portada .texto-portada h1{
+		font-size: 44px;
+	}
+
 }
 @media (max-width: 576px) { /*576 a 376*/
 	.box-header .box-header-primary .box-menu-resp .box-telefono{
@@ -638,7 +809,145 @@
 	.page-contacto .section-contacto .box-form .box-form-detail label{
 		font-size: 12px;
 	}
-
+	/* PAGE BLOG */
+	.page-blog .section-listentries .item-blog .box-hovered{
+		left: 0;
+    	right: 0;
+	}
+	.page-blog .section-listentries .item-blog{
+		padding: 0;
+	}
+	.page-blog .section-listentries .item-blog-foot{
+		padding: 0;
+	}
+	.page-blog .section-portada .texto-portada h1{
+		font-size: 20px;
+	}
+	.page-blog .section-portada .box-arrow.box-left-arrow .btn{
+		padding-left: 0;
+	}
+	.page-blog .section-portada .box-arrow.box-right-arrow .btn{
+		padding-right: 0;
+	}
+	.page-blog .section-portada .box-arrow .btn img{
+		width: 38px;
+	}
+	.page-blog .section-listentries .item-blog .box-hovered .btn{
+		font-size: 12px;
+		line-height: 1;
+	}
+	.page-blog .section-listentries .item-blog-foot h4{
+		font-size: 14px;
+		overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+	.page-blog .section-listentries .item-blog-foot > p{
+		font-size: 12px;
+	}
+	.page-blog .section-listentries .pre-item{
+		height: 320px;
+	}
+	/* PAGE FICHA BLOG */
+	.page-fichablog .section-entrie .box-header-entrie h1{
+		font-size: 28px;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info {
+	    padding: 3rem 3.25rem 3rem 8rem;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info{
+		margin-left: -8rem;
+		height: 150px;
+	}
+	.page-fichablog .section-entrie .box-autor .box-autor-foto img{
+		height: 90%;
+		width: auto;
+	}
+	.page-fichablog .section-entrie .box-autor .box-autor-foto{
+		min-width: 150px;
+		height: 150px;
+    	width: 150px;
+	}
+	.page-fichablog .section-interes .box-item img {
+	    border-radius: 15px 0;
+	}
+	.page-fichablog .section-interes .box-item .box-hovered {
+	    display: flex;
+	    background-color: rgba(0,38,178,.5);
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    visibility: visible;
+	    align-items: center;
+	    border-radius: 15px 0;
+	}
+	.page-fichablog .section-interes .pre-item{
+		height: 300px;
+	}
+	.page-fichablog .section-interes .item-blog .box-hovered .btn{
+		font-size: 12px;
+	    line-height: 1;
+	    height: 28px;
+	    display: flex;
+	    align-items: center;
+	}
+	.page-fichablog .section-interes .box-title h2{
+		font-size: 3rem;
+	}
+	.page-fichablog .section-interes .item-blog-foot h4{
+		font-size: 12px;
+		overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+	.page-fichablog .section-entrie .box-header-entrie {
+	    padding: 0 2rem;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info h3{
+		font-size: 20px;
+	}
+	.page-fichablog .section-entrie .box-autor .box-info small{
+		font-size: 12px;
+	}
+	/* PAGE STAFF */
+	.page-sm .section-portada .texto-portada{
+		left: 0;
+	    right: 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	.page-sm .section-portada .texto-portada h1{
+		font-size: 35px;
+	}
+	.page-sm .section-portada .img-portada .bg-portada{
+		height: 280px;
+		background-position: 2%;
+	}
+	.page-sm .section-medicos .box-filtros .box-form{
+		flex-wrap: wrap;
+	}
+	.page-sm .section-medicos .box-filtros .box-form .box-especialidad{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.page-sm .section-medicos .box-filtros .box-form .box-medico{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.page-sm .section-medicos .box-filtros .box-abc button{
+		width: 30px;
+		font-size: 12px;
+    	height: 30px;
+	}
+	.page-sm .section-medicos .box-result .item-medico{
+		width: 150px;
+	    height: 180px;
+	}
+	.page-sm .section-medicos .box-result .pre-item h4{
+		width: 150px;
+		font-size: 15px;
+	}
+	.page-sm .section-medicos .box-paginate .box-content{
+		font-size: 12px;
+	}
 }
 @media (max-width: 375px) {
 	.box-header .box-header-primary .box-logo img{
@@ -684,6 +993,15 @@
 	}
 	.page-promocion .box-result .box-description{
 		width: 120px;
+	}
+	/* STAFF */
+	.page-sm .section-medicos .box-result .item-medico{
+		width: 120px;
+	    height: 150px;
+	}
+	.page-sm .section-medicos .box-result .pre-item h4{
+		width: 120px;
+		font-size: 13px;
 	}
 }
 

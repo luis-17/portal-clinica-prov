@@ -64,3 +64,4 @@ $route['vidasalud'] = 'Blog/index';
 $route['vidasalud/(:any)'] = 'Blog/entrada/$1';
 $route['servicio/(:any)'] = 'Servicio/ficha/$1';
 $route['nuestras-promociones'] = 'Promocion';
+$route['alianzas-y-convenios'] = 'Convenio';

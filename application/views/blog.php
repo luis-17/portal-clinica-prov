@@ -50,9 +50,9 @@ $(document).ready(function() {
 	    slidesPerColumn: 1,
 	    spaceBetween: 0,
 	    parallax: true,
-	    autoplay: {
-			delay: 5000,
-		},
+	 //    autoplay: {
+		// 	delay: 5000,
+		// },
 	    autoplayDisableOnInteraction: false,
     });
     $('#btn-leftSlider').on('click', function(e) {
@@ -95,12 +95,12 @@ $(document).ready(function() {
 	      	$contEntriesBlog.empty();
 	      	$.each(paramData, function(key, val) {
 	      		var strJson = JSON.stringify(val);
-	      		var $wrap1 = $('<div class="col-lg-4 col-sm-6 col-xs-12 pre-item"></div>');
+	      		var $wrap1 = $('<div class="col-lg-4 col-sm-6 col-xs-6 pre-item"></div>');
 	      			var $wrap2 = $('<div class="item-blog"></div>');
 	      				var $wrap2_1 = $('<img class="img-responsive" src="'+URLPreview+'assets/dinamic/blog/'+val.imagen_preview+'" />');
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');
 	      					var $wrap2_2_1 = $('<div class="box-action"></div>');
-	      						var $wrap2_2_1_1 = $('<a target="blank" href="<?php echo site_url('vidasalud/'); ?>'+val.uri+'" class="btn btn-verMas"> LEER MÁS </a><code class="json-hide">'+strJson+'</code>');
+	      						var $wrap2_2_1_1 = $('<a href="<?php echo site_url('vidasalud/'); ?>'+val.uri+'" class="btn btn-verMas"> LEER MÁS </a><code class="json-hide">'+strJson+'</code>');
 	      			var $wrap3 = $('<a href="<?php echo site_url('vidasalud/'); ?>'+val.uri+'"></a>');
 	      				var $wrap3_1 = $('<div class="item-blog-foot"></div>');
 		      				var $wrap3_1_1 = $('<h4>'+val.titulo+'</h4>');

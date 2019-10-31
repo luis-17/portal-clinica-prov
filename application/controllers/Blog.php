@@ -44,7 +44,7 @@ class Blog extends CI_Controller {
                     'imagen_portada' => $row['imagen_portada'],
                     'titulo'=> $row['titulo'],
                     'fechaFormat' => $strFechaFormat,
-                    'resumen' => $row['resumen'].'...'
+                    'resumen' => strip_tags($row['resumen'].'...')
                 )
             );
         }
@@ -98,7 +98,7 @@ class Blog extends CI_Controller {
                     'imagen_portada' => $row['imagen_portada'],
                     'titulo'=> $row['titulo'],
                     'fechaFormat' => $strFechaFormat,
-                    'resumen' => $row['resumen'].'...'
+                    'resumen' => strip_tags($row['resumen'].'...')
                 )
             );
         }

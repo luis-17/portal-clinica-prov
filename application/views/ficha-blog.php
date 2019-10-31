@@ -79,7 +79,7 @@
 		</div>
 		<div class="box-content">
 			<?php foreach($arrEntradasAle as $key => $row): ?>
-			<div class="box-item col-lg-4 col-sm-4 col-xs-12 pre-item wow bounceInRight">
+			<div class="box-item col-lg-4 col-sm-4 col-xs-6 pre-item wow bounceInRight">
 				<div class="item-blog">
 					<img class="img-responsive" src=" <?php echo URL_PREVIEW; ?>assets/dinamic/blog/<?php echo $row['imagen_preview']; ?>" />
 					<div class="box-hovered">
