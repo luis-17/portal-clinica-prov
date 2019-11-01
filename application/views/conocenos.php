@@ -11,9 +11,9 @@
 			<img src="<?php echo base_url(); ?>assets/images/favicon.png" />
 		</div>
 	</section>
-	<div class="angle-separator-content">
+	<!-- <div class="angle-separator-content">
 	  	<div class="angle-separator-up-style-2 wow slideInUp slow"></div>
-	</div>
+	</div> -->
 	<section class="section-conocenos">
 		<div class="box-content-bg">
 			<div class="box-background wow zoomIn" data-wow-offset="200" style="
@@ -49,7 +49,7 @@
 				<div class="box-option box-option-mision">
 					<div class="box-title">
 						<h3>Misión</h3>
-						<small> Lorem ipsum Lorem ipsum</small>
+						<small> Nuestra misión </small>
 					</div>
 					<div class="box-parrafo">
 						<p>Brindar una atención de calidad a nuestros pacientes, transmitiendo calidez, confianza y seguridad.</p>
@@ -58,7 +58,7 @@
 				<div class="box-option box-option-vision">
 					<div class="box-title">
 						<h3>Visión</h3>
-						<small> Lorem ipsum Lorem ipsum</small>
+						<small> Nuestra visión </small>
 					</div>
 					<div class="box-parrafo">
 						<p>Ser reconocida como LA CLÍNICA de referencia en Lima, por nuestro modelo de atención humanizado y de calidad.</p>
@@ -67,7 +67,7 @@
 				<div class="box-option box-option-valores">
 					<div class="box-title">
 						<h3>Valores</h3>
-						<small> Lorem ipsum Lorem ipsum </small>
+						<small> Nuestros valores </small>
 					</div>
 					<div class="box-parrafo">
 						<ul>
@@ -92,7 +92,7 @@
   		$('.box-barra-2 .box-option img.si-alt').hide();
   		var destino = objSelected.attr('data-destino');
   		var classDestino = 'box-option-' + destino;
-  		$('.box-options-detail .box-option.'+classDestino).fadeIn(2000);
+  		$('.box-options-detail .box-option.'+classDestino).fadeIn(1000);
   		$('.box-barra-2 .box-option.'+classDestino+' img.no-alt').hide();
   		$('.box-barra-2 .box-option.'+classDestino+' img.si-alt').fadeIn(1000);
   		$('.box-barra-2 .box-option').on('click', function() {
@@ -102,8 +102,8 @@
   			var destino = thes.attr('data-destino');
   			var classDestino = 'box-option-' + destino;
 
-  			$('.box-options-detail .box-option').hide().removeClass('animated bounceInRight delay-500ms');
-  			$('.box-options-detail .box-option.'+classDestino).fadeIn(2000).addClass('animated bounceInRight delay-500ms');
+  			$('.box-options-detail .box-option').hide();
+  			$('.box-options-detail .box-option.'+classDestino).fadeIn(1000);
 
   			// correr los iconos
   			if (thes.hasClass('box-option-mision')) {

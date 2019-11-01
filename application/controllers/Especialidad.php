@@ -44,7 +44,7 @@ class Especialidad extends CI_Controller {
                     'cmp' => $row['cmp'],
                     'rne' => $row['rne'],
                     'lema' => $row['lema'],
-                    'estudios_html' => $row['estudios_html'],
+                    'estudios_html' => strip_tags($row['estudios_html']),
                     'foto' => $row['foto'],
                     'foto_perfil' => $row['foto_perfil'],
                     'horarios'=> $arrHorarios,

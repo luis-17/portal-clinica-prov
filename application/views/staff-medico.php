@@ -281,7 +281,7 @@
 	      	$.each(paramData, function(key, val) {
 	      		var strJson = JSON.stringify(val);
 	      		console.log(key, val, 'keyval');
-	      		var $wrap1 = $('<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pre-item wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"></div>');
+	      		var $wrap1 = $('<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pre-item wow fadeIn" data-wow-duration="1s" data-wow-delay="500ms"></div>');
 	      			var $wrap2 = $('<div class="item-medico"></div>');
 	      				var $wrap2_1 = $('<img alt="'+val.medico+'" src="'+URLPreview+'assets/dinamic/medico/'+val.foto+'" />');
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');

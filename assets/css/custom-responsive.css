@@ -123,6 +123,31 @@
 		padding: 0 6rem;
 	}
 	/* PAGE STAFF MEDICO */
+	/* PERFIL MEDICO */
+	.box-modal-perfil .box-perfil-medico .box-foto-perfil img{
+		max-width: 350px;
+	}
+	/* PAGE CONOCENOS */
+	.page-conocenos .section-conocenos .box-background{
+		background-position: center;
+	}
+	.page-conocenos .section-conocenos .box-content-bg{
+		width: 50%;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2{
+		width: 105px;
+		left: 50%;
+		background-color: inherit;
+	}
+	.page-conocenos .section-conocenos .box-background{
+		border-top-right-radius: 25% 50%;
+    	border-bottom-right-radius: 25% 50%;
+	}
+	.page-conocenos .section-conocenos .box-info .box-options-detail{
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
 
 }
 
@@ -235,9 +260,9 @@
 	}
 	.page-esp .section-portada .texto-portada h1{
 		font-size: 48px;
-	    background-color: rgba(255,255,255,0.5);
+	    /*background-color: rgba(255,255,255,0.5);
 	    padding: 4px 8px;
-	    border-radius: 15px;
+	    border-radius: 15px;*/
 	}
 	/* PAGE FICHA ESPECIALIDAD */
 	.page-fichesp .section-portada{
@@ -251,9 +276,9 @@
 	}
 	.page-fichesp .section-portada .texto-portada h1{
 		font-size: 48px;
-	    background-color: rgba(255,255,255,0.5);
+	    /*background-color: rgba(255,255,255,0.5);
 	    padding: 4px 8px;
-	    border-radius: 15px;
+	    border-radius: 15px;*/
 	}
 	.page-fichesp .section-describe .box-content-describe{
 		display: block;
@@ -384,6 +409,29 @@
 	.page-sm .section-portada .texto-portada h1{
 		font-size: 50px;
 	}
+	/* PERFIL MEDICO */
+	.box-modal-perfil .box-perfil-medico .box-foto-perfil img{
+		max-width: 300px;
+	}
+	.box-modal-perfil{
+		width: 75%;
+	}
+	.box-modal-perfil.out{
+		right: -75%;
+	}
+	/* PAGE CONOCENOS*/
+	.page-conocenos .section-conocenos .box-content-bg{
+		width: 46%;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2{
+		left: 44%;
+	}
+	/*.page-conocenos .section-conocenos .box-barra .box-barra-1{
+		display: none;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2{
+		left: 0;
+	}*/
 }
 @media (max-width: 768px) { /* 768 a 577 */
 	.container-full{
@@ -605,7 +653,50 @@
 	.page-sm .section-portada .texto-portada h1{
 		font-size: 44px;
 	}
-
+	/* PERFIL MEDICO */
+	.box-modal-perfil {
+	    width: 90%;
+	}
+	.box-modal-perfil.out {
+	    right: -90%;
+	}
+	.box-modal-perfil .box-perfil-medico{
+		flex-wrap: wrap;
+	}
+	.box-modal-perfil .box-perfil-medico .box-foto-perfil{
+		position: absolute;
+	    left: 0;
+	    right: 0;
+	    align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    bottom: 0;
+	    width: 100%;
+	}
+	.box-modal-perfil .box-perfil-medico .box-foto-perfil img{
+		opacity: 0.4;
+		position: relative;
+	}
+	.box-modal-perfil .box-perfil-medico .box-info-medico{
+		width: 100%;
+	}
+	/* PAGE CONOCENOS*/
+	.page-conocenos .section-conocenos .box-barra .box-barra-1{
+		display: none;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2{
+		left: 0;
+	}
+	.page-conocenos .section-conocenos .box-info{
+		left: 50%;
+    	right: 2%;
+	}
+	.page-conocenos .section-conocenos{
+		padding-top: 8rem;
+	}
+	.page-conocenos .section-conocenos .box-info{
+		padding-top: 8rem;
+	}
 }
 @media (max-width: 576px) { /*576 a 376*/
 	.box-header .box-header-primary .box-menu-resp .box-telefono{
@@ -700,6 +791,7 @@
 	/* PAGE FICHA ESP */
 	.page-fichesp .section-portada .texto-portada h1{
 		font-size: 35px;
+		text-align: center;
 	}
 	.page-fichesp .section-staff .box-body{
 		display: flex;
@@ -948,6 +1040,51 @@
 	.page-sm .section-medicos .box-paginate .box-content{
 		font-size: 12px;
 	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info h5{
+		font-size: 14px;
+		/*white-space: nowrap;*/
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    word-wrap: break-word;
+	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info .cmp{
+		font-size: 20px;
+	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-action button{
+		font-size: 11px;
+    	width: auto;
+	}
+	/* PERFIL MEDICO */
+	.box-modal-perfil {
+	    width: 100%;
+	}
+	.box-modal-perfil.out {
+	    right: -100%;
+	}
+	.box-modal-perfil .box-perfil-medico{
+		margin: 20px;
+	}
+	.box-modal-perfil .box-perfil-medico .box-present h2{
+		font-size: 26px;
+	}
+	/* PAGE CONOCENOS */
+	.page-conocenos .section-conocenos .box-content-bg{
+		width: 100%;
+    	border-radius: unset;
+	}
+	.page-conocenos .section-conocenos .box-background{
+		opacity: 0.25;
+    	border-radius: unset;
+	}
+	.page-conocenos .section-conocenos .box-info{
+		left: 36%;
+	}
+	.page-conocenos .section-conocenos{
+		min-height: 680px;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2{
+		left: -25px;
+	}
 }
 @media (max-width: 375px) {
 	.box-header .box-header-primary .box-logo img{
@@ -984,6 +1121,9 @@
 	.page-fichesp .section-staff .box-body .box-item{
 		min-height: 200px;
 	}
+	.page-fichesp .section-servicios .box-content .box-item a{
+		width: auto;
+	}
 	/* PAGE PROMOCIONES */
 	.page-promocion .box-result .box-item{
 		width: 120px;
@@ -1003,6 +1143,19 @@
 		width: 120px;
 		font-size: 13px;
 	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info h5{
+		font-size: 12px;
+	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-info .cmp{
+		font-size: 15px;
+	}
+	.page-sm .section-medicos .box-result .item-medico .box-hovered .box-action{
+		margin: 0;
+	    padding-top: 8px;
+	    padding-bottom: 8px;
+	}
+	/* PERFIL MEDICO */
+
 }
 
 

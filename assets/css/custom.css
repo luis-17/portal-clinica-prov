@@ -1028,7 +1028,9 @@ header.box-header{
 .page-sm .section-portada .texto-portada h1{
     font-size: 60px;
     font-weight: bold;
-    color: #0085b2;
+    /*color: #0085b2;*/
+    color: #00488c;
+    text-shadow: 0px 0px 4px white;
 }
 .page-sm .section-portada .img-portada .bg-portada{
     background-image: url(../images/portada-staff.png);
@@ -1166,6 +1168,7 @@ header.box-header{
     color: white;
     width: 100%;
     margin-top: 20px;
+    padding: 0 6px;
 }
 .page-sm .section-medicos .box-result .item-medico .box-hovered .box-info .cmp{
     font-size: 28px;
@@ -1248,7 +1251,9 @@ header.box-header{
     .page-esp .section-portada .texto-portada h1{
         font-size: 60px;
         font-weight: bold;
-        color: #0085b2;
+        /*color: #0085b2;*/
+        text-shadow: 0px 0px 4px white;
+        color: #00488c;
     }
     .page-esp .section-portada .img-portada .bg-portada{
         background-image: url(../images/portada-especialidades-central.png);
@@ -1394,7 +1399,9 @@ header.box-header{
     .page-fichesp .section-portada .texto-portada h1{
         font-size: 60px;
         font-weight: bold;
-        color: #0085b2;
+        /*color: #0085b2;*/
+        text-shadow: 0px 0px 4px white;
+        color: #00488c;
     }
     .page-fichesp .section-portada .img-portada .bg-portada{
         background-image: url(../images/portada-especialidades-ficha.png);
@@ -2186,7 +2193,7 @@ header.box-header{
     .page-conocenos .section-portada{
         margin-top: 140px;
         position: relative;
-        /*display: none;*/
+        display: none;
     }
     .page-conocenos .angle-separator-up-style-2{
         background-color: #d5dee5;
@@ -2231,9 +2238,10 @@ header.box-header{
         display: flex;
         z-index: 5;
         position: relative;
-        min-height: 640px;
-        margin-top: 3rem;
-        /*padding-top: 12rem;*/
+        /*min-height: 640px;*/
+        min-height: 720px;
+        /*margin-top: 3rem;*/
+        padding-top: 12rem;
         overflow: hidden;
     }
     .page-conocenos .section-conocenos .box-content-bg{
@@ -2266,7 +2274,7 @@ header.box-header{
         content: '';
         position: absolute;
         width: 100%;
-        top: 0;
+        /*top: 0;*/
         height: 100px;
         background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #d5dee5 100%);
         z-index: 10;
@@ -2274,13 +2282,14 @@ header.box-header{
     }
     .page-conocenos .section-conocenos .box-barra{
         width: 100%;
+        position: relative;
     }
     .page-conocenos .section-conocenos .box-barra::after {
         content: '';
         position: absolute;
         width: 100%;
         bottom: 0;
-        height: 100px;
+        height: 80px;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #d5dee5 100%);
         z-index: 10;
         pointer-events: none;
@@ -2367,6 +2376,7 @@ header.box-header{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 12rem;
     }
     .page-conocenos .section-conocenos .box-info .box-title{
         padding-bottom: 1rem;
