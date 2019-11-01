@@ -1080,10 +1080,20 @@
 		left: 36%;
 	}
 	.page-conocenos .section-conocenos{
-		min-height: 680px;
+		/*min-height: 680px;*/
+		min-height: 100vh;
+	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img{
+		width: 64px;
 	}
 	.page-conocenos .section-conocenos .box-barra .box-barra-2{
 		left: -25px;
+	}
+	.page-conocenos .section-conocenos .box-background {
+	    background-position: 35%;
+	}
+	.page-conocenos .section-conocenos .box-info .box-parrafo p{
+		color: #00488c;
 	}
 }
 @media (max-width: 375px) {
