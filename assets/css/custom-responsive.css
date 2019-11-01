@@ -1081,7 +1081,8 @@
 	}
 	.page-conocenos .section-conocenos{
 		/*min-height: 680px;*/
-		min-height: 100vh;
+		/*min-height: 100vh;*/
+		min-height: 550px;
 	}
 	.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img{
 		width: 64px;
