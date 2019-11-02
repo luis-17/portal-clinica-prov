@@ -5,7 +5,7 @@ class Model_convenio extends CI_Model {
 		parent::__construct();
 	}
 
-	public function cargar_convenio()
+	public function m_cargar_convenios()
 	{
 		$this->db->select('cv.idconvenio, cv.descripcion');
 		$this->db->from('convenio cv');

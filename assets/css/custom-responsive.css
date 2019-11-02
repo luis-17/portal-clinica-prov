@@ -148,7 +148,17 @@
 	    align-items: center;
 	    justify-content: center;
 	}
-
+	/* PAGE CONVENIOS */
+	.page-convenio .section-portada .img-portada .bg-portada .box-persona-image{
+		width: 480px;
+	}
+	.page-convenio .section-portada .texto-portada h1{
+		margin: 0 4rem;
+		font-size: 48px;
+	}
+	.page-convenio .section-list .box-title h2{
+		font-size: 30px;
+	}
 }
 
 @media (max-width: 992px){ /* 992 a 769*/
@@ -426,12 +436,28 @@
 	.page-conocenos .section-conocenos .box-barra .box-barra-2{
 		left: 44%;
 	}
-	/*.page-conocenos .section-conocenos .box-barra .box-barra-1{
-		display: none;
+	/* PAGE CONVENIOS */
+	.page-convenio .section-portada{
+		margin-top: 76px;
 	}
-	.page-conocenos .section-conocenos .box-barra .box-barra-2{
-		left: 0;
-	}*/
+	.page-convenio .section-portada .texto-portada h1{
+		font-size: 38px;
+	}
+	.page-convenio .section-portada .texto-portada small{
+		font-size: 24px;
+	}
+	.page-convenio .section-portada .img-portada .bg-portada{
+		height: 360px;
+	}
+	.page-convenio .section-portada .img-portada .bg-portada .box-persona-image {
+	    width: 390px;
+	}
+	.page-convenio .section-list .box-title h2{
+		flex-wrap: wrap;
+	}
+	.page-convenio .section-list{
+        margin: 5rem 8rem 0;;
+    }
 }
 @media (max-width: 768px) { /* 768 a 577 */
 	.container-full{
@@ -492,14 +518,14 @@
 		width: 85%;
 		margin-right: 2.5rem;
 	}
-	.page-home .section-seguro .box-content .owl-item img{
+	.section-seguro .box-content .owl-item img{
     	width: 100%;
     	padding: 0 15px;
 	}
-	.page-home .section-seguro .box-header h2{
+	.section-seguro .box-header h2{
 		font-size: 28px;
 	}
-	.page-home .section-seguro .box-header p{
+	.section-seguro .box-header p{
 		font-size: 20px;
 	}
 	.section-footer .box-contacto{
@@ -697,6 +723,25 @@
 	.page-conocenos .section-conocenos .box-info{
 		padding-top: 8rem;
 	}
+	/* PAGE CONVENIOS */
+	.page-convenio .section-portada .img-portada .bg-portada{
+		height: 280px;
+	}
+	.page-convenio .section-portada .texto-portada h1{
+		font-size: 28px;
+	}
+	.page-convenio .section-portada .texto-portada small{
+		font-size: 16px;
+	}
+	.page-convenio .section-portada .img-portada .bg-portada .box-persona-image {
+	    width: 300px;
+	}
+	.page-convenio .section-list {
+	    margin: 4rem 4rem 0;
+	}
+	.page-convenio .section-list .box-title h2{
+		font-size: 24px;
+	}
 }
 @media (max-width: 576px) { /*576 a 376*/
 	.box-header .box-header-primary .box-menu-resp .box-telefono{
@@ -757,19 +802,19 @@
 	.angle-separator-content .entre-test-y-pe{
 		display: none;
 	}
-	.page-home .section-seguro .box-content{
+	.section-seguro .box-content{
 		margin-top: 2rem;
 	}
 	.page-home .section-porque-elegirnos .box-content .box-item .box-item-content{
 		width: 280px;
 	}
-	.page-home .section-seguro {
+	.section-seguro {
 	    padding: 0;
 	}
 	.section-post-footer{
 		font-size: 12px;
 	}
-	.page-home .section-seguro .box-content .owl-item img{
+	.section-seguro .box-content .owl-item img{
 		filter: unset;
 	}
 	.page-home .section-testimonio{
@@ -1095,6 +1140,19 @@
 	}
 	.page-conocenos .section-conocenos .box-info .box-parrafo p{
 		color: #00488c;
+	}
+	/* PAGE CONVENIOS */
+	.page-convenio .section-portada .img-portada .bg-portada .box-persona-image{
+		display: none;
+	}
+	.page-convenio .section-portada .texto-portada{
+		width: 100%;
+	}
+	.page-convenio .section-list .box-title{
+		margin-bottom: 3rem
+	}
+	.page-convenio .section-list {
+	    margin: 3rem 3rem 0;
 	}
 }
 @media (max-width: 375px) {

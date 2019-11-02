@@ -940,40 +940,40 @@ header.box-header{
 }
 
 /* SEGUROS */
-.page-home .section-seguro{
+.section-seguro{
     padding: 50px 0;
 }
-.page-home .section-seguro .box-header h2{
+.section-seguro .box-header h2{
     color: #014d90;
     font-weight: 900;
     text-align: center;
     margin-top: 60px;
     font-size: 34px;
 }
-.page-home .section-seguro .box-header p{
+.section-seguro .box-header p{
     font-size: 24px;
     text-align: center;
     color: #014d90;
     padding-top: 15px;
 }
-.page-home .section-seguro .box-content{
+.section-seguro .box-content{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
 }
 
-.page-home .section-seguro .box-content .owl-controls .owl-pagination{
+.section-seguro .box-content .owl-controls .owl-pagination{
     margin-top: 20px;
 }
-.page-home .section-seguro .box-content .owl-controls .owl-pagination .owl-page > span{
+.section-seguro .box-content .owl-controls .owl-pagination .owl-page > span{
     background-color: #d0d0d0;
     border-color: #d0d0d0;
 }
-.page-home .section-seguro .box-content .owl-controls .owl-pagination .owl-page.active >span{
+.section-seguro .box-content .owl-controls .owl-pagination .owl-page.active >span{
     background-color: #014d90;
     border-color: #014d90;
 }
-.page-home .section-seguro .box-content .owl-item img{
+.section-seguro .box-content .owl-item img{
     margin: auto;
     display: block;
     filter: grayscale(1);
@@ -981,7 +981,7 @@ header.box-header{
     cursor: pointer;
 
 }
-.page-home .section-seguro .box-content .owl-item img:hover{
+.section-seguro .box-content .owl-item img:hover{
     filter: grayscale(0);
 }
 
@@ -2464,6 +2464,106 @@ header.box-header{
         margin: auto;
         color: #00488d;
         margin-bottom: 4rem;
+    }
+
+/* ************************* */
+/*       CONVENIOS           */
+/* ************************* */
+    .page-convenio .section-portada{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-convenio .section-portada .img-portada{
+        position: relative;
+    }
+    .page-convenio .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        width: 62%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        height: 100%;
+        /*align-items: baseline;*/
+    }
+    .page-convenio .section-portada .texto-portada h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: #00488c;
+        text-shadow: 0px 0px 4px white;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        margin: 0 14rem;
+    }
+    .page-convenio .section-portada .texto-portada small{
+        display: block;
+        width: 100%;
+        font-size: 30px;
+    }
+    .page-convenio .section-portada .img-portada .bg-portada{
+        background-image: url(../images/portada-convenio.png);
+        background-size: cover;
+        width: 100%;
+        height: 480px;
+    }
+    .page-convenio .section-portada .img-portada .bg-portada .box-persona-image{
+        width: 640px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .page-convenio .section-list{
+        margin: 8rem 12rem;
+    }
+    .page-convenio .section-list .box-title{
+        margin-bottom: 6rem;
+    }
+    .page-convenio .section-list .box-title h2{
+        font-size: 35px;
+        font-weight: bold;
+        color: #00488c;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .page-convenio .section-list .box-listado{
+        border-radius: 40px 0;
+        /*background-color: rgba(35,131,196,0.5);*/
+        color: white;
+        background-image: url(../images/fondo-lista-convenio.png);
+        background-size: cover;
+        position: relative;
+        max-width: 1024px;
+        margin: auto;
+    }
+    .page-convenio .section-list .box-listado .box-layer{
+        background-color: rgba(35,131,196,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 40px 0;
+    }
+    .page-convenio .section-list .box-listado .box-content-listado{
+        padding: 3rem 4rem;
+        max-height: 520px;
+        overflow: auto;
+        position: relative;
+    }
+    .page-convenio .section-list .box-listado .box-content-listado ul{
+        padding: 0;
+        list-style-type: none;
+    }
+    .page-convenio .section-list .box-listado .box-content-listado li {
+        border-bottom: 1px dashed rgba(255,255,255,0.65);
     }
 
 /* ************************* */
