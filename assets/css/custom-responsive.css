@@ -302,6 +302,7 @@
 	}
 	.page-fichserv .section-portada .img-portada .bg-portada{
 		height: 420px;
+		background-attachment: inherit;
 	}
 	.page-fichserv .section-portada .texto-portada{
 		top: 60%;
@@ -833,6 +834,10 @@
 	.page-esp .section-portada .texto-portada h1{
 		font-size: 35px;
 	}
+	.page-esp .section-portada .img-portada .bg-portada{
+		height: 240px;
+    	background-position: 5%;
+	}
 	/* PAGE FICHA ESP */
 	.page-fichesp .section-portada .texto-portada h1{
 		font-size: 35px;
@@ -1153,6 +1158,15 @@
 	}
 	.page-convenio .section-list {
 	    margin: 3rem 3rem 0;
+	}
+	.page-convenio .section-list .box-listado {
+    	border-radius: 20px;
+	}
+	.page-convenio .section-list .box-listado .box-layer{
+		border-radius: 20px;
+	}
+	.page-convenio .section-portada .texto-portada h1 > span{
+		width: 100%;
 	}
 }
 @media (max-width: 375px) {

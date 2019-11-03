@@ -1294,6 +1294,7 @@ header.box-header{
         align-items: center;
         background-color: white;
         border-radius: 15px;
+        justify-content: center
     }
     .page-esp .section-especialidades .box-content .box-items{
         margin: 40px 0;
@@ -1364,6 +1365,7 @@ header.box-header{
     .page-esp .section-especialidades .box-content .swiper-pagination{
         position: relative;
         margin-top: 15px;
+        display: none;
     }
     .page-esp .section-especialidades .box-content .box-inner-content .box-items .box-nombre{
         margin: auto;
