@@ -2329,40 +2329,17 @@ header.box-header{
     .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img{
         width: 80px;
     }
-    /*.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option .box-icon img.si-alt{
-        visibility: hidden;
-        position: absolute;
-        left: 0;
-    }
-    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option:hover .box-icon img.si-alt{
-        visibility: visible;
-    }
-    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.selected .box-icon img.si-alt{
-        visibility: visible;
-    }*/
-    /*{
-       visibility: visible; 
-    }*/
-    /*.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-icon img:hover{
-
-    }*/
     .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-mision{
         top: 20%;
         left: 32%;
     }
     .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-vision{
-        /*top: 45%;
-        left: 45%;*/
-        /*top: 70%;
-        left: 32%;*/
         top: 66%;
         left: 36%;
     }
     .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-valores{
         top: 87%;
         left: -2%;
-        /*top: 70%;
-        left: 32%;*/
     }
     /**/
     .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.selected{
@@ -2620,6 +2597,11 @@ header.box-header{
     .box-modal-perfil .box-perfil-medico .box-present{
         padding-top: 6px;
     }
+
+    .box-modal-perfil .box-perfil-medico .box-action > .btn{
+        margin-top: 1rem;
+        width: 100%;
+    }
     .box-modal-perfil .box-perfil-medico h3{
         font-size: 22px;
         font-weight: 700;
@@ -2778,7 +2760,31 @@ header.box-header{
     text-align: right;
 }
 
-/* helpers */
+/* button to up */
+.btn-to-top{
+    position: fixed;
+    padding: 15px;
+    background-color: rgb(0, 72, 140);
+    bottom: 3.5%;
+    right: 2%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.btn-to-top:hover{
+  opacity: 1;
+  color: white;
+}
+/*/* helpers */
 .-turquesa-bg{
     background-color: #0085b2;
 }

@@ -92,10 +92,10 @@
 					</ul>
 				</li>
 				<li class="hidden-desktop">
-					<a href="<?php echo site_url('conocenos'); ?>"> VidaSalud - Blog </a>
+					<a href="<?php echo site_url('vidasalud'); ?>"> VidaSalud - Blog </a>
 				</li>
 				<li class="hidden-desktop">
-					<a href="<?php echo site_url('conocenos'); ?>"> Contáctanos </a>
+					<a href="<?php echo site_url('contactanos'); ?>"> Contáctanos </a>
 				</li>
 				<li>
 					<a href="<?php echo site_url('conocenos'); ?>"> Conócenos </a>

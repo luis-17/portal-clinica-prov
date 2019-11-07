@@ -613,6 +613,9 @@
 	.page-fichserv .section-mas-servicios .owl-buttons .owl-next{
 		right: 10px;
 	}
+	.page-fichserv .section-detalle .box-video iframe {
+	    height: 320px;
+	}
 	/* PAGE PROMOCIONES */
 	.page-promocion .section-portada .texto-portada h1{
 		font-size: 40px;
@@ -900,6 +903,9 @@
 	.page-fichserv .section-portada .texto-portada h1{
 		font-size: 28px;
 	}
+	.page-fichserv .section-detalle .box-video iframe {
+	    height: 240px;
+	}
 	/* PAGE PROMOCIONES */
 	.page-promocion .section-portada .texto-portada{
 		left: 0;
@@ -1146,6 +1152,18 @@
 	.page-conocenos .section-conocenos .box-info .box-parrafo p{
 		color: #00488c;
 	}
+	.page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-mision{
+        /*top: 20%;*/
+        left: 40%;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-vision{
+        /*top: 66%;*/
+        left: 40%;
+    }
+    .page-conocenos .section-conocenos .box-barra .box-barra-2 .box-option.box-option-valores{
+        /*top: 87%;*/
+        left: 40%;
+    }
 	/* PAGE CONVENIOS */
 	.page-convenio .section-portada .img-portada .bg-portada .box-persona-image{
 		display: none;

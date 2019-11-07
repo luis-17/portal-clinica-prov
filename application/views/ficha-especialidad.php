@@ -115,6 +115,9 @@
 					No se muestra estudios en este momento. 
 				</p>
 			</div>
+			<div class="box-action">
+				<a href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary"> AGENDAR CITA </a>
+			</div>
 		</div>
 		<div class="box-foto-perfil">
 			<img class="inputjson foto" src="" alt="" />

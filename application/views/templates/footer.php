@@ -73,6 +73,7 @@
 	  </div>
 	</section> 
 </div>
+<a href="#" class="btn-to-top"> <i class="fa fa-angle-up"></i> </a>
 <script type="text/javascript" src="<?php echo base_url('libs/bootstrap-3.3.7/js/bootstrap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/jquery-mask-plugin/jquery.mask.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('libs/owl-carousel/owl.carousel.min.js'); ?>"></script>
@@ -99,7 +100,16 @@
 </script>
 
 <script type="text/javascript">
-window.onscroll = function() {myScrollFixedMenu()};
+window.onscroll = function() {
+	myScrollFixedMenu();
+
+	var height = $(window).scrollTop();
+    if (height > 250) {
+        $('.btn-to-top').fadeIn();
+    } else {
+        $('.btn-to-top').fadeOut();
+    }
+};
 
 var header = document.getElementById("myHeaderTop");
 var pointToFixed = document.getElementById("box-header-primary");
@@ -176,7 +186,15 @@ $( document ).ready( function() {
 	$(".option-toggle").click(function() {
 	  $(".option-toggle .box-content-subitems").toggle("slow");
 	});
+	/* button to top */
+	$(".btn-to-top").hide();
+	$(".btn-to-top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 });
+
 </script>
 </body>
 </html>

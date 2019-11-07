@@ -109,16 +109,31 @@
   			if (thes.hasClass('box-option-mision')) {
   				$('.box-barra-2 .box-option.box-option-vision').css({left: '36%', top: '66%'});
   				$('.box-barra-2 .box-option.box-option-valores').css({left: '-2%', top: '87%'});
+  				if ($(window).width() <= 576){
+  					$('.box-barra-2 .box-option.box-option-vision').css({left: '40%', top: '66%'});
+  					$('.box-barra-2 .box-option.box-option-valores').css({left: '40%', top: '87%'});
+  				}
   			}
   			if (thes.hasClass('box-option-vision')) {
   				$('.box-barra-2 .box-option.box-option-mision').css({left: '36%', top: '24%'});
   				$('.box-barra-2 .box-option.box-option-valores').css({left: '36%', top: '66%'});
+  				if ($(window).width() <= 576){
+  					$('.box-barra-2 .box-option.box-option-mision').css({left: '40%', top: '24%'});
+  					$('.box-barra-2 .box-option.box-option-valores').css({left: '40%', top: '66%'});
+  				}
   			}
   			if (thes.hasClass('box-option-valores')) {
   				$('.box-barra-2 .box-option.box-option-mision').css({left: '0', top: '2%'});
   				$('.box-barra-2 .box-option.box-option-vision').css({left: '36%', top: '24%'});
+  				if ($(window).width() <= 576){
+  					$('.box-barra-2 .box-option.box-option-mision').css({left: '40%', top: '2%'});
+  					$('.box-barra-2 .box-option.box-option-vision').css({left: '40%', top: '24%'});
+  				}
   			}
   			thes.css({left: '45%', top: '45%'});
+  			if ($(window).width() <= 576){
+  				thes.css({left: '40%', top: '45%'});
+  			}
   			$('.box-barra-2 .box-option img.si-alt').hide();
   			$('.box-barra-2 .box-option img.no-alt').fadeIn(1000);
   			$('.box-barra-2 .box-option.'+classDestino+' img.no-alt').hide();
@@ -126,4 +141,41 @@
 
   		});
   	});
+
+  	function fnResizeMenor576(x) {
+	  	$('.box-barra-2 .box-option').on('click', function() {
+  			var thes = $(this);
+  			$('.box-barra-2 .box-option').removeClass('selected');
+  			thes.addClass('selected');
+  			var destino = thes.attr('data-destino');
+  			var classDestino = 'box-option-' + destino;
+
+  			$('.box-options-detail .box-option').hide();
+  			$('.box-options-detail .box-option.'+classDestino).fadeIn(1000);
+
+  			// correr los iconos
+  			if (thes.hasClass('box-option-mision')) {
+  				$('.box-barra-2 .box-option.box-option-vision').css({left: '40%', top: '66%'});
+  				$('.box-barra-2 .box-option.box-option-valores').css({left: '40%', top: '87%'});
+  			}
+  			if (thes.hasClass('box-option-vision')) {
+  				$('.box-barra-2 .box-option.box-option-mision').css({left: '40%', top: '24%'});
+  				$('.box-barra-2 .box-option.box-option-valores').css({left: '40%', top: '66%'});
+  			}
+  			if (thes.hasClass('box-option-valores')) {
+  				$('.box-barra-2 .box-option.box-option-mision').css({left: '40', top: '2%'});
+  				$('.box-barra-2 .box-option.box-option-vision').css({left: '40%', top: '24%'});
+  			}
+  			thes.css({left: '40%', top: '45%'});
+  			$('.box-barra-2 .box-option img.si-alt').hide();
+  			$('.box-barra-2 .box-option img.no-alt').fadeIn(1000);
+  			$('.box-barra-2 .box-option.'+classDestino+' img.no-alt').hide();
+  			$('.box-barra-2 .box-option.'+classDestino+' img.si-alt').fadeIn(1000);
+
+  		});
+	}
+
+	// var x = window.matchMedia("(max-width: 576px)")
+	// fnResizeMenor576(x) // Call listener function at run time
+	// x.addListener(fnResizeMenor576) // Attach listener function on state changes
 </script> 	
