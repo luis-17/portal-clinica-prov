@@ -2594,6 +2594,9 @@ header.box-header{
         color: #00488d;
         display: flex;
     }
+    .box-modal-perfil .box-perfil-medico .box-info-medico{
+        max-width: 640px;
+    }
     .box-modal-perfil .box-perfil-medico .box-present{
         padding-top: 6px;
     }

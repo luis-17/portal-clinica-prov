@@ -47,6 +47,7 @@ class StaffMedico extends CI_Controller {
                     'ap_paterno' => $row['ap_paterno'],
                     'ap_materno' => $row['ap_materno'],
                     'especialidad'=> $row['especialidad'],
+                    'tipo_colegiatura' => strtoupper($row['tipo_colegiatura']),
                     'cmp' => $row['cmp'],
                     'rne' => $row['rne'],
                     'lema' => $row['lema'],

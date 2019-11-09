@@ -97,7 +97,7 @@
 						<dd class="inputjson especialidad"> - </dd>
 					</dl>
 					<dl>
-						<dt> CMP: </dt>
+						<dt class="inputjson tc"> Colegiatura: </dt>
 						<dd class="inputjson cmp"> - </dd>
 					</dl>
 					<dl>
@@ -290,7 +290,7 @@
 	      				var $wrap2_2 = $('<div class="box-hovered"></div>');
 	      					var $wrap2_2_1 = $('<div class="box-info"></div>');
 	      						var $wrap2_2_1_1 = $('<h5 class="especialidad">'+val.especialidad+'</h5>');
-	      						var $wrap2_2_1_2 = $('<span class="cmp"> CMP: '+val.cmp+'</span>');
+	      						var $wrap2_2_1_2 = $('<span class="cmp"> '+val.tipo_colegiatura+': '+val.cmp+'</span>');
 	      					var $wrap2_2_2 = $('<div class="box-action"></div>');
 	      						var $wrap2_2_2_1 = $('<button class="btn btn-verMas" type="button""> Ver más </button><code class="json-hide">'+strJson+'</code>');
 	      			var $wrap3 = $('<h4>'+val.medico+'</h4>');
@@ -331,6 +331,7 @@
 				// console.log(arrPerfilJson, 'arrPerfilJson');
 				$('.inputjson.nombre').html(arrPerfilJson.medico);
 				$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
+				$('.inputjson.tc').html(arrPerfilJson.tipo_colegiatura+':');
 				$('.inputjson.cmp').html(arrPerfilJson.cmp);
 				$('.inputjson.rne').html(arrPerfilJson.rne);
 

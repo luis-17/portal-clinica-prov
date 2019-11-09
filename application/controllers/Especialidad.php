@@ -41,6 +41,7 @@ class Especialidad extends CI_Controller {
                     'ap_paterno' => $row['ap_paterno'],
                     'ap_materno' => $row['ap_materno'],
                     'especialidad'=> $row['especialidad'],
+                    'tipo_colegiatura' => $row['tipo_colegiatura'],
                     'cmp' => $row['cmp'],
                     'rne' => $row['rne'],
                     'lema' => $row['lema'],

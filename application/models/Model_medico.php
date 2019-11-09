@@ -6,7 +6,7 @@ class Model_medico extends CI_Model {
 	}
 	public function m_cargar_staff_medico($paramPaginate, $paramDatos)
 	{
-		$this->db->select('md.idmedico, md.nombres, md.ap_paterno, md.ap_materno, md.cmp, md.rne, md.lema, md.estudios_html, md.foto, md.foto_perfil');
+		$this->db->select('md.idmedico, md.nombres, md.ap_paterno, md.ap_materno, md.tipo_colegiatura, md.cmp, md.rne, md.lema, md.estudios_html, md.foto, md.foto_perfil');
 		$this->db->select('esp.idespecialidad, esp.nombre AS especialidad',FALSE);
 		$this->db->from('medico md');
 		$this->db->join('especialidad_medico em', 'md.idmedico = em.idmedico');
@@ -56,12 +56,13 @@ class Model_medico extends CI_Model {
 		$this->db->from('medico md');
 		$this->db->join('horario ho', 'md.idmedico = ho.idmedico');
 		$this->db->where('md.idmedico', $idmedico);
+		$this->db->where('ho.estado', 1);
 		return $this->db->get()->result_array();
 	}
 	public function m_cargar_medicos_especialidad($idespecialidad)
 	{
 		// $this->db->select('md.idmedico');
-		$this->db->select('md.idmedico, md.nombres, md.ap_paterno, md.ap_materno, md.cmp, md.rne, md.lema, md.estudios_html, md.foto, md.foto_perfil');
+		$this->db->select('md.idmedico, md.nombres, md.ap_paterno, md.ap_materno, md.cmp, md.tipo_colegiatura, md.rne, md.lema, md.estudios_html, md.foto, md.foto_perfil');
 		$this->db->select('esp.idespecialidad, esp.nombre AS especialidad',FALSE);
 		$this->db->from('medico md');
 		$this->db->join('especialidad_medico em', 'md.idmedico = em.idmedico');

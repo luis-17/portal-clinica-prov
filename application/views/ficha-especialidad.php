@@ -91,7 +91,7 @@
 						<dd class="inputjson especialidad"> - </dd>
 					</dl>
 					<dl>
-						<dt> CMP: </dt>
+						<dt class="inputjson tc"> Colegiatura: </dt>
 						<dd class="inputjson cmp"> - </dd>
 					</dl>
 					<dl>
@@ -145,6 +145,7 @@
 					// console.log(arrPerfilJson, 'arrPerfilJson');
 					$('.inputjson.nombre').html(arrPerfilJson.medico);
 					$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
+					$('.inputjson.tc').html(arrPerfilJson.tipo_colegiatura);
 					$('.inputjson.cmp').html(arrPerfilJson.cmp);
 					$('.inputjson.rne').html(arrPerfilJson.rne);
 
