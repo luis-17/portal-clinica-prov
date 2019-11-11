@@ -116,7 +116,7 @@
 				</p>
 			</div>
 			<div class="box-action">
-				<a href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary"> AGENDAR CITA </a>
+				<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary"> AGENDAR CITA </a>
 			</div>
 		</div>
 		<div class="box-foto-perfil">

@@ -9,7 +9,8 @@ class Model_convenio extends CI_Model {
 	{
 		$this->db->select('cv.idconvenio, cv.descripcion');
 		$this->db->from('convenio cv');
-		$this->db->where('cv.estado', 1); 
+		$this->db->where('cv.estado', 1);
+		$this->db->order_by('cv.descripcion', 'ASC');
 		// $this->db->where('cv.visible', 1); 
 		return $this->db->get()->result_array();
 	}
