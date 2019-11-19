@@ -350,7 +350,11 @@
 					});
 				}
 				if(arrPerfilJson.estudios_html){
-					$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
+					// console.log(arrPerfilJson.estudios_html, '==>arrPerfilJson.estudios_html');
+					// console.log(atob(arrPerfilJson.estudios_html), 'dsffs');
+					// var htmlEstudios = atob(arrPerfilJson.estudios_html);
+					var htmlEstudios = arrPerfilJson.estudios_html;
+					$('.inputjson.estudios').html( decodeURIComponent(escape(atob( htmlEstudios ))) );
 				}else{
 					$('.inputjson.estudios').text('No se muestra estudios en este momento.');
 				}

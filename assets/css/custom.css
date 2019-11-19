@@ -54,7 +54,13 @@ code.json-hide{
 .loading-spinner .box-img-loading img{
     width: 180px;
 }
-
+.box-notificacion .alert{
+    position: fixed;
+    top: 12%;
+    z-index: 10;
+    box-shadow: 1px 2px 3px;
+    right: 2%;
+}
 /* buttons */
 .btn{
 	position: relative;
@@ -2543,6 +2549,391 @@ header.box-header{
     }
     .page-convenio .section-list .box-listado .box-content-listado li {
         border-bottom: 1px dashed rgba(255,255,255,0.65);
+    }
+
+/* ************************* */
+/*       PRODUCTOS ESP.      */
+/* ************************* */
+    .page-productos-esp .section-portada{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-productos-esp .section-portada .img-portada{
+        position: relative;
+    }
+    .page-productos-esp .section-portada .texto-portada{
+        position: absolute;
+        bottom: 0;
+        width: 62%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        height: 100%;
+        /*align-items: baseline;*/
+    }
+    .page-productos-esp .section-portada .texto-portada h2{
+        color: #e080a5;
+        font-size: 45px;
+    }
+    .page-productos-esp .section-portada .texto-portada small{
+        display: block;
+        width: 100%;
+        font-size: 28px;
+        margin-top: 1rem;
+    }
+    .page-productos-esp .section-portada .img-portada .bg-portada{
+        background-image: url(../images/productos-esp/fondo-madre-exclusiva.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 480px;
+    }
+    .page-productos-esp .section-portada .img-portada .bg-portada .box-persona-image{
+        width: 280px;
+        position: absolute;
+        right: 5rem;
+        bottom: 0;
+    }
+    .page-productos-esp .section-contenido-me{
+        margin: 4rem 18rem;
+    }
+    .page-productos-esp .section-contenido-me .box-logo-producto{
+        display: flex;
+    }
+    .page-productos-esp .section-contenido-me .box-logo-producto img{
+        margin: auto;
+        max-width: 280px;
+    }
+    .page-productos-esp .section-contenido-me .box-parrafo{
+        font-size: 20px;
+        padding-top: 2rem;
+    }
+    .page-productos-esp .section-contenido-me .box-iconos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-promovemos, 
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-contamos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .page-productos-esp .section-contenido-me .box-iconos img{
+        width: 140px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-promovemos h4,
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-contamos h4{
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: #9b9b9b;
+        margin-bottom: 2.5rem;
+    }
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-promovemos .box-content-iconos,
+    .page-productos-esp .section-contenido-me .box-iconos .box-iconos-contamos .box-content-iconos{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-pregunta{
+        margin: 5rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-pregunta img{
+        max-width: 320px;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-pregunta h2{
+        color: #e080a5;
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-image > img{
+        width: 70px;
+        max-width: 70px;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera{
+        display: flex;
+        align-items: center;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-text-link{
+        margin-left: 1.5rem;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-image{
+        margin-left: 2rem;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-text-link > h3{
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0;
+        line-height: 1;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-text-link > a{
+        font-size: 20px;
+        color: #e080a5;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario{
+        margin: 6rem 0;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario{
+        padding: 2.5rem 8rem;
+        background-color: #e17fa5;
+        color: white;
+        border-radius: 4rem;
+        position: relative;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-title h3{
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        /*margin-bottom: 2rem;*/
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-title small{
+        font-size: 22px;
+        display: block;
+        text-align: center;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs{
+        margin-top: 3.5rem;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .box-corner-left-top img{
+        width: 150px;
+        position: absolute;
+        top: -32px;
+        left: -32px;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .box-corner-right-top img{
+        width: 120px;
+        position: absolute;
+        bottom: 4px;
+        right: -56px;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs select,
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs input{
+        border-radius: 2rem;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .form-check label{
+        font-weight: 100;
+        margin-left: 2rem;
+        margin-bottom: 0;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .form-check .box-check{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .form-check .box-check a{
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .box-action{
+        margin-top: 2.5rem;
+        text-align: center;
+    }
+    .page-productos-esp .section-contenido-me .box-formulario .box-content-formulario .box-formulario-inputs .box-action button{
+        width: 200px;
+        border-radius: 15px;
+        font-weight: bold;
+        background-color: #c3c7c8;
+        color: #565656;
+    }
+    .page-productos-esp .section-portada-tarjetas{
+        margin-top: 140px;
+        /*background-color: #0085b2;*/
+        /*padding-top: 60px;*/
+        position: relative;
+    }
+    .page-productos-esp .section-portada-tarjetas .img-portada{
+        position: relative;
+    }
+    .page-productos-esp .section-portada-tarjetas .texto-portada{
+        position: absolute;
+        bottom: 0;
+        width: 62%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        height: 100%;
+        margin-left: 10rem;
+        /*align-items: baseline;*/
+    }
+    .page-productos-esp .section-portada-tarjetas .texto-portada h1{
+        font-weight: bold;
+        font-size: 40px;
+        color: #003e79;
+    }
+    .page-productos-esp .section-portada-tarjetas .texto-portada h1 img{
+        width: 30px;
+        position: relative;
+        top: -25px;
+        left: -25px;
+    }
+    .page-productos-esp .section-portada-tarjetas .texto-portada small{
+        display: block;
+        width: 100%;
+        font-size: 28px;
+        margin-top: 1rem;
+    }
+    .page-productos-esp .section-portada-tarjetas .img-portada .bg-portada{
+        background-image: url(../images/productos-esp/fondo-provicard.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 480px;
+        background-position: center;
+    }
+    .page-productos-esp .section-portada-tarjetas .img-portada .bg-portada .box-persona-image{
+        width: 480px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .page-productos-esp .angle-separator-bottom{
+        top: 70px;
+    }
+    .page-productos-esp .section-contenido-tarjetas{
+        margin: 0 12rem;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provicard,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provikids{
+        width: 50%;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provicard img,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provikids img{
+        max-width: 420px;
+        margin: auto;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids{
+        width: 50%;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-header > h2,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-header > h2{
+        font-weight: bold;
+        color: #003e79;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-header > h2 > img,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-header > h2 > img{
+        width: 36px;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-cuerpo p,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-cuerpo p{
+        font-size: 18px;
+        margin-top: 2rem;
+        color: #003e79;
+        margin-bottom: 3rem;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-detalle-costo,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-detalle-costo{
+        color: #003e79;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-icono-pig img,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-icono-pig img{
+        max-width: 120px;
+        margin-right: 2rem;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-como-afiliarme,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-como-afiliarme{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-cuando-cuesta,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-cuando-cuesta{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-pregunta,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-pregunta{
+        font-weight: bold;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-pregunta > img,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-pregunta > img{
+        width: 20px;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-cuando-cuesta .box-respuesta,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-cuando-cuesta .box-respuesta{
+        font-weight: bold;
+        font-size: 30px;
+        color: #007ea9;
+        padding-left: 25px;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-cuando-cuesta .box-respuesta{
+        color: #dc6a34;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-como-afiliarme .box-respuesta,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-como-afiliarme .box-respuesta{
+        width: 100%;
+        padding-left: 2.5rem;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-costo .box-caracteristicas ul,
+    .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-caracteristicas ul{
+        margin: 0;
+    }
+    .page-productos-esp .section-contenido-tarjetas .box-provikids{
+        margin-top: 4rem;
+    }
+
+    .page-productos-esp .section-mas-servicios{
+        padding-top: 5rem;
+    }
+    .page-productos-esp .section-mas-servicios h2{
+        font-weight: bold;
+        color: #004791;
+        font-size: 32px;
+        padding-bottom: 3.5rem;
+    }
+    .page-productos-esp .section-mas-servicios .owl-buttons .owl-prev{
+        position: absolute;
+        left: -10px;
+        top: 33%;
+    }
+    .page-productos-esp .section-mas-servicios .owl-buttons .owl-next{
+        position: absolute;
+        right: -10px;
+        top: 33%;
+    }
+    .page-productos-esp .section-mas-servicios .owl-buttons svg{
+        font-size: 45px;
+        color: #0085b2;
+    }
+    .page-productos-esp .section-mas-servicios .box-item p{
+        color: #0085b2;
+        font-size: 18px;
+        margin-top: 15px;
     }
 
 /* ************************* */

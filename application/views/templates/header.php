@@ -104,7 +104,7 @@
 					<a href="<?php echo site_url('alianzas-y-convenios'); ?>"> Convenios </a>
 				</li>
 				<li>
-					<a href="<?php echo site_url('productos-especiales'); ?>" target="_blank"> Productos Especiales </a>
+					<a href="<?php echo site_url('productos-especiales'); ?>"> Productos Especiales </a>
 				</li>
 				<li>
 					<a href="<?php echo site_url('nuestras-promociones'); ?>"> Nuestras Promociones </a>

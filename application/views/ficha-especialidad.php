@@ -164,7 +164,7 @@
 						});
 					}
 					if(arrPerfilJson.estudios_html){
-						$('.inputjson.estudios').html(arrPerfilJson.estudios_html);
+						$('.inputjson.estudios').html(decodeURIComponent(escape(atob( arrPerfilJson.estudios_html ))));
 					}else{
 						$('.inputjson.estudios').text('No se muestra estudios en este momento.');
 					}

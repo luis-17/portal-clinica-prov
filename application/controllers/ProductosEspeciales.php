@@ -1,56 +1,61 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Contacto extends CI_Controller {
+class ProductosEspeciales extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('model_contacto'));
+        $this->load->model(array('model_servicio', 'model_contacto_pe'));
+        $this->load->helper(array('otros_helper'));
     }
-	public function index()
-	{
-		
+    public function index()
+    {
         if( $this->input->post('nombres') ){ 
             $arrData = array(
+                'tipo_documento'=> $this->input->post('tipo_documento'),
+                'numero_documento'=> $this->input->post('numero_documento'),
                 'nombres'=> $this->input->post('nombres'),
-                'empresa'=> $this->input->post('empresa'),
-                'telefono'=> $this->input->post('telefono'),
+                'apellidos'=> $this->input->post('apellidos'),
+                'celular'=> $this->input->post('celular'),
                 'correo'=> $this->input->post('correo'),
-                'consulta'=> $this->input->post('consulta'),
                 'fecha_registro'=> date('Y-m-d H:i:s') 
             ); 
-            if($this->model_contacto->m_registrar_contacto($arrData)){
+            if($this->model_contacto_pe->m_registrar_contacto_pe($arrData)){
                 $this->session->set_flashdata('bool_info', 'ok');
             }else{
                 $this->session->set_flashdata('bool_info', 'error');
             }
             $this->envioCorreo($arrData); 
-            redirect('/contactanos'); 
+            redirect('/productos-especiales'); 
             exit(); 
         }else{
-            $data['active'] = array( 
+            $data['activeSelected'] = 'productos-especiales';
+            $data['arrServicios'] = $this->model_servicio->m_cargar_mas_servicios();
+
+            $data['active'] = array(
                 'inicio'=> NULL,
                 'especialidades'=> NULL,
                 'conocenos'=> NULL,
+                'promocion'=> NULL,
                 'staff_medico'=> NULL,
                 'servicios'=> NULL,
                 'vidasalud'=> NULL,
-                'contactanos'=> '-active',
+                'contactanos'=> NULL
             );
-            $this->load->template('contacto',$data); 
+            $this->load->template('productos-especiales',$data);
         }
-	}
+    }
     private function envioCorreo($arrData)
     {
         $this->load->library('My_PHPMailer'); 
         $htmlCorreo = '<div class="container-mensaje"> 
-            <h2 class="header"> ¡'.strtoupper($arrData['nombres']).' se registró desde el Formulario de Contacto! </h2> 
+            <h2 class="header"> ¡'.strtoupper($arrData['nombres']).' se registró desde el Formulario de Productos Especiales! </h2> 
             <ul class="list-info">
-                <li> <label> NOMBRES Y APELLIDOS </label> <span>'.$arrData['nombres'].'</span> </li> 
-                <li> <label> EMPRESA </label> <span>'.$arrData['empresa'].'</span> </li> 
-                <li> <label> CORREO </label> <span>'.$arrData['correo'].'</span> </li> 
-                <li> <label> TELEFONO </label> <span>'.$arrData['telefono'].'</span> </li>
-                <li> <label> CONSULTA: </label> <span>'.$arrData['consulta'].'</span> </li> 
+                <li> <label> TIPO DE DOC. </label> <span>'.$arrData['tipo_documento'].'</span> </li> 
+                <li> <label> NOMBRES </label> <span>'.$arrData['nombres'].'</span> </li> 
+                <li> <label> APELLIDOS </label> <span>'.$arrData['apellidos'].'</span> </li> 
+                <li> <label> CELULAR </label> <span>'.$arrData['celular'].'</span> </li> 
+                <li> <label> CORREO </label> <span>'.$arrData['correo'].'</span> </li>
             </ul>
             <p>'.$arrData['fecha_registro'].'</p>
         </div>'; 
