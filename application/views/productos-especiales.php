@@ -56,6 +56,9 @@
 					<div class="box-cabecera">
 						<div class="box-image">
 							<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/parto.png" />
+							<div class="box-flecha-top">
+								<img src="<?php echo base_url(); ?>assets/images/productos-esp/flechas.png">
+							</div>
 						</div>
 						<div class="box-text-link">
 							<h3> Parto Normal</h3>
@@ -71,6 +74,9 @@
 						</div>
 						<div class="box-image">
 							<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/parto.png" />
+							<div class="box-flecha-top">
+								<img src="<?php echo base_url(); ?>assets/images/productos-esp/flechas.png">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -88,7 +94,7 @@
 								<div class="box-precio">S/ 2.100</div>
 								<div class="box-cuota-inicial"> 
 									Cuota Inicial<br />
-									S/ 500
+									<b>S/ 500</b>
 								</div>
 							</div>
 						</div>
@@ -96,12 +102,11 @@
 					<div class="box-lateral-informacion">
 						<div class="box-pre-natal">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Pre Natal 
+								<img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Pre Natal 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li>
-										1 Control Pre-Natal
+									<li> 1 Control Pre-Natal
 										<span class="box-help">El control Pre Natal solo es válido dentro del 1er y 2do trimestre de embarazo.</span>
 									</li>
 									<li>1 Ecografía Obstétrica
@@ -113,12 +118,12 @@
 						</div>
 						<div class="box-clinica">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Clínica 
+								<img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Clínica 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> 1 Día de Habitación Individual Simple </li>
-									<li> Farmacia Cubierta al 100%
+									<li>1 Día de Habitación Individual Simple </li>
+									<li>Farmacia Cubierta al 100%
 										<span>Hasta la hospitalización.</span>
 									</li>
 									<li>Monitoreo Fetal</li>
@@ -130,7 +135,7 @@
 						</div>
 						<div class="box-honorarios">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Honorarios Profesionales 
+								<img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Honorarios Profesionales 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
@@ -142,11 +147,11 @@
 						</div>
 						<div class="box-examenes">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Exámenes
+								<img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Exámenes
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> Exámenes para la Madre
+									<li>Exámenes para la Madre
 										<span>Hemograma completo, Glucosa, Grupo Sanguíneo Factor RH, Creatinina, Examen de Orina HIV, RPR.</span>
 									</li>
 									<li> Exámenes para el Recién Nacido
@@ -157,15 +162,15 @@
 						</div>
 						<div class="box-post-parto">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Post Parto
+								<img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Post Parto
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> Incluye Vacuna BCG y contra la Hepatitis B.</li>
-									<li> 2 Atenciones de Emergencia para el Recién Nacido
+									<li>Incluye Vacuna BCG y contra la Hepatitis B.</li>
+									<li>2 Atenciones de Emergencia para el Recién Nacido
 										<span>No incluye Hospitalización, Farmacia, Exámenes de Laboratorio y/o Imágenes derivadas de la atención</span>
 									</li>
-									<li> 1 Control de Niño Sano </li>
+									<li>1 Control de Niño Sano </li>
 								</ul>
 							</div>
 						</div>
@@ -175,61 +180,60 @@
 					<div class="box-lateral-informacion">
 						<div class="box-pre-natal">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Pre Natal 
+								Pre Natal <img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png">
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li>
-										1 Control Pre-Natal
+									<li><strong class="listrong">1 Control Pre-Natal </strong>
 										<span class="box-help">El control Pre Natal solo es válido dentro del 1er y 2do trimestre de embarazo.</span>
 									</li>
-									<li>1 Ecografía Obstétrica
+									<li><strong class="listrong">1 Ecografía Obstétrica </strong>
 										<span>La Ecografía Obstétrica sólo es válida a partir de la semana 36.</span>
 									</li>
-									<li>1 Consulta de Nutrición</li>
+									<li><strong class="listrong">1 Consulta de Nutrición</strong></li>
 								</ul>
 							</div>
 						</div>
 						<div class="box-clinica">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Clínica 
+								 Clínica <img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png">
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> 2 Días de Habitación Individual Simple </li>
-									<li> Farmacia Cubierta al 100%
+									<li><strong class="listrong">2 Días de Habitación Individual Simple </strong></li>
+									<li><strong class="listrong">Farmacia Cubierta al 100%</strong>
 										<span>Hasta la hospitalización.</span>
 									</li>
-									<li>Monitoreo Fetal</li>
-									<li>Sala de Operaciones</li>
-									<li>Sala de Recuperación</li>
-									<li>Sala de Neonatología</li>
+									<li><strong class="listrong">Monitoreo Fetal</strong></li>
+									<li><strong class="listrong">Sala de Operaciones</strong></li>
+									<li><strong class="listrong">Sala de Recuperación</strong></li>
+									<li><strong class="listrong">Sala de Neonatología</strong></li>
 								</ul>
 							</div>
 						</div>
 						<div class="box-honorarios">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Honorarios Profesionales 
+								Honorarios Profesionales <img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li>Honorarios de Ginecobstetra</li>
-									<li>Honorarios de Pediatra</li>
-									<li>Servicios de Enfermería y Obstetriz</li>
-									<li>Anestesiólogo</li>
+									<li><strong class="listrong">Honorarios de Ginecobstetra</strong></li>
+									<li><strong class="listrong">Honorarios de Pediatra</strong></li>
+									<li><strong class="listrong">Servicios de Enfermería y Obstetriz</strong></li>
+									<li><strong class="listrong">Anestesiólogo</strong></li>
 								</ul>
 							</div>
 						</div>
 						<div class="box-examenes">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Exámenes
+								Exámenes <img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> Exámenes para la Madre
+									<li><strong class="listrong">Exámenes para la Madre</strong>
 										<span>Hemograma completo, Glucosa, Grupo Sanguíneo Factor RH, Riesgo Quirúrgico, Tiempo de Coagulación y Sangría, Úrea, Creatinina, Examen de Orina, Hepatitis B, HIV, RPR.</span>
 									</li>
-									<li> Exámenes para el Recién Nacido
+									<li><strong class="listrong">Exámenes para el Recién Nacido</strong>
 										<span>Hemoglobina, Glucosa, Grupo Sanguíneo y Hematocrito</span>
 									</li>
 								</ul>
@@ -237,16 +241,16 @@
 						</div>
 						<div class="box-post-parto">
 							<h4> 
-								<img src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> Post Parto
+								Post Parto <img class="img-hoja" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-guion-de-subtitulos.png"> 
 							</h4>
 							<div class="box-detalle-info">
 								<ul>
-									<li> Incluye Vacuna BCG y contra la Hepatitis B.</li>
-									<li> 2 Atenciones de Emergencia para el Recién Nacido
+									<li><strong class="listrong">Incluye Vacuna BCG y contra la Hepatitis B.</strong></li>
+									<li><strong class="listrong">2 Atenciones de Emergencia para el Recién Nacido</strong>
 										<span>No incluye Hospitalización, Farmacia, Exámenes de Laboratorio y/o Imágenes derivadas de la atención</span>
 									</li>
-									<li> 1 Control de Niño Sano </li>
-									<li> 1 Control Ginecológico </li>
+									<li><strong class="listrong">1 Control de Niño Sano </strong></li>
+									<li><strong class="listrong">1 Control Ginecológico </strong></li>
 								</ul>
 							</div>
 						</div>
@@ -262,7 +266,7 @@
 								<div class="box-precio">S/ 4,700</div>
 								<div class="box-cuota-inicial"> 
 									Cuota Inicial<br />
-									S/ 800
+									<b>S/ 800 </b>
 								</div>
 							</div>
 						</div>
@@ -363,7 +367,7 @@
 	</div>
 	<section class="section-contenido-tarjetas">
 		<div class="box-item box-provicard">
-			<div class="box-image-provicard">
+			<div class="box-image-provicard wow bounceInLeft">
 				<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/provicard.png" />
 			</div>
 			<div class="box-info-provicard">
@@ -434,7 +438,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="box-image-provikids">
+			<div class="box-image-provikids wow bounceInRight">
 				<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/provikids.png" />
 			</div>
 		</div>
@@ -488,13 +492,30 @@
     }, 4000);
     
     $('.box-detail-toggle').hide();
+    $('.box-parto-cesarea .box-flecha-top').hide();
+    $('.box-parto-normal .box-flecha-top').hide();
     $('.btn-ver-normal').on('click', function() {
-    	$('.box-detail-toggle.box-ce').fadeOut();
-    	$('.box-detail-toggle.box-pn').fadeIn("fast");
+    	if ($('.box-detail-toggle.box-pn').is(':visible')) {
+    		$('.box-detail-toggle.box-pn').fadeOut();
+    		$('.box-parto-normal .box-flecha-top').hide();
+    	}else{
+    		$('.box-detail-toggle.box-ce').fadeOut();
+	    	$('.box-detail-toggle.box-pn').fadeIn("fast");
+	    	$('.box-parto-cesarea .box-flecha-top').hide();
+	    	$('.box-parto-normal .box-flecha-top').show();
+    	}
+    	
     });
     $('.btn-ver-cesarea').on('click', function() {
-    	$('.box-detail-toggle.box-pn').fadeOut();
-    	$('.box-detail-toggle.box-ce').fadeIn("fast");
+    	if ($('.box-detail-toggle.box-ce').is(':visible')) {
+	    	$('.box-detail-toggle.box-ce').fadeOut();
+    		$('.box-parto-cesarea .box-flecha-top').hide();
+	    }else{
+	    	$('.box-detail-toggle.box-pn').fadeOut();
+	    	$('.box-detail-toggle.box-ce').fadeIn("fast");
+	    	$('.box-parto-cesarea .box-flecha-top').show();
+	    	$('.box-parto-normal .box-flecha-top').hide();
+	    }
     });
 	});
 </script>

@@ -2628,6 +2628,7 @@ header.box-header{
         width: 140px;
         margin-left: 1rem;
         margin-right: 1rem;
+        height: 140px;
     }
     .page-productos-esp .section-contenido-me .box-iconos .box-iconos-promovemos h4,
     .page-productos-esp .section-contenido-me .box-iconos .box-iconos-contamos h4{
@@ -2656,6 +2657,8 @@ header.box-header{
         color: #e080a5;
         font-size: 38px;
         font-weight: bold;
+        padding: 0 2rem;
+        text-align: center;
     }
     .page-productos-esp .section-contenido-me .box-como-quieres .box-options{
         display: flex;
@@ -2666,6 +2669,17 @@ header.box-header{
         width: 70px;
         max-width: 70px;
     }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-image > .box-flecha-top{
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-image > .box-flecha-top img{
+        width: 42px;
+    }
     .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera{
         display: flex;
         align-items: center;
@@ -2675,6 +2689,7 @@ header.box-header{
     }
     .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-image{
         margin-left: 2rem;
+        position: relative;
     }
     .page-productos-esp .section-contenido-me .box-como-quieres .box-options .box-cabecera .box-text-link > h3{
         font-weight: bold;
@@ -2815,18 +2830,20 @@ header.box-header{
         align-items: center;
         flex-wrap: wrap;
     }
-    .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provicard,
+    /*.page-productos-esp .section-contenido-tarjetas .box-item .box-image-provicard,
     .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provikids{
         width: 50%;
-    }
+    }*/
     .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provicard img,
     .page-productos-esp .section-contenido-tarjetas .box-item .box-image-provikids img{
-        max-width: 420px;
-        margin: auto;
+        max-width: 380px;
+        /*margin: auto;*/
     }
     .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard,
     .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids{
-        width: 50%;
+        /*width: 50%;*/
+        flex: 1;
+        padding: 0 2rem;
     }
     .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provicard .box-header > h2,
     .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-header > h2{
@@ -2889,7 +2906,7 @@ header.box-header{
         font-weight: bold;
         font-size: 30px;
         color: #007ea9;
-        padding-left: 25px;
+        padding-left: 18px;
     }
     .page-productos-esp .section-contenido-tarjetas .box-item .box-info-provikids .box-costo .box-cuando-cuesta .box-respuesta{
         color: #dc6a34;
@@ -2935,7 +2952,122 @@ header.box-header{
         font-size: 18px;
         margin-top: 15px;
     }
-
+    /* toggles */
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*flex-wrap: wrap;*/
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle.box-pn > .box-lateral-imagen{
+        flex: 1;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle img.img-hoja{
+        width: 20px;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle.box-ce .box-lateral-informacion{
+        flex: 1;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle .box-lateral-imagen .box-foto{
+        width: 400px;
+        margin: auto;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie{
+        text-align: center;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie h4{
+        font-style: italic;
+        font-weight: bold;
+        color: #969696;
+        font-size: 24px;
+        margin: 0;
+        padding-top: 2.5rem;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie small{
+        font-size: 16px;
+        color: #969696;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie .box-foto-precio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        margin: auto;
+        border-radius: 20px;
+        background-color: #bdbdbd;
+        color: white;
+        font-weight: bold;
+        height: 52px;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie .box-foto-precio .box-precio{
+        width: 70%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        border-radius: 20px;
+        background-color: #e17fa5;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie .box-foto-precio .box-cuota-inicial{
+        width: 30%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        font-weight: 100;
+        flex-wrap: wrap;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-foto-pie .box-foto-precio .box-cuota-inicial b{
+        font-size: 22px;
+        line-height: 1;
+        margin-top: -14px;
+    }
+    .page-productos-esp .section-contenido-me .box-como-quieres .box-options-detail{
+        margin-top: 10rem;
+    }
+    .page-productos-esp .section-contenido-me .box-detail-toggle.box-ce .box-lateral-informacion{
+        text-align: right;
+        padding-right: 5rem;
+        list-style-position: inside;
+    }
+    .page-productos-esp .section-contenido-me .box-detail-toggle.box-ce .box-lateral-imagen{
+        flex: 1;
+    }
+    .page-productos-esp .section-contenido-me .box-detail-toggle .box-lateral-informacion h4{
+        font-weight: bold;
+        color: #e17fa5;
+    }
+    .page-productos-esp .section-contenido-me .box-detail-toggle .box-lateral-informacion .box-detalle-info{
+        margin-bottom: 2rem;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle .box-lateral-informacion ul{
+        list-style: none;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle .box-lateral-informacion ul li{
+        font-weight: 600;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle .box-lateral-informacion ul li > span{
+        font-weight: 300;
+        display: block;
+        font-size: 12px;
+        color: #757575;
+        margin-left: 15px;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle.box-ce .box-lateral-informacion ul li strong.listrong::after{
+        content: "\2022";
+        color: #e17fa5;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+    }
+    .page-productos-esp .section-contenido-me .box-options-detail .box-detail-toggle.box-pn .box-lateral-informacion ul li::before{
+        content: "\2022";
+        color: #e17fa5;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+    }
 /* ************************* */
 /*  MODAL PERFIL DEL MEDICO  */
 /* ************************* */
