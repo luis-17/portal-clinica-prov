@@ -32,12 +32,12 @@
 		<div class="box-iconos">
 			<div class="box-iconos-promovemos">
 				<h4> Promovemos </h4>
-				<div class="box-content-iconos">
+				<div class="box-content-iconos wow bounceInLeft">
 					<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/promovemos.png" />
 					<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/promovemos-2.png" />
 				</div>
 			</div>
-			<div class="box-iconos-contamos">
+			<div class="box-iconos-contamos wow bounceInRight">
 				<h4> Contamos con </h4>
 				<div class="box-content-iconos">
 					<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/contamos-con-1.png" />
@@ -48,8 +48,8 @@
 		</div>
 		<div class="box-como-quieres">
 			<div class="box-pregunta">
-				<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-para-titulo.png" />
-				<h2> ¿Cómo quieres que nazca tu bebé? </h2>
+				<img class="img-responsive wow bounceInLeft" src="<?php echo base_url(); ?>assets/images/productos-esp/icono-para-titulo.png" />
+				<h2 class="wow bounceInRight"> ¿Cómo quieres que nazca tu bebé? </h2>
 			</div>
 			<div class="box-options">
 				<div class="box-parto-normal">
