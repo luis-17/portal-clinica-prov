@@ -29,10 +29,10 @@
 		<div class="box-title">
 			<strong class="vineta"></strong> STAFF MÉDICO 
 		</div>
-		<div class="box-body">
+		<div class="box-body owl-carousel" id="prov-staff">
 			<?php if(!empty($arrMedicos)): ?>
 			<?php foreach ($arrMedicos as $key => $row): ?>
-			<div class="box-item wow fadeIn" data-wow-delay="500ms" data-wow-duration="1s">
+			<div class="box-item wow fadeIn owl-item" data-wow-delay="500ms" data-wow-duration="1s">
 				<a class="btn-verMas" href="javascript:void;">
 					<div class="box-photo">
 						<img src="<?php echo URL_PREVIEW; ?>assets/dinamic/medico/<?php echo $row['foto']; ?>" alt="<?php echo $row['nombres']; ?>">
@@ -127,59 +127,73 @@
 <!-- END PERFIL DE MEDICO -->
 <script type="text/javascript">
 	$(document).ready(function() { 
+		// GALERIA staff  
+	    var owlEspec = $("#prov-staff");
+	    owlEspec.owlCarousel({
+	      pagination : false,
+	      navigation : true,
+	      items: 3,
+	      navigationText: [
+	        "<i class='next fa fa-angle-left'></i>",
+	        "<i class='prev fa fa-angle-right'></i>"
+	      ],
+	      itemsDesktopSmall: [992,3],
+	      itemsTablet: [768,3],
+	      itemsMobile: [380,2]
+	    });
 		/* INTERACCION PERFIL MEDICO */
-    function onClickPerfilMedico() {
-    	$('.btn-verMas, .box-modal-perfil .box-close').off();
-    	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
-    		var thes = $(this);
-    		console.log('click mee xd');
-				var sectionPerfilMed = $('.box-modal-perfil');
-				if(sectionPerfilMed.hasClass('out')){
-					sectionPerfilMed.removeClass('out').addClass('in');
-					$('.page-sm').addClass('op-25');
-					$('#myHeaderTop').addClass('op-25');
-					// BINDEAR INFO
-					strPerfilJson = thes.next().text();
-					// console.log(strPerfilJson, 'strPerfilJson');
-					arrPerfilJson = JSON.parse(strPerfilJson);
-					// console.log(arrPerfilJson, 'arrPerfilJson');
-					$('.inputjson.nombre').html(arrPerfilJson.medico);
-					$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
-					$('.inputjson.tc').html(arrPerfilJson.tipo_colegiatura);
-					$('.inputjson.cmp').html(arrPerfilJson.cmp);
-					$('.inputjson.rne').html(arrPerfilJson.rne);
+	    function onClickPerfilMedico() {
+	    	$('.btn-verMas, .box-modal-perfil .box-close').off();
+	    	$('.btn-verMas, .box-modal-perfil .box-close').on('click', function(event){
+	    		var thes = $(this);
+	    		console.log('click mee xd');
+					var sectionPerfilMed = $('.box-modal-perfil');
+					if(sectionPerfilMed.hasClass('out')){
+						sectionPerfilMed.removeClass('out').addClass('in');
+						$('.page-sm').addClass('op-25');
+						$('#myHeaderTop').addClass('op-25');
+						// BINDEAR INFO
+						strPerfilJson = thes.next().text();
+						// console.log(strPerfilJson, 'strPerfilJson');
+						arrPerfilJson = JSON.parse(strPerfilJson);
+						// console.log(arrPerfilJson, 'arrPerfilJson');
+						$('.inputjson.nombre').html(arrPerfilJson.medico);
+						$('.inputjson.especialidad').html(arrPerfilJson.especialidad);
+						$('.inputjson.tc').html(arrPerfilJson.tipo_colegiatura);
+						$('.inputjson.cmp').html(arrPerfilJson.cmp);
+						$('.inputjson.rne').html(arrPerfilJson.rne);
 
-					$('.inputjson.lema').html(arrPerfilJson.lema);
-					if(!arrPerfilJson.lema){
-						$('.inputjson.lema').hide();
+						$('.inputjson.lema').html(arrPerfilJson.lema);
+						if(!arrPerfilJson.lema){
+							$('.inputjson.lema').hide();
+						}else{
+							$('.inputjson.lema').show();
+						}
+						/* horarios */
+						if( arrPerfilJson.horarios.length > 0 ){
+							$('.inputjson.horarios').empty();
+							$.each(arrPerfilJson.horarios, function(key, val) {
+								var objDl = $('<dl> <dt> <img src="assets/images/mini-stethoscope.png" /> '+val.dia+': </dt> <dd> '+val.hora_inicio+' - '+val.hora_fin+ ' </dd> </dl>');
+								$('.inputjson.horarios').append(objDl);
+							});
+						}
+						if(arrPerfilJson.estudios_html){
+							$('.inputjson.estudios').html(decodeURIComponent(escape(atob( arrPerfilJson.estudios_html ))));
+						}else{
+							$('.inputjson.estudios').text('No se muestra estudios en este momento.');
+						}
+						
+						$('.inputjson.foto').attr("src", URLPreview+'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
 					}else{
-						$('.inputjson.lema').show();
+						$('.inputjson.foto').attr("src", '');
+						sectionPerfilMed.removeClass('in').addClass('out');
+						$('.page-sm').removeClass('op-25');
+						$('#myHeaderTop').removeClass('op-25');
 					}
-					/* horarios */
-					if( arrPerfilJson.horarios.length > 0 ){
-						$('.inputjson.horarios').empty();
-						$.each(arrPerfilJson.horarios, function(key, val) {
-							var objDl = $('<dl> <dt> <img src="assets/images/mini-stethoscope.png" /> '+val.dia+': </dt> <dd> '+val.hora_inicio+' - '+val.hora_fin+ ' </dd> </dl>');
-							$('.inputjson.horarios').append(objDl);
-						});
-					}
-					if(arrPerfilJson.estudios_html){
-						$('.inputjson.estudios').html(decodeURIComponent(escape(atob( arrPerfilJson.estudios_html ))));
-					}else{
-						$('.inputjson.estudios').text('No se muestra estudios en este momento.');
-					}
-					
-					$('.inputjson.foto').attr("src", URLPreview+'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
-				}else{
-					$('.inputjson.foto').attr("src", '');
-					sectionPerfilMed.removeClass('in').addClass('out');
-					$('.page-sm').removeClass('op-25');
-					$('#myHeaderTop').removeClass('op-25');
-				}
-				event.preventDefault();
-			});
-    };
-    $(document).mouseup(function(e) {
+					event.preventDefault();
+				});
+	    };
+	    $(document).mouseup(function(e) {
 		    var sectionMenuLat = $('.box-modal-perfil');
 		    if(!sectionMenuLat.is(e.target) && sectionMenuLat.has(e.target).length === 0){
 		        sectionMenuLat.removeClass('in').addClass('out');

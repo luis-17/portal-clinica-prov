@@ -71,7 +71,7 @@ class Model_medico extends CI_Model {
 		$this->db->where('md.visible', 1);
 		$this->db->where('em.estado_em', 1);
 		$this->db->order_by('md.foto','DESC');
-		$this->db->limit(3);
+		// $this->db->limit(3);
 		return $this->db->get()->result_array();
 	}
 }

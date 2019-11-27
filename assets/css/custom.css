@@ -1457,9 +1457,22 @@ header.box-header{
         align-items: center;
         justify-content: center;
     }
-    /*
-
-    */
+    
+    .page-fichesp .section-staff .owl-buttons .owl-prev{
+        position: absolute;
+        left: -10px;
+        top: 33%;
+    }
+    .page-fichesp .section-staff .owl-buttons .owl-next{
+        position: absolute;
+        right: -10px;
+        top: 33%;
+    }
+    .page-fichesp .section-staff .owl-buttons svg{
+        font-size: 45px;
+        color: #0085b2;
+    }
+    
     .page-fichesp .section-staff .box-body .box-item{
         /*width: 270px;*/
         /*width: 340px;*/

@@ -7,7 +7,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title> Clínica Providencia </title> 
+	<title> Clínica Providencia </title>
+	<!--favicon-->
+    <link rel="shortcut icon" href="<?php echo base_url('favicon.ico'); ?>">
+    <!--fin favicon-->
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('libs/bootstrap-3.3.7/css/bootstrap-social.css'); ?>" rel="stylesheet">
 
@@ -19,7 +22,7 @@
 
 	<link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet"> 
 	<link href="<?php echo base_url('assets/css/custom-responsive.css'); ?>" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script> 
 	<script type="text/javascript" src="<?php echo base_url('libs/jquery-3.2.0.min.js'); ?>"></script>
 </head>

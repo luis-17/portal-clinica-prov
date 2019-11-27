@@ -492,8 +492,8 @@
     }, 4000);
     
     $('.box-detail-toggle').hide();
-    $('.box-parto-cesarea .box-flecha-top').hide();
-    $('.box-parto-normal .box-flecha-top').hide();
+    $('.box-parto-cesarea .box-flecha-top').show();
+    $('.box-parto-normal .box-flecha-top').show();
     $('.btn-ver-normal').on('click', function() {
     	if ($('.box-detail-toggle.box-pn').is(':visible')) {
     		$('.box-detail-toggle.box-pn').fadeOut();
