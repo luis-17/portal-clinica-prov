@@ -60,7 +60,7 @@
 	    			</div>
 	    		</div>
 	    		<div class="box-header-buttons">
-	    			<button type="button" class="btn secondary btn-reserva">RESERVA TU CITA</button>
+	    			<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn secondary btn-reserva">RESERVA TU CITA</a>
 	    			<button type="button" class="btn btn-menu-lateral"> <i class="fas fa-bars"></i> </button>
 	    		</div>
 	  		</div>
@@ -175,7 +175,7 @@
 	    			</div>
 	    			<div class="box-header-buttons">
 	    				<a href="<?php echo site_url('inicio'); ?>" class="btn btn-primary btn-home" title="Ir al Home"> <i class="fa fa-home"></i> </a>
-		    			<button type="button" class="btn btn-primary btn-reserva">RESERVA TU CITA</button>
+		    			<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary btn-reserva">RESERVA TU CITA</a>
 		    			<button type="button" class="btn btn-menu-lateral"> <i class="fas fa-bars"></i> </button>
 		    		</div>
 	    		</div>

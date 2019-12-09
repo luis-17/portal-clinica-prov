@@ -122,7 +122,7 @@
             </div>
             <div class="box-title"> Nuestra reserva de citas en línea </div>
             <div class="box-action">
-              <a target="_blank" href="#" class="btn btn-rounded"> SABER MÁS </a>
+              <a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-rounded"> SABER MÁS </a>
             </div>
           </div>
         </div>
