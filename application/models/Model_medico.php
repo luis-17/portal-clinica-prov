@@ -12,6 +12,7 @@ class Model_medico extends CI_Model {
 		$this->db->join('especialidad_medico em', 'md.idmedico = em.idmedico');
 		$this->db->join('especialidad esp', 'em.idespecialidad = esp.idespecialidad');
 		$this->db->where('md.visible', 1);
+		$this->db->where('md.estado', 1);
 		$this->db->where('em.estado_em', 1);
 		if( !empty($paramDatos['medicoAbc']) && $paramDatos['medicoAbc'] !== 'ALL' ){
 			$this->db->like('UPPER(LEFT(md.nombres, 1))', strtoupper($paramDatos['medicoAbc']));
@@ -37,6 +38,7 @@ class Model_medico extends CI_Model {
 		$this->db->join('especialidad_medico em', 'md.idmedico = em.idmedico');
 		$this->db->join('especialidad esp', 'em.idespecialidad = esp.idespecialidad');
 		$this->db->where('md.visible', 1);
+		$this->db->where('md.estado', 1);
 		$this->db->where('em.estado_em', 1);
 		// $this->db->where('esp.visible_home', 1);
 		if( !empty($paramDatos['medicoAbc']) && $paramDatos['medicoAbc'] !== 'ALL' ){
@@ -69,6 +71,7 @@ class Model_medico extends CI_Model {
 		$this->db->join('especialidad esp', 'em.idespecialidad = esp.idespecialidad');
 		$this->db->where('em.idespecialidad', (int)$idespecialidad);
 		$this->db->where('md.visible', 1);
+		$this->db->where('md.estado', 1);
 		$this->db->where('em.estado_em', 1);
 		$this->db->order_by('md.foto','DESC');
 		// $this->db->limit(3);
