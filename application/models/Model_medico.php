@@ -7,7 +7,7 @@ class Model_medico extends CI_Model {
 	public function m_cargar_staff_medico($paramPaginate, $paramDatos)
 	{
 		$this->db->select('md.idmedico, md.nombres, md.ap_paterno, md.ap_materno, md.tipo_colegiatura, md.cmp, md.rne, md.lema, md.estudios_html, md.foto, md.foto_perfil');
-		$this->db->select('esp.idespecialidad, esp.nombre AS especialidad',FALSE);
+		$this->db->select('esp.idespecialidad, esp.nombre AS especialidad, esp.reserva_cita', FALSE);
 		$this->db->from('medico md');
 		$this->db->join('especialidad_medico em', 'md.idmedico = em.idmedico');
 		$this->db->join('especialidad esp', 'em.idespecialidad = esp.idespecialidad');

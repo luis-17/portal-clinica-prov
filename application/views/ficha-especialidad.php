@@ -116,7 +116,9 @@
 				</p>
 			</div>
 			<div class="box-action">
+				<?php if($fEspecialidad['reserva_cita'] == 1) { ?>
 				<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary"> AGENDAR CITA </a>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="box-foto-perfil">

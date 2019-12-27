@@ -122,7 +122,7 @@
 				</p>
 			</div>
 			<div class="box-action">
-				<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary"> AGENDAR CITA </a>
+				<a target="_blank" href="http://citasenlinea.clinicaprovidencia.pe" class="btn btn-primary btn-agendar-cita"> AGENDAR CITA </a>
 			</div>
 		</div>
 		<div class="box-foto-perfil">
@@ -360,6 +360,13 @@
 				}
 				
 				$('.inputjson.foto').attr("src", URLPreview+'assets/dinamic/medico/medico-perfil/'+arrPerfilJson.foto_perfil);
+				// console.log(arrPerfilJson.reserva_cita, 'arrPerfilJson.reserva_cita');
+				// console.log($('.btn-agendar-cita'));
+				if(arrPerfilJson.reserva_cita == 1){
+					$('.btn-agendar-cita').show();
+				}else{
+					$('.btn-agendar-cita').hide();
+				}
 			}else{
 				$('.inputjson.foto').attr("src", '');
 				sectionPerfilMed.removeClass('in').addClass('out');
