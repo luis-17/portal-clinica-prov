@@ -35,7 +35,7 @@ class Model_blog extends CI_Model {
 	public function get_entrada_por_uri($uri)
 	{
 		$this->db->select('bl.idblog, bl.uri, bl.titulo, bl.imagen_preview, bl.imagen_portada, bl.contenido_html, bl.autor, bl.cargo_autor, 
-			bl.fecha_publicacion, bl.fecha_creacion, bl.estado, bl.foto_autor');
+			bl.fecha_publicacion, bl.fecha_creacion, bl.estado, bl.foto_autor, bl.titulo_seo, bl.meta_content_seo');
 		$this->db->from('blog bl');
 		$this->db->where('bl.uri', $uri);
 		$this->db->limit(1);

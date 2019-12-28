@@ -14,6 +14,7 @@ class Inicio extends CI_Controller {
         $data['arrPorqueElegirnos'] = $this->model_porque_elegirnos->cargar_porque_elegirnos();
         $data['arrTestimonios'] = $this->model_testimonio->cargar_testimonio_home();
         $data['arrSeguros'] = $this->model_seguro->cargar_seguro_home();
+        $data['fSeo'] = $this->model_pagina->m_obtener_pagina('home');
         $data['activeSelected'] = 'inicio'; 
 		$data['active'] = array(
             'inicio'=> '-active',

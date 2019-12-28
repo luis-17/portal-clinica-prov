@@ -10,11 +10,10 @@ class Promocion extends CI_Controller {
     }
     public function index()
     {
-        // $data['fServicio'] = $this->model_servicio->obtener_servicio_por_alias($alias); 
-        $data['activeSelected'] = 'promocion'; 
+        $data['activeSelected'] = 'promocion';
         $data['arrPromociones'] = $this->model_promocion->m_cargar_promociones();
+        $data['fSeo'] = $this->model_pagina->m_obtener_pagina('promocion');
         $data['arrAbc'] = range('A', 'Z');
-        // array_unshift($data['arrAbc'], "TODOS LOS MÉDICOS");
         $data['active'] = array(
             'inicio'=> NULL,
             'especialidades'=> NULL,

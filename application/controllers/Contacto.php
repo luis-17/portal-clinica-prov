@@ -28,6 +28,7 @@ class Contacto extends CI_Controller {
             redirect('/contactanos'); 
             exit(); 
         }else{
+            $data['fSeo'] = $this->model_pagina->m_obtener_pagina('contacto');
             $data['active'] = array( 
                 'inicio'=> NULL,
                 'especialidades'=> NULL,

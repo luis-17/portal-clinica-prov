@@ -10,11 +10,9 @@ class Blog extends CI_Controller {
     }
     public function index()
     {
-        // $data['fServicio'] = $this->model_servicio->obtener_servicio_por_alias($alias); 
         $data['activeSelected'] = 'vidasalud';
         $data['arrEntradasAle'] = $this->model_blog->m_cargar_entradas_aleatorias(3);
-        // $data['arrAbc'] = range('A', 'Z');
-        // array_unshift($data['arrAbc'], "TODOS LOS MÉDICOS");
+        $data['fSeo'] = $this->model_pagina->m_obtener_pagina('blog');
         $data['active'] = array(
             'inicio'=> NULL,
             'especialidades'=> NULL,
@@ -48,21 +46,10 @@ class Blog extends CI_Controller {
                 )
             );
         }
-        // $arrListadoVideos = array();
-        // foreach ($listaVideos as $row) {
-        //     $strFechaFormat = darFormatoFecha($row['fecha_publicacion']);
-        //     array_push($arrListadoVideos,
-        //         array(
-        //             'idblog' => $row['idblog'],
-        //             'uri' => $row['uri'],
-        //             'fecha_publicacion' => $row['fecha_publicacion'],
-        //             'imagen_preview' => $row['imagen_preview'],
-        //             'titulo'=> $row['titulo'],
-        //             'fechaFormat' => $strFechaFormat,
-        //             'resumen' => $row['resumen'].'...'
-        //         )
-        //     );
-        // }
+        $data['fSeo'] = array(
+            'titulo_seo'=> $fEntrada['titulo_seo'],
+            'meta_content_seo'=> $fEntrada['meta_content_seo']
+        );
         $data['arrEntradasAle'] = $arrListado;
         $data['arrListadoVideos'] = $listaVideos;
         $data['fEntrada'] = $fEntrada;
@@ -82,10 +69,8 @@ class Blog extends CI_Controller {
     { 
         $allInputs = json_decode(trim($this->input->raw_input_stream),true);
         $paramPaginate = $allInputs['paginate'];
-        // $paramDatos = $allInputs['datos'];
         $lista = $this->model_blog->m_cargar_entradas($paramPaginate);
         $fContador = $this->model_blog->m_count_entradas($paramPaginate);
-        //var_dump('hola'); exit();
         $arrListado = array();
         foreach ($lista as $row) {
             $strFechaFormat = darFormatoFecha($row['fecha_publicacion']);

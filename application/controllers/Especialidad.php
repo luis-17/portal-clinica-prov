@@ -10,11 +10,9 @@ class Especialidad extends CI_Controller {
     }
     public function index()
     {
-        // $data['fServicio'] = $this->model_servicio->obtener_servicio_por_alias($alias); 
         $data['activeSelected'] = 'especialidad'; 
         $data['arrEspecialidades'] = $this->model_especialidad->m_cargar_especialidades();
-        // $data['arrAbc'] = range('A', 'Z');
-        // array_unshift($data['arrAbc'], "TODOS LOS MÉDICOS");
+        $data['fSeo'] = $this->model_pagina->m_obtener_pagina('esp');
         $data['active'] = array(
             'inicio'=> NULL,
             'especialidades'=> '-active',
@@ -54,6 +52,10 @@ class Especialidad extends CI_Controller {
             );
             $arrMedicos[$key]['json'] = json_encode($arrMedicos[$key]);
         }
+        $data['fSeo'] = array(
+            'titulo_seo'=> $data['fEspecialidad']['titulo_seo'],
+            'meta_content_seo'=> $data['fEspecialidad']['meta_content_seo']
+        );
         $data['arrServicios'] = $this->model_servicio->m_cargar_servicios_esp();
         $data['arrMedicos'] = $arrMedicos;
         $data['activeSelected'] = 'especialidad'; 

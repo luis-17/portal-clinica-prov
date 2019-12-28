@@ -23,7 +23,8 @@ class Model_especialidad extends CI_Model {
 	}
 	public function get_especialidad_por_uri($uri)
 	{
-		$this->db->select('esp.idespecialidad, esp.nombre, esp.icono_home, esp.uri, esp.descripcion_html, esp.image_banner, esp.tiene_landing, esp.reserva_cita');
+		$this->db->select('esp.idespecialidad, esp.nombre, esp.icono_home, esp.uri, esp.descripcion_html, esp.image_banner, 
+			esp.tiene_landing, esp.reserva_cita, esp.titulo_seo, esp.meta_content_seo');
 		$this->db->from('especialidad esp');
 		$this->db->where('esp.uri', $uri);
 		return $this->db->get()->row_array();

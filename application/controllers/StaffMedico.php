@@ -10,11 +10,10 @@ class StaffMedico extends CI_Controller {
     }
     public function index()
     {
-        // $data['fServicio'] = $this->model_servicio->obtener_servicio_por_alias($alias); 
         $data['activeSelected'] = 'staff_medico'; 
         $data['arrEspecialidades'] = $this->model_especialidad->m_cargar_especialidades();
+        $data['fSeo'] = $this->model_pagina->m_obtener_pagina('sm');
         $data['arrAbc'] = range('A', 'Z');
-        // array_unshift($data['arrAbc'], "TODOS LOS MÉDICOS");
         $data['active'] = array(
             'inicio'=> NULL,
             'especialidades'=> NULL,
@@ -27,15 +26,12 @@ class StaffMedico extends CI_Controller {
         $this->load->template('staff-medico',$data);
     }
     public function listar_staff_medico()
-    { 
-        // var_dump('hola');
+    {
         $allInputs = json_decode(trim($this->input->raw_input_stream),true);
         $paramPaginate = $allInputs['paginate'];
         $paramDatos = $allInputs['datos'];
         $lista = $this->model_medico->m_cargar_staff_medico($paramPaginate,$paramDatos);
         $fContador = $this->model_medico->m_count_staff_medico($paramPaginate,$paramDatos);
-        // var_dump($fContador); exit();
-        // var_dump('inicio foreach');
         $arrListado = array();
         foreach ($lista as $row) {
             $arrHorarios = $this->model_medico->m_cargar_horario_medico($row['idmedico']);
@@ -59,20 +55,16 @@ class StaffMedico extends CI_Controller {
                 )
             );
         }
-        // var_dump('end foreach');
         $arrData['datos'] = $arrListado;
         $arrData['paginate']['totalRows'] = $fContador['contador'];
         $arrData['paginate']['itemsByView'] = $paramPaginate['pageSize'];
         $arrData['message'] = '';
         $arrData['flag'] = 1;
-        // var_dump('222'); 
         if(empty($lista)){
             $arrData['flag'] = 0;
         }
-        // var_dump($arrData); exit();
         $this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($arrData));
-        // var_dump($arrData); exit();
     }
 }

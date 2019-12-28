@@ -31,7 +31,7 @@ class ProductosEspeciales extends CI_Controller {
         }else{
             $data['activeSelected'] = 'productos-especiales';
             $data['arrServicios'] = $this->model_servicio->m_cargar_mas_servicios();
-
+            $data['fSeo'] = $this->model_pagina->m_obtener_pagina('productos-esp');
             $data['active'] = array(
                 'inicio'=> NULL,
                 'especialidades'=> NULL,

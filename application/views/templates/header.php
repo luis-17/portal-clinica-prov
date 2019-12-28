@@ -6,8 +6,9 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
+	<title> <?php echo $fSeo['titulo_seo']; ?> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title> Clínica Providencia </title>
+	<meta name="Description" content="<?php echo $fSeo['meta_content_seo']; ?>">
 	<!--favicon-->
     <link rel="shortcut icon" href="<?php echo base_url('favicon.ico'); ?>">
     <!--fin favicon-->

@@ -20,7 +20,6 @@
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
 					<a href="<?php echo URL_PREVIEW; ?>assets/dinamic/promocion/<?php echo $row['foto']; ?>" class="box-item" data-fancybox="promociones" data-caption="<?php echo $row['titulo']; ?>">
 						<div class="box-image" style="background-image: url(<?php echo URL_PREVIEW; ?>assets/dinamic/promocion/<?php echo $row['foto']; ?>);"></div>
-						
 					</a>
 					<div class="box-description">
 						<?php echo $row['titulo']; ?>
